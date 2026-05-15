@@ -377,7 +377,7 @@ a{color:inherit;text-decoration:none}
 }
 .stog.on{background:#C9A961;color:#0A0A0A;border-color:#C9A961}
 .stog-label{font-size:.68rem;font-weight:500;letter-spacing:.08em}
-.stog-hint{font-size:.58rem;font-weight:400;opacity:.65;letter-spacing:.04em}
+.usd-note{font-size:.85rem;color:#888;text-align:center;max-width:600px;margin:16px auto 24px;line-height:1.6}
 
 /* luxury car cards — large cinematic */
 .fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -1207,16 +1207,16 @@ input[type="date"]::-webkit-datetime-edit-text {
       <div class="stog-row rv d3">
         <button class="stog on" id="flo" onclick="setFS('lo')">
           <span class="stog-label" data-t="sl">Low Season &nbsp;&middot;&nbsp; Apr 16 &ndash; Dec 14</span>
-          <span class="stog-hint" data-t="sl_hint">From $45/day</span>
         </button>
         <button class="stog" id="fhi" onclick="setFS('hi')">
           <span class="stog-label" data-t="sh">High Season &nbsp;&middot;&nbsp; Dec 15 &ndash; Apr 15</span>
-          <span class="stog-hint" data-t="sh_hint">From $60/day</span>
         </button>
       </div>
     </div>
     <p class="fl-desc rv d2" data-t="fl_sb">Each vehicle is selected, maintained, and delivered wherever you are in Aruba. Unlimited island mileage included.</p>
   </div>
+
+  <p class="usd-note" data-t="usd_note">All prices in US dollars. We accept all major credit cards; foreign cards may incur your bank's conversion fee.</p>
 
   <div class="fgrid">
 
@@ -1784,7 +1784,6 @@ en:{
   fl_tg:"Our Fleet",fl_h:"Curated Vehicles<br/><em>for Every Journey</em>",
   fl_sb:"Each vehicle is selected, maintained, and delivered wherever you are in Aruba. Unlimited island mileage included.",
   sl:"Low Season · Apr 16 – Dec 14",sh:"High Season · Dec 15 – Apr 15",
-  sl_hint:"From $45/day",sh_hint:"From $60/day",
   c_co:"Compact · Economy",c_co_b:"Island Essentials",c_co_i:"Ideal for couples & solo travelers",
   c_se:"Sedan · Comfort",c_se_b:"Executive Comfort",c_se_i:"Ideal for business & couples",
   c_su:"SUV",c_su_b:"Premium SUV",c_su_i:"Ideal for families & groups",
@@ -1804,6 +1803,7 @@ en:{
   pr_lsu_hi:"From <strong>$155</strong>/day",
   pr_je_hi:"From <strong>$190</strong>/day",
   pr_va_hi:"From <strong>$145</strong>/day",
+  usd_note:"All prices in US dollars. We accept all major credit cards; foreign cards may incur your bank's conversion fee.",
   bn_li:"3-day minimum &middot; Free delivery &middot; Unlimited mileage",
   cc_t:"“Not sure which vehicle fits your plans?”",
   cc_s:"Our team on WhatsApp will help you choose the perfect car for your Aruba experience.",
@@ -1929,7 +1929,6 @@ es:{
   fl_tg:"Nuestra Flota",fl_h:"Vehiculos Curados<br/><em>Para Cada Viaje</em>",
   fl_sb:"Cada vehículo es seleccionado, mantenido y entregado donde sea que esté en Aruba. Kilometraje ilimitado incluido.",
   sl:"Temporada Baja · 16 Abr – 14 Dic",sh:"Temporada Alta · 15 Dic – 15 Abr",
-  sl_hint:"Desde $45/día",sh_hint:"Desde $60/día",
   c_co:"Compacto · Económico",c_co_b:"Esenciales de Isla",c_co_i:"Ideal para parejas y viajeros solos",
   c_se:"Sedán · Confort",c_se_b:"Confort Ejecutivo",c_se_i:"Ideal para negocios y parejas",
   c_su:"SUV",c_su_b:"SUV Premium",c_su_i:"Ideal para familias y grupos",
@@ -1949,6 +1948,7 @@ es:{
   pr_lsu_hi:"Desde <strong>$155</strong>/día",
   pr_je_hi:"Desde <strong>$190</strong>/día",
   pr_va_hi:"Desde <strong>$145</strong>/día",
+  usd_note:"Todos los precios en dólares estadounidenses. Aceptamos todas las tarjetas de crédito principales; las tarjetas extranjeras pueden incurrir en la tarifa de conversión de su banco.",
   bn_li:"Mínimo 3 días &middot; Entrega gratuita &middot; Kilometraje ilimitado",
   cc_t:"“¿No sabe qué vehiculo se adapta a sus planes?”",
   cc_s:"Nuestro equipo en WhatsApp le ayudará a elegir el auto perfecto para su experiencia en Aruba.",
@@ -2073,7 +2073,6 @@ nl:{
   fl_tg:"Onze Vloot",fl_h:"Gecureerde Voertuigen<br/><em>Voor Elke Reis</em>",
   fl_sb:"Elk voertuig is geselecteerd, onderhouden en bezorgd waar u ook bent op Aruba. Onbeperkte kilometers inbegrepen.",
   sl:"Laagseizoen · 16 Apr – 14 Dec",sh:"Hoogseizoen · 15 Dec – 15 Apr",
-  sl_hint:"Vanaf $45/dag",sh_hint:"Vanaf $60/dag",
   c_co:"Compact · Economisch",c_co_b:"Eiland Essentials",c_co_i:"Ideaal voor stellen en solo reizigers",
   c_se:"Sedan · Comfort",c_se_b:"Executive Comfort",c_se_i:"Ideaal voor zakelijk en stellen",
   c_su:"SUV",c_su_b:"Premium SUV",c_su_i:"Ideaal voor families en groepen",
@@ -2093,6 +2092,7 @@ nl:{
   pr_lsu_hi:"Vanaf <strong>$155</strong>/dag",
   pr_je_hi:"Vanaf <strong>$190</strong>/dag",
   pr_va_hi:"Vanaf <strong>$145</strong>/dag",
+  usd_note:"Alle prijzen in Amerikaanse dollars. Wij accepteren alle grote creditcards; buitenlandse kaarten kunnen de wisselkoerskosten van uw bank met zich meebrengen.",
   bn_li:"Minimum 3 dagen &middot; Gratis bezorging &middot; Onbeperkte kilometers",
   cc_t:"“Weet u niet welk voertuig bij uw plannen past?”",
   cc_s:"Ons team op WhatsApp helpt u de perfecte auto kiezen voor uw Aruba-ervaring.",
@@ -2217,7 +2217,6 @@ pt:{
   fl_tg:"Nossa Frota",fl_h:"Veículos Curados<br/><em>Para Cada Viagem</em>",
   fl_sb:"Cada veículo é selecionado, mantido e entregue onde quer que esteja em Aruba. Quilometragem ilimitada incluída.",
   sl:"Baixa Temporada · 16 Abr – 14 Dez",sh:"Alta Temporada · 15 Dez – 15 Abr",
-  sl_hint:"A partir de $45/dia",sh_hint:"A partir de $60/dia",
   c_co:"Compacto · Econômico",c_co_b:"Essenciais da Ilha",c_co_i:"Ideal para casais e viajantes solo",
   c_se:"Sedã · Conforto",c_se_b:"Conforto Executivo",c_se_i:"Ideal para negócios e casais",
   c_su:"SUV",c_su_b:"SUV Premium",c_su_i:"Ideal para famílias e grupos",
@@ -2237,6 +2236,7 @@ pt:{
   pr_lsu_hi:"A partir de <strong>$155</strong>/dia",
   pr_je_hi:"A partir de <strong>$190</strong>/dia",
   pr_va_hi:"A partir de <strong>$145</strong>/dia",
+  usd_note:"Todos os preços em dólares americanos. Aceitamos todos os principais cartões de crédito; cartões estrangeiros podem incorrer na taxa de conversão do seu banco.",
   bn_li:"Mínimo 3 dias &middot; Entrega grátis &middot; Quilometragem ilimitada",
   cc_t:"“Não sabe qual veículo se encaixa nos seus planos?”",
   cc_s:"Nossa equipe no WhatsApp ajuda você a escolher o carro perfeito para sua experiência em Aruba.",
