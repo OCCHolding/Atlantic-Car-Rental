@@ -1184,11 +1184,12 @@ input[type="date"]::-webkit-datetime-edit-text {
         <div class="qb-label" data-t="f_vh">Vehicle</div>
         <select class="qb-input" id="qv" style="appearance:none">
           <option value="" data-t="fv0">Select type</option>
-          <option>Compact &ndash;  </option>
-          <option>Sedan &ndash;  </option>
-          <option>SUV</option>
-          <option>Jeep  4x4</option>
-          <option>SUV / Van &ndash;  </option>
+          <option value="compact" data-t="fv_co">Compact</option>
+          <option value="sedan" data-t="fv_se">Sedan</option>
+          <option value="suv" data-t="fv_su">SUV</option>
+          <option value="large-suv" data-t="fv_lsu">Large SUV</option>
+          <option value="jeep-4x4" data-t="fv_je">Jeep 4x4</option>
+          <option value="van" data-t="fv_va">Van</option>
         </select>
       </div>
       <button class="qb-btn" onclick="qbSubmit()" data-t="n_ct">Reservation Request</button>
@@ -1652,12 +1653,12 @@ input[type="date"]::-webkit-datetime-edit-text {
       <div class="fg"><label data-t="f_vh">Vehicle</label>
         <select id="fv">
           <option value="" data-t="fv0">Select vehicle type</option>
-          <option>Compact</option>
-          <option>Sedan</option>
-          <option>SUV</option>
-          <option>Large SUV</option>
-          <option>Jeep 4x4</option>
-          <option>Van</option>
+          <option value="compact" data-t="fv_co">Compact</option>
+          <option value="sedan" data-t="fv_se">Sedan</option>
+          <option value="suv" data-t="fv_su">SUV</option>
+          <option value="large-suv" data-t="fv_lsu">Large SUV</option>
+          <option value="jeep-4x4" data-t="fv_je">Jeep 4x4</option>
+          <option value="van" data-t="fv_va">Van</option>
         </select>
       </div>
       <div class="fg"><label data-t="f_pl">Pickup Location</label>
@@ -1857,6 +1858,7 @@ en:{
   f_pk:"Pickup Date",f_rt:"Return Date",f_vh:"Vehicle",f_pl:"Pickup Location",
   f_air:"Aruba Airport (Queen Beatrix International)",f_hd:"Hotel / Villa Delivery",
   f_nt:"Special Requests",fv0:"Select vehicle type",
+  fv_co:"Compact",fv_se:"Sedan",fv_su:"SUV",fv_lsu:"Large SUV",fv_je:"Jeep 4x4",fv_va:"Van",
   ft_hd:"No payment required to reserve",
   ft_bd:"We confirm by WhatsApp within 1 hour. Need instant help? <a href='https://wa.me/2975931982' target='_blank'>Message us now</a>",
   f_sb:"Send Reservation Request",
@@ -2000,6 +2002,7 @@ es:{
   f_pk:"Fecha de Recogida",f_rt:"Fecha de Devolución",f_vh:"Vehículo",f_pl:"Lugar de Recogida",
   f_air:"Aeropuerto de Aruba (Queen Beatrix)",f_hd:"Entrega en Hotel / Villa",
   f_nt:"Solicitudes Especiales",fv0:"Selecciona el tipo",
+  fv_co:"Compacto",fv_se:"Sedán",fv_su:"SUV",fv_lsu:"SUV Grande",fv_je:"Jeep 4x4",fv_va:"Van",
   ft_hd:"Sin pago requerido para reservar",
   ft_bd:"Confirmamos por WhatsApp en 1 hora. ¿Necesita ayuda inmediata? <a href='https://wa.me/2975931982' target='_blank'>Escríbanos</a>",
   f_sb:"Enviar Solicitud de Reserva",
@@ -2143,6 +2146,7 @@ nl:{
   f_pk:"Ophaaldatum",f_rt:"Retourdatum",f_vh:"Voertuig",f_pl:"Ophaallocatie",
   f_air:"Aruba Airport (Queen Beatrix International)",f_hd:"Hotel / Villa Bezorging",
   f_nt:"Speciale Verzoeken",fv0:"Selecteer type",
+  fv_co:"Compact",fv_se:"Sedan",fv_su:"SUV",fv_lsu:"Grote SUV",fv_je:"Jeep 4x4",fv_va:"Van",
   ft_hd:"Geen betaling vereist voor reservering",
   ft_bd:"We bevestigen via WhatsApp binnen 1 uur. <a href='https://wa.me/2975931982' target='_blank'>Direct berichten</a>",
   f_sb:"Stuur Reserveringsverzoek",
@@ -2286,6 +2290,7 @@ pt:{
   f_pk:"Data de Retirada",f_rt:"Data de Devolução",f_vh:"Veículo",f_pl:"Local de Retirada",
   f_air:"Aeroporto de Aruba (Queen Beatrix)",f_hd:"Entrega em Hotel / Villa",
   f_nt:"Pedidos Especiais",fv0:"Selecione o tipo",
+  fv_co:"Compacto",fv_se:"Sedan",fv_su:"SUV",fv_lsu:"SUV Grande",fv_je:"Jeep 4x4",fv_va:"Van",
   ft_hd:"Sem pagamento necessário para reservar",
   ft_bd:"Confirmamos via WhatsApp em 1 hora. <a href='https://wa.me/2975931982' target='_blank'>Mensagem direta</a>",
   f_sb:"Enviar Solicitação de Reserva",
