@@ -2482,7 +2482,8 @@ function doSub() {
   const fp  = document.getElementById('fp').value.trim();
   const fpk = document.getElementById('fpk').value;
   const frt = document.getElementById('frt').value;
-  const fv  = document.getElementById('fv').value;
+  const fvEl = document.getElementById('fv');
+  const fv  = fvEl.options[fvEl.selectedIndex].text;
   const fpl = document.getElementById('fpl').value;
   const fn  = document.getElementById('fn').value.trim();
   if (!ff || !fpk || !frt || !fv) {
