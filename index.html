@@ -35,8 +35,8 @@
    TOKENS — DARK PRESTIGE PALETTE
 ═══════════════════════════════ */
 :root{
-  --ink:   #0F172A;
-  --ink-2: #1E293B;
+  --ink:   #0A0A0A;
+  --ink-2: #1A1A1A;
   --ink-3: #161616;
   --ink-4: #222222;
   --ink-5: #383838;
@@ -366,18 +366,18 @@ a{color:inherit;text-decoration:none}
 .fl-desc{font-size:.88rem;font-weight:300;line-height:1.82;color:var(--body)}
 
 .stog-row{
-  display:flex;gap:0;margin-bottom:52px;
-  border:1px solid var(--ink-4);border-radius:var(--r);
-  overflow:hidden;width:fit-content;
+  display:flex;gap:12px;margin-bottom:52px;flex-wrap:wrap;
 }
 .stog{
-  font-size:.68rem;font-weight:500;letter-spacing:.08em;
-  padding:11px 24px;background:transparent;color:var(--muted);
-  border:none;font-family:'Outfit',sans-serif;
-  transition:all .2s;cursor:pointer;
+  display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;
+  padding:11px 22px;border-radius:var(--r);
+  background:transparent;color:#C9A961;border:1px solid #C9A961;
+  font-family:'Outfit',sans-serif;cursor:pointer;text-align:left;
+  transition:background 200ms ease,color 200ms ease,border-color 200ms ease;
 }
-.stog.on{background:var(--gold);color:var(--ink);font-weight:600}
-.stog:not(.on):hover{color:var(--white);background:var(--ink-4)}
+.stog.on{background:#C9A961;color:#0A0A0A;border-color:#C9A961}
+.stog-label{font-size:.68rem;font-weight:500;letter-spacing:.08em}
+.stog-hint{font-size:.58rem;font-weight:400;opacity:.65;letter-spacing:.04em}
 
 /* luxury car cards — large cinematic */
 .fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -398,7 +398,7 @@ a{color:inherit;text-decoration:none}
 
 .car-img-wrap{
   height:220px;overflow:hidden;position:relative;
-  background:linear-gradient(145deg,#1E293B,#0F172A);
+  background:linear-gradient(145deg,#1A1A1A,#0A0A0A);
   display:flex;align-items:center;justify-content:center;
 }
 .car-img-wrap::after{
@@ -478,7 +478,7 @@ a{color:inherit;text-decoration:none}
    CONCIERGE STRIP
 ═══════════════════════════════ */
 #concierge{
-  background:var(--gold);
+  background:#0A0A0A;
   padding:0 52px;
 }
 .cc-inner{
@@ -488,19 +488,19 @@ a{color:inherit;text-decoration:none}
 .cc-txt{
   font-family:'Cormorant',serif;
   font-size:1.6rem;font-weight:500;font-style:italic;
-  color:var(--ink);
+  color:var(--white);
 }
 .cc-sub{
-  font-size:.72rem;font-weight:400;color:rgba(8,8,8,.65);margin-top:3px;
+  font-size:.72rem;font-weight:400;color:var(--muted);margin-top:3px;
 }
 .cc-cta{
   display:inline-flex;align-items:center;gap:10px;
   font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--ink);border:2px solid var(--ink);
+  color:var(--gold);border:2px solid var(--gold);
   padding:13px 28px;border-radius:var(--r);
   transition:all .25s;white-space:nowrap;
 }
-.cc-cta:hover{background:var(--ink);color:var(--gold)}
+.cc-cta:hover{background:var(--gold);color:var(--ink)}
 
 /* ═══════════════════════════════
    STANDARDS — TWO COLUMN STICKY
@@ -543,60 +543,6 @@ a{color:inherit;text-decoration:none}
   text-transform:uppercase;color:var(--white);margin-bottom:10px;
 }
 .des-b{font-size:.75rem;font-weight:300;line-height:1.72;color:var(--body)}
-
-/* ═══════════════════════════════
-   PRICING
-═══════════════════════════════ */
-#pricing{background:var(--ink)}
-.ptab-row{
-  display:flex;gap:0;margin-bottom:36px;
-  border:1px solid var(--ink-4);border-radius:var(--r);
-  overflow:hidden;width:fit-content;
-}
-.ptab{
-  font-size:.68rem;font-weight:500;letter-spacing:.08em;
-  padding:11px 26px;background:transparent;color:var(--muted);
-  border:none;font-family:'Outfit',sans-serif;transition:all .2s;cursor:pointer;
-}
-.ptab.on{background:var(--gold);color:var(--ink);font-weight:600}
-.ptab:not(.on):hover{color:var(--white);background:var(--ink-4)}
-.ppanel{display:none}.ppanel.on{display:block}
-.pnote{font-size:.76rem;font-weight:300;color:var(--muted);margin-bottom:40px;line-height:1.7}
-.pnote a{color:var(--gold);border-bottom:1px solid var(--gold-d)}
-
-.ptbl{width:100%;border-collapse:collapse}
-.ptbl th{
-  font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--muted);padding:14px 18px;text-align:left;
-  border-bottom:1px solid var(--ink-4);background:var(--ink-2);
-}
-.ptbl td{border-bottom:1px solid var(--ink-4);vertical-align:middle;padding:0}
-.ptbl tr:last-child td{border-bottom:none}
-.ptbl tr:hover td{background:rgba(200,169,110,.03)}
-
-.prow{display:flex;align-items:center}
-.prowimg{
-  width:130px;height:74px;flex-shrink:0;
-  background:var(--ink-3);overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
-}
-.prowimg img{width:124px;height:68px;object-fit:contain;padding:4px}
-.prowinfo{padding:14px 20px;flex:1}
-.prowname{font-family:'Cormorant',serif;font-size:1.5rem;font-weight:500;color:var(--white);margin-bottom:0;letter-spacing:.01em}
-.prowsub{font-size:.6rem;color:var(--muted)}
-.p1d,.p3d,.p7d{padding:14px 16px;font-size:.9rem;font-weight:500;color:var(--gold-l);white-space:nowrap}
-.pbadge{
-  display:inline-block;font-size:.44rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--ink);background:var(--gold);padding:3px 8px;border-radius:2px;
-  margin-left:8px;vertical-align:middle;
-}
-.pres{padding:14px 16px}
-.presl{
-  font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--gold);border-bottom:1px solid var(--gold-d);padding-bottom:2px;
-  transition:color .2s,border-color .2s;white-space:nowrap;
-}
-.presl:hover{color:var(--gold-l);border-color:var(--gold-l)}
 
 /* ═══════════════════════════════
    ARUBA EDITORIAL
@@ -899,7 +845,7 @@ footer{background:var(--ink-2);border-top:1px solid var(--ink-4);padding:0 52px}
 }
 
 #chat-badge{position:absolute;top:-3px;right:-3px;background:#e74c3c;color:#fff;font-size:.5rem;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #09090B}
-#chat-win{position:fixed;bottom:100px;right:30px;z-index:9998;width:340px;height:500px;background:#1E293B;border:1px solid rgba(200,169,110,.25);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;flex-direction:column;overflow:hidden}
+#chat-win{position:fixed;bottom:100px;right:30px;z-index:9998;width:340px;height:500px;background:#1A1A1A;border:1px solid rgba(200,169,110,.25);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;flex-direction:column;overflow:hidden}
 #chat-win.open{display:flex}
 .ch-head{background:linear-gradient(135deg,#A8874C,#C8A96E);padding:14px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0}
 .ch-head-txt{flex:1}
@@ -1152,7 +1098,6 @@ input[type="date"]::-webkit-datetime-edit-text {
   </a>
   <ul class="nlinks">
     <li><a href="#fleet"    data-t="n_fl">Fleet</a></li>
-    <li><a href="#pricing"  data-t="n_pr">Pricing</a></li>
     <li><a href="#aruba"    data-t="n_ar">Explore Aruba</a></li>
     <li><a href="#about"    data-t="n_ab">About</a></li>
   </ul>
@@ -1260,8 +1205,14 @@ input[type="date"]::-webkit-datetime-edit-text {
       <h2 class="sh rv d1" data-t="fl_h">Curated Vehicles<br/><em>for Every Journey</em></h2>
       <div class="rule rv d2"></div>
       <div class="stog-row rv d3">
-        <button class="stog on" id="flo" onclick="setFS('lo')" data-t="sl">Low Season &nbsp;&middot;&nbsp; Apr 16 &ndash; Dec 14</button>
-        <button class="stog"    id="fhi" onclick="setFS('hi')" data-t="sh">High Season &nbsp;&middot;&nbsp; Dec 15 &ndash; Apr 15</button>
+        <button class="stog on" id="flo" onclick="setFS('lo')">
+          <span class="stog-label" data-t="sl">Low Season &nbsp;&middot;&nbsp; Apr 16 &ndash; Dec 14</span>
+          <span class="stog-hint" data-t="sl_hint">From $45/day</span>
+        </button>
+        <button class="stog" id="fhi" onclick="setFS('hi')">
+          <span class="stog-label" data-t="sh">High Season &nbsp;&middot;&nbsp; Dec 15 &ndash; Apr 15</span>
+          <span class="stog-hint" data-t="sh_hint">From $60/day</span>
+        </button>
       </div>
     </div>
     <p class="fl-desc rv d2" data-t="fl_sb">Each vehicle is selected, maintained, and delivered wherever you are in Aruba. Unlimited island mileage included.</p>
@@ -1271,13 +1222,13 @@ input[type="date"]::-webkit-datetime-edit-text {
 
     <div class="ccard rv" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       <div class="car-img-wrap">
-        <img class="car-img" src="https://images.unsplash.com/photo-1604410869154-3c16714cd476?w=800&q=85&auto=format&fit=crop" onerror="this.parentElement.style.background='#1E293B'" alt="Compact"/>
+        <img class="car-img" src="https://images.unsplash.com/photo-1604410869154-3c16714cd476?w=800&q=85&auto=format&fit=crop" onerror="this.parentElement.style.background='#1A1A1A'" alt="Compact"/>
       </div>
       <div class="ccard-cta-bar"><div class="ccard-cta-txt" data-t="fl_rs">Reservation Request</div></div>
       <div class="ccard-body">
         <div class="ccard-category" data-t="c_co">Compact &nbsp;&middot;&nbsp; Economy</div>
         <div class="ccard-ideal" data-t="c_co_i">Ideal for couples &amp; solo travelers</div>
-        <div class="ccard-price" data-t="pr_co">From <strong>$45</strong>/day</div>
+        <div class="ccard-price" data-t="pr_co" data-t-hi="pr_co_hi">From <strong>$45</strong>/day</div>
         <div class="ccard-benefits" data-t="bn_li">3-day minimum &nbsp;&middot;&nbsp; Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
         <div class="ccard-specs">
           <span class="cspec">5 seats</span>
@@ -1289,13 +1240,13 @@ input[type="date"]::-webkit-datetime-edit-text {
     <div class="ccard rv d1" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       <div class="car-img-wrap">
         
-        <img class="car-img" src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=85&auto=format&fit=crop" onerror="this.parentElement.style.background='#1E293B'" alt=" "/>
+        <img class="car-img" src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=85&auto=format&fit=crop" onerror="this.parentElement.style.background='#1A1A1A'" alt=" "/>
       </div>
       <div class="ccard-cta-bar"><div class="ccard-cta-txt" data-t="fl_rs">Reservation Request</div></div>
       <div class="ccard-body">
         <div class="ccard-category" data-t="c_se">Sedan &nbsp;&middot;&nbsp; Comfort</div>
         <div class="ccard-ideal" data-t="c_se_i">Ideal for business &amp; couples</div>
-        <div class="ccard-price" data-t="pr_se">From <strong>$60</strong>/day</div>
+        <div class="ccard-price" data-t="pr_se" data-t-hi="pr_se_hi">From <strong>$60</strong>/day</div>
         <div class="ccard-benefits" data-t="bn_li">3-day minimum &nbsp;&middot;&nbsp; Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
         <div class="ccard-specs">
           <span class="cspec">5 seats</span>
@@ -1307,13 +1258,13 @@ input[type="date"]::-webkit-datetime-edit-text {
     <div class="ccard rv d2" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       <div class="car-img-wrap">
         
-        <img class="car-img" src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=85&auto=format&fit=crop" onerror="this.parentElement.style.background='#1E293B'" alt="SUV"/>
+        <img class="car-img" src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=85&auto=format&fit=crop" onerror="this.parentElement.style.background='#1A1A1A'" alt="SUV"/>
       </div>
       <div class="ccard-cta-bar"><div class="ccard-cta-txt" data-t="fl_rs">Reservation Request</div></div>
       <div class="ccard-body">
         <div class="ccard-category" data-t="c_su">SUV &nbsp;&middot;&nbsp; Spacious</div>
         <div class="ccard-ideal" data-t="c_su_i">Ideal for families &amp; groups</div>
-        <div class="ccard-price" data-t="pr_su">From <strong>$85</strong>/day</div>
+        <div class="ccard-price" data-t="pr_su" data-t-hi="pr_su_hi">From <strong>$85</strong>/day</div>
         <div class="ccard-benefits" data-t="bn_li">3-day minimum &nbsp;&middot;&nbsp; Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
         <div class="ccard-specs">
           <span class="cspec">5 seats</span>
@@ -1324,13 +1275,13 @@ input[type="date"]::-webkit-datetime-edit-text {
 
     <div class="ccard rv d3" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       <div class="car-img-wrap">
-        <img class="car-img" src="https://images.unsplash.com/photo-1776723210515-c7fad08ff3cd?w=800&q=85&auto=format&fit=crop" onerror="this.parentElement.style.background='#1E293B'" alt="Large SUV"/>
+        <img class="car-img" src="https://images.unsplash.com/photo-1776723210515-c7fad08ff3cd?w=800&q=85&auto=format&fit=crop" onerror="this.parentElement.style.background='#1A1A1A'" alt="Large SUV"/>
       </div>
       <div class="ccard-cta-bar"><div class="ccard-cta-txt" data-t="fl_rs">Reservation Request</div></div>
       <div class="ccard-body">
         <div class="ccard-category" data-t="c_lsu">Large SUV</div>
         <div class="ccard-ideal" data-t="c_lsu_i">Ideal for groups &amp; extended families</div>
-        <div class="ccard-price" data-t="pr_lsu">From <strong>$110</strong>/day</div>
+        <div class="ccard-price" data-t="pr_lsu" data-t-hi="pr_lsu_hi">From <strong>$110</strong>/day</div>
         <div class="ccard-benefits" data-t="bn_li">3-day minimum &nbsp;&middot;&nbsp; Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
         <div class="ccard-specs">
           <span class="cspec">7 seats</span>
@@ -1342,13 +1293,13 @@ input[type="date"]::-webkit-datetime-edit-text {
     <div class="ccard rv d4" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       <div class="car-img-wrap">
 
-        <img class="car-img" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=85&auto=format&fit=crop" onerror="this.parentElement.style.background='#1E293B'" alt="Jeep 4x4"/>
+        <img class="car-img" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=85&auto=format&fit=crop" onerror="this.parentElement.style.background='#1A1A1A'" alt="Jeep 4x4"/>
       </div>
       <div class="ccard-cta-bar"><div class="ccard-cta-txt" data-t="fl_rs">Reservation Request</div></div>
       <div class="ccard-body">
         <div class="ccard-category" data-t="c_je">Jeep 4x4 &nbsp;&middot;&nbsp; Adventure</div>
         <div class="ccard-ideal" data-t="c_je_i">Ideal for off-road &amp; adventure</div>
-        <div class="ccard-price" data-t="pr_je">From <strong>$130</strong>/day</div>
+        <div class="ccard-price" data-t="pr_je" data-t-hi="pr_je_hi">From <strong>$130</strong>/day</div>
         <div class="ccard-benefits" data-t="bn_li">3-day minimum &nbsp;&middot;&nbsp; Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
         <div class="ccard-specs">
           <span class="cspec">5 seats</span>
@@ -1359,13 +1310,13 @@ input[type="date"]::-webkit-datetime-edit-text {
 
     <div class="ccard rv d5" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       <div class="car-img-wrap">
-        <img class="car-img" src="https://images.unsplash.com/photo-1746985094087-e703bf52c71b?w=800&q=85&auto=format&fit=crop" onerror="this.parentElement.style.background='#1E293B'" alt="Van"/>
+        <img class="car-img" src="https://images.unsplash.com/photo-1746985094087-e703bf52c71b?w=800&q=85&auto=format&fit=crop" onerror="this.parentElement.style.background='#1A1A1A'" alt="Van"/>
       </div>
       <div class="ccard-cta-bar"><div class="ccard-cta-txt" data-t="fl_rs">Reservation Request</div></div>
       <div class="ccard-body">
         <div class="ccard-category" data-t="c_va">Van</div>
         <div class="ccard-ideal" data-t="c_va_i">Ideal for groups &amp; families</div>
-        <div class="ccard-price" data-t="pr_va">From <strong>$110</strong>/day</div>
+        <div class="ccard-price" data-t="pr_va" data-t-hi="pr_va_hi">From <strong>$110</strong>/day</div>
         <div class="ccard-benefits" data-t="bn_li">3-day minimum &nbsp;&middot;&nbsp; Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
         <div class="ccard-specs">
           <span class="cspec">7+ seats</span>
@@ -1376,6 +1327,35 @@ input[type="date"]::-webkit-datetime-edit-text {
 
   </div>
 </section>
+
+<!-- CONCIERGE STRIP -->
+<div id="concierge">
+  <div class="cc-inner">
+    <div>
+      <div class="cc-txt" data-t="cc_t">"Not sure which vehicle fits your plans?"</div>
+      <div class="cc-sub" data-t="cc_s">Our team on WhatsApp will help you choose the perfect car for your Aruba experience.</div>
+    </div>
+    <a href="https://wa.me/2975931982" target="_blank" class="cc-cta" data-t="cc_btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Concierge
+    </a>
+  </div>
+</div>
+
+<!-- BENEFITS -->
+<section id="benefits" class="sec sec-alt">
+  <div style="max-width:640px;margin:0 auto">
+    <ul class="bcard-list rv">
+      <li><span class="bc-dot"></span><span data-t="bn1">Delivery anywhere on the island</span></li>
+      <li><span class="bc-dot"></span><span data-t="bn2">Unlimited mileage</span></li>
+      <li><span class="bc-dot"></span><span data-t="bn3">Flexible payment (cash, card, bank transfer, crypto)</span></li>
+      <li><span class="bc-dot"></span><span data-t="bn4">All vehicles automatic</span></li>
+      <li><span class="bc-dot"></span><span data-t="bn5">24/7 support</span></li>
+    </ul>
+  </div>
+</section>
+
+
 
 <!-- OCC BLACK CARD -->
 <section class="sec" style="background:linear-gradient(135deg,#0a0a0a 0%,#1a1a1a 100%);position:relative;overflow:hidden">
@@ -1410,59 +1390,6 @@ input[type="date"]::-webkit-datetime-edit-text {
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- CONCIERGE STRIP -->
-<div id="concierge">
-  <div class="cc-inner">
-    <div>
-      <div class="cc-txt" data-t="cc_t">"Not sure which vehicle fits your plans?"</div>
-      <div class="cc-sub" data-t="cc_s">Our team on WhatsApp will help you choose the perfect car for your Aruba experience.</div>
-    </div>
-    <a href="https://wa.me/2975931982" target="_blank" class="cc-cta" data-t="cc_btn">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      WhatsApp Concierge
-    </a>
-  </div>
-</div>
-
-<!-- BENEFITS -->
-<section id="benefits" class="sec sec-alt">
-  <div style="max-width:640px;margin:0 auto">
-    <ul class="bcard-list rv">
-      <li><span class="bc-dot"></span><span data-t="bn1">Delivery anywhere on the island</span></li>
-      <li><span class="bc-dot"></span><span data-t="bn2">Unlimited mileage</span></li>
-      <li><span class="bc-dot"></span><span data-t="bn3">Flexible payment (cash, card, bank transfer, crypto)</span></li>
-      <li><span class="bc-dot"></span><span data-t="bn4">All vehicles automatic</span></li>
-      <li><span class="bc-dot"></span><span data-t="bn5">24/7 support</span></li>
-    </ul>
-  </div>
-</section>
-
-
-
-<!-- PRICING -->
-<section id="pricing" class="sec">
-  <div style="max-width:520px;margin-bottom:24px">
-    <div class="tag rv" data-t="pr_tg">Rates</div>
-    <h2 class="sh rv d1" data-t="pr_h">Transparent Pricing,<br/><em>Two Seasons</em></h2>
-    <div class="rule rv d2"></div>
-  </div>
-  <p class="pnote rv" data-t="pr_nt">All rates include unlimited mileage within Aruba. Prices in USD. <a href="#contact" data-t="pr_ct">Contact us</a> for weekly and group rates.</p>
-
-  <div class="rv">
-    <table class="ptbl">
-      <thead><tr><th data-t="th_v">Vehicle</th><th data-t="th_lo">Low Season&nbsp;/day</th><th data-t="th_hi">High Season&nbsp;/day</th><th></th></tr></thead>
-      <tbody>
-        <tr><td><div class="prow"><div class="prowimg"><img src="https://images.unsplash.com/photo-1604410869154-3c16714cd476?w=800&q=85&auto=format&fit=crop" onerror="this.style.display='none'" alt=""/></div><div class="prowinfo"><div class="prowname" data-t="c_co">Compact</div></div></div></td><td class="p1d">$45</td><td class="p1d">$60</td><td class="pres"><a href="#contact" class="presl" data-t="pr_rs">Reservation Request</a></td></tr>
-        <tr><td><div class="prow"><div class="prowimg"><img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=85&auto=format&fit=crop" onerror="this.style.display='none'" alt=""/></div><div class="prowinfo"><div class="prowname" data-t="c_se">Sedan</div></div></div></td><td class="p1d">$60</td><td class="p1d">$80</td><td class="pres"><a href="#contact" class="presl" data-t="pr_rs">Reservation Request</a></td></tr>
-        <tr><td><div class="prow"><div class="prowimg"><img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=85&auto=format&fit=crop" onerror="this.style.display='none'" alt="SUV"/></div><div class="prowinfo"><div class="prowname" data-t="c_su">SUV</div></div></div></td><td class="p1d">$85</td><td class="p1d">$110</td><td class="pres"><a href="#contact" class="presl" data-t="pr_rs">Reservation Request</a></td></tr>
-        <tr><td><div class="prow"><div class="prowimg"><img src="https://images.unsplash.com/photo-1776723210515-c7fad08ff3cd?w=800&q=85&auto=format&fit=crop" onerror="this.style.display='none'" alt="Large SUV"/></div><div class="prowinfo"><div class="prowname" data-t="c_lsu">Large SUV</div></div></div></td><td class="p1d">$110</td><td class="p1d">$155</td><td class="pres"><a href="#contact" class="presl" data-t="pr_rs">Reservation Request</a></td></tr>
-        <tr><td><div class="prow"><div class="prowimg"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=85&auto=format&fit=crop" onerror="this.style.display='none'" alt="Jeep"/></div><div class="prowinfo"><div class="prowname">Jeep 4x4</div></div></div></td><td class="p1d">$130</td><td class="p1d">$190</td><td class="pres"><a href="#contact" class="presl" data-t="pr_rs">Reservation Request</a></td></tr>
-        <tr><td><div class="prow"><div class="prowimg"><img src="https://images.unsplash.com/photo-1746985094087-e703bf52c71b?w=800&q=85&auto=format&fit=crop" onerror="this.style.display='none'" alt="Van"/></div><div class="prowinfo"><div class="prowname" data-t="c_va">Van</div></div></div></td><td class="p1d">$110</td><td class="p1d">$145</td><td class="pres"><a href="#contact" class="presl" data-t="pr_rs">Reservation Request</a></td></tr>
-      </tbody>
-    </table>
   </div>
 </section>
 
@@ -1796,7 +1723,6 @@ input[type="date"]::-webkit-datetime-edit-text {
       <div class="ftch" data-t="ft_nv">Navigate</div>
       <ul class="ftlinks">
         <li><a href="#fleet"   data-t="n_fl">Fleet</a></li>
-        <li><a href="#pricing" data-t="n_pr">Pricing</a></li>
         <li><a href="#aruba"   data-t="n_ar">Explore Aruba</a></li>
         <li><a href="#about"   data-t="n_ab">About</a></li>
         <li><a href="#contact" data-t="n_ct">Contact</a></li>
@@ -1848,7 +1774,7 @@ input[type="date"]::-webkit-datetime-edit-text {
 /* ── TRANSLATIONS ── */
 const T = {
 en:{
-  n_fl:"Fleet",n_pr:"Pricing",n_ar:"Explore Aruba",n_rv:"Reviews",n_ab:"About",n_ct:"Reservation Request",
+  n_fl:"Fleet",n_ar:"Explore Aruba",n_rv:"Reviews",n_ab:"About",n_ct:"Reservation Request",
   h_t1:"Discover Aruba",h_t2:"Without",h_t3:"Limits",
   h_sb:"Curated vehicles. We deliver anywhere. Your private concierge for the island.",
   h_c1:"Reservation Request",h_c2:"Explore Fleet",
@@ -1858,6 +1784,7 @@ en:{
   fl_tg:"Our Fleet",fl_h:"Curated Vehicles<br/><em>for Every Journey</em>",
   fl_sb:"Each vehicle is selected, maintained, and delivered wherever you are in Aruba. Unlimited island mileage included.",
   sl:"Low Season · Apr 16 – Dec 14",sh:"High Season · Dec 15 – Apr 15",
+  sl_hint:"From $45/day",sh_hint:"From $60/day",
   c_co:"Compact · Economy",c_co_b:"Island Essentials",c_co_i:"Ideal for couples & solo travelers",
   c_se:"Sedan · Comfort",c_se_b:"Executive Comfort",c_se_i:"Ideal for business & couples",
   c_su:"SUV",c_su_b:"Premium SUV",c_su_i:"Ideal for families & groups",
@@ -1871,6 +1798,12 @@ en:{
   pr_je:"From <strong>$130</strong>/day",
   pr_lsu:"From <strong>$110</strong>/day",
   pr_va:"From <strong>$110</strong>/day",
+  pr_co_hi:"From <strong>$60</strong>/day",
+  pr_se_hi:"From <strong>$80</strong>/day",
+  pr_su_hi:"From <strong>$110</strong>/day",
+  pr_lsu_hi:"From <strong>$155</strong>/day",
+  pr_je_hi:"From <strong>$190</strong>/day",
+  pr_va_hi:"From <strong>$145</strong>/day",
   bn_li:"3-day minimum &middot; Free delivery &middot; Unlimited mileage",
   cc_t:"“Not sure which vehicle fits your plans?”",
   cc_s:"Our team on WhatsApp will help you choose the perfect car for your Aruba experience.",
@@ -1891,9 +1824,6 @@ en:{
   df2t:"Adventurers",df2b:"The Natural Pool. The rugged north coast. Arikok at dawn. Only the Jeep  gets you there.",
   df3t:"Families",df3b:"Space, comfort, and safety for everyone. Our van handles the whole crew with ease.",
   df4t:"VIP Travelers",df4b:"Private delivery anywhere. Personal concierge. Curated island routes. This is how Aruba should feel.",
-  pr_tg:"Rates",pr_h:"Transparent Pricing,<br/><em>Two Seasons</em>",
-  pr_nt:"All rates include unlimited mileage within Aruba. Prices in USD.",pr_ct:"Contact us",
-  th_v:"Vehicle",th_1:"1 Day",th_3:"3 Days",th_7:"7 Days",pb:"Popular",pr_rs:"Reservation Request",
   ar_tg:"Explore Aruba",ar_h:"Aruba Beyond<br/><em>the Postcard</em>",
   ar_q:"“Aruba is not just a destination. In the right vehicle, it becomes an experience.”",
   ar_b:"Aruba is 32 kilometres of <em>volcanic cliffs, hidden coves, desert trails and world-class beaches</em> that most visitors never see beyond their resort pool.",
@@ -1951,8 +1881,6 @@ en:{
   ins_3t:"Theft & Roadside",
   ins_4n:"Full Cover",
   ad_h:"On-Island <em>Add-ons</em>",
-  th_lo:"Low Season&nbsp;/day",
-  th_hi:"High Season&nbsp;/day",
   ch_wa:"Talk to a human on WhatsApp",
   bc_tg:"Selective",
   bc_cta:"Join OCC Black Card",
@@ -1991,7 +1919,7 @@ en:{
   f_eml:"Questions? Email <a href='mailto:info@atlanticcarrentalaruba.com' style='color:var(--gold);text-decoration:none'>info@atlanticcarrentalaruba.com</a> or WhatsApp us."
 },
 es:{
-  n_fl:"Flota",n_pr:"Tarifas",n_ar:"Explorar Aruba",n_rv:"Opiniones",n_ab:"Nosotros",n_ct:"Reservar Ahora",
+  n_fl:"Flota",n_ar:"Explorar Aruba",n_rv:"Opiniones",n_ab:"Nosotros",n_ct:"Reservar Ahora",
   h_t1:"Descubre Aruba",h_t2:"Sin",h_t3:"Límites",
   h_sb:"Vehiculos curados. Entrega en aeropuerto. Tu concierge privado para la isla.",
   h_c1:"Reserva Tu Experiencia",h_c2:"Ver Flota",
@@ -2001,6 +1929,7 @@ es:{
   fl_tg:"Nuestra Flota",fl_h:"Vehiculos Curados<br/><em>Para Cada Viaje</em>",
   fl_sb:"Cada vehículo es seleccionado, mantenido y entregado donde sea que esté en Aruba. Kilometraje ilimitado incluido.",
   sl:"Temporada Baja · 16 Abr – 14 Dic",sh:"Temporada Alta · 15 Dic – 15 Abr",
+  sl_hint:"Desde $45/día",sh_hint:"Desde $60/día",
   c_co:"Compacto · Económico",c_co_b:"Esenciales de Isla",c_co_i:"Ideal para parejas y viajeros solos",
   c_se:"Sedán · Confort",c_se_b:"Confort Ejecutivo",c_se_i:"Ideal para negocios y parejas",
   c_su:"SUV",c_su_b:"SUV Premium",c_su_i:"Ideal para familias y grupos",
@@ -2014,6 +1943,12 @@ es:{
   pr_je:"Desde <strong>$130</strong>/día",
   pr_lsu:"Desde <strong>$110</strong>/día",
   pr_va:"Desde <strong>$110</strong>/día",
+  pr_co_hi:"Desde <strong>$60</strong>/día",
+  pr_se_hi:"Desde <strong>$80</strong>/día",
+  pr_su_hi:"Desde <strong>$110</strong>/día",
+  pr_lsu_hi:"Desde <strong>$155</strong>/día",
+  pr_je_hi:"Desde <strong>$190</strong>/día",
+  pr_va_hi:"Desde <strong>$145</strong>/día",
   bn_li:"Mínimo 3 días &middot; Entrega gratuita &middot; Kilometraje ilimitado",
   cc_t:"“¿No sabe qué vehiculo se adapta a sus planes?”",
   cc_s:"Nuestro equipo en WhatsApp le ayudará a elegir el auto perfecto para su experiencia en Aruba.",
@@ -2034,9 +1969,6 @@ es:{
   df2t:"Aventureros",df2b:"El Natural Pool. La costa norte. Arikok al amanecer. Solo el Jeep  llega.",
   df3t:"Familias",df3b:"Espacio, confort y seguridad. El  de 7 plazas maneja a toda la familia.",
   df4t:"Viajeros VIP",df4b:"Entrega privada en aeropuerto. Concierge personal. Rutas curadas por la isla.",
-  pr_tg:"Tarifas",pr_h:"Precios Transparentes,<br/><em>Dos Temporadas</em>",
-  pr_nt:"Todas las tarifas incluyen kilometraje ilimitado en Aruba. Precios en USD.",pr_ct:"Contáctanos",
-  th_v:"Vehiculo",th_1:"1 Día",th_3:"3 Días",th_7:"7 Días",pb:"Popular",pr_rs:"Reservar",
   ar_tg:"Explorar Aruba",ar_h:"Aruba Más Allá<br/><em>del Postal</em>",
   ar_q:"“Aruba no es solo un destino. En el vehículo correcto, se convierte en una experiencia.”",
   ar_b:"Aruba son 32 kilómetros de <em>acantilados volcánicos, calas ocultas, senderos de desierto y playas</em> que la mayoría nunca ve más allá de su resort.",
@@ -2093,8 +2025,6 @@ es:{
   ins_3t:"Robo y asistencia",
   ins_4n:"Cobertura Total",
   ad_h:"Extras en la <em>Isla</em>",
-  th_lo:"Temporada baja&nbsp;/día",
-  th_hi:"Temporada alta&nbsp;/día",
   ch_wa:"Hablar con una persona por WhatsApp",
   bc_tg:"Selectivo",
   bc_cta:"Únete a OCC Black Card",
@@ -2133,7 +2063,7 @@ es:{
   f_eml:"¿Preguntas? Escríbenos a <a href='mailto:info@atlanticcarrentalaruba.com' style='color:var(--gold);text-decoration:none'>info@atlanticcarrentalaruba.com</a> o por WhatsApp."
 },
 nl:{
-  n_fl:"Vloot",n_pr:"Tarieven",n_ar:"Ontdek Aruba",n_rv:"Recensies",n_ab:"Over Ons",n_ct:"Nu Reserveren",
+  n_fl:"Vloot",n_ar:"Ontdek Aruba",n_rv:"Recensies",n_ab:"Over Ons",n_ct:"Nu Reserveren",
   h_t1:"Ontdek Aruba",h_t2:"Zonder",h_t3:"Grenzen",
   h_sb:"Gecureerde voertuigen. Luchthavenbezorging. Uw privé concierge voor het eiland.",
   h_c1:"Reserveer Uw Ervaring",h_c2:"Bekijk Vloot",
@@ -2143,6 +2073,7 @@ nl:{
   fl_tg:"Onze Vloot",fl_h:"Gecureerde Voertuigen<br/><em>Voor Elke Reis</em>",
   fl_sb:"Elk voertuig is geselecteerd, onderhouden en bezorgd waar u ook bent op Aruba. Onbeperkte kilometers inbegrepen.",
   sl:"Laagseizoen · 16 Apr – 14 Dec",sh:"Hoogseizoen · 15 Dec – 15 Apr",
+  sl_hint:"Vanaf $45/dag",sh_hint:"Vanaf $60/dag",
   c_co:"Compact · Economisch",c_co_b:"Eiland Essentials",c_co_i:"Ideaal voor stellen en solo reizigers",
   c_se:"Sedan · Comfort",c_se_b:"Executive Comfort",c_se_i:"Ideaal voor zakelijk en stellen",
   c_su:"SUV",c_su_b:"Premium SUV",c_su_i:"Ideaal voor families en groepen",
@@ -2156,6 +2087,12 @@ nl:{
   pr_je:"Vanaf <strong>$130</strong>/dag",
   pr_lsu:"Vanaf <strong>$110</strong>/dag",
   pr_va:"Vanaf <strong>$110</strong>/dag",
+  pr_co_hi:"Vanaf <strong>$60</strong>/dag",
+  pr_se_hi:"Vanaf <strong>$80</strong>/dag",
+  pr_su_hi:"Vanaf <strong>$110</strong>/dag",
+  pr_lsu_hi:"Vanaf <strong>$155</strong>/dag",
+  pr_je_hi:"Vanaf <strong>$190</strong>/dag",
+  pr_va_hi:"Vanaf <strong>$145</strong>/dag",
   bn_li:"Minimum 3 dagen &middot; Gratis bezorging &middot; Onbeperkte kilometers",
   cc_t:"“Weet u niet welk voertuig bij uw plannen past?”",
   cc_s:"Ons team op WhatsApp helpt u de perfecte auto kiezen voor uw Aruba-ervaring.",
@@ -2176,9 +2113,6 @@ nl:{
   df2t:"Avonturiers",df2b:"Het Natuurlijk Zwembad. De ruige noordkust. Arikok bij zonsopgang. Alleen de Jeep  komt er.",
   df3t:"Families",df3b:"Ruimte, comfort en veiligheid voor iedereen. De  van 7 personen verwerkt het hele gezin.",
   df4t:"VIP Reizigers",df4b:"Privé luchthavenbezorging. Persoonlijke concierge. Gecureerde eilandroutes.",
-  pr_tg:"Tarieven",pr_h:"Transparante Prijzen,<br/><em>Twee Seizoenen</em>",
-  pr_nt:"Alle tarieven inclusief onbeperkte km in Aruba. Prijzen in USD.",pr_ct:"Contact",
-  th_v:"Voertuig",th_1:"1 Dag",th_3:"3 Dagen",th_7:"7 Dagen",pb:"Populair",pr_rs:"Reserveren",
   ar_tg:"Ontdek Aruba",ar_h:"Aruba Voorbij<br/><em>de Ansichtkaart</em>",
   ar_q:"“Aruba is niet zomaar een bestemming. In het juiste voertuig wordt het een beleving.”",
   ar_b:"Aruba is 32 kilometer <em>vulkanische kliffen, verborgen baaien, woestijnpaden en stranden</em> die de meeste bezoekers nooit zien.",
@@ -2235,8 +2169,6 @@ nl:{
   ins_3t:"Diefstal & pechhulp",
   ins_4n:"Volledige dekking",
   ad_h:"Extra's op het <em>eiland</em>",
-  th_lo:"Laagseizoen&nbsp;/dag",
-  th_hi:"Hoogseizoen&nbsp;/dag",
   ch_wa:"Spreek met een medewerker via WhatsApp",
   bc_tg:"Selectief",
   bc_cta:"Word lid van OCC Black Card",
@@ -2275,7 +2207,7 @@ nl:{
   f_eml:"Vragen? Mail <a href='mailto:info@atlanticcarrentalaruba.com' style='color:var(--gold);text-decoration:none'>info@atlanticcarrentalaruba.com</a> of WhatsApp ons."
 },
 pt:{
-  n_fl:"Frota",n_pr:"Preços",n_ar:"Explorar Aruba",n_rv:"Avaliações",n_ab:"Sobre Nós",n_ct:"Reservar Agora",
+  n_fl:"Frota",n_ar:"Explorar Aruba",n_rv:"Avaliações",n_ab:"Sobre Nós",n_ct:"Reservar Agora",
   h_t1:"Descubra Aruba",h_t2:"Sem",h_t3:"Limites",
   h_sb:"Veículos curados. Entrega no aeroporto. Seu concierge privado para a ilha.",
   h_c1:"Reserve Sua Experiência",h_c2:"Ver Frota",
@@ -2285,6 +2217,7 @@ pt:{
   fl_tg:"Nossa Frota",fl_h:"Veículos Curados<br/><em>Para Cada Viagem</em>",
   fl_sb:"Cada veículo é selecionado, mantido e entregue onde quer que esteja em Aruba. Quilometragem ilimitada incluída.",
   sl:"Baixa Temporada · 16 Abr – 14 Dez",sh:"Alta Temporada · 15 Dez – 15 Abr",
+  sl_hint:"A partir de $45/dia",sh_hint:"A partir de $60/dia",
   c_co:"Compacto · Econômico",c_co_b:"Essenciais da Ilha",c_co_i:"Ideal para casais e viajantes solo",
   c_se:"Sedã · Conforto",c_se_b:"Conforto Executivo",c_se_i:"Ideal para negócios e casais",
   c_su:"SUV",c_su_b:"SUV Premium",c_su_i:"Ideal para famílias e grupos",
@@ -2298,6 +2231,12 @@ pt:{
   pr_je:"A partir de <strong>$130</strong>/dia",
   pr_lsu:"A partir de <strong>$110</strong>/dia",
   pr_va:"A partir de <strong>$110</strong>/dia",
+  pr_co_hi:"A partir de <strong>$60</strong>/dia",
+  pr_se_hi:"A partir de <strong>$80</strong>/dia",
+  pr_su_hi:"A partir de <strong>$110</strong>/dia",
+  pr_lsu_hi:"A partir de <strong>$155</strong>/dia",
+  pr_je_hi:"A partir de <strong>$190</strong>/dia",
+  pr_va_hi:"A partir de <strong>$145</strong>/dia",
   bn_li:"Mínimo 3 dias &middot; Entrega grátis &middot; Quilometragem ilimitada",
   cc_t:"“Não sabe qual veículo se encaixa nos seus planos?”",
   cc_s:"Nossa equipe no WhatsApp ajuda você a escolher o carro perfeito para sua experiência em Aruba.",
@@ -2318,9 +2257,6 @@ pt:{
   df2t:"Aventureiros",df2b:"A Piscina Natural. A costa norte. Arikok ao amanhecer. Apenas o Jeep  chega lá.",
   df3t:"Famílias",df3b:"Espaço, conforto e segurança para todos. O  de 7 lugares cuida da família toda.",
   df4t:"Viajantes VIP",df4b:"Entrega privada no aeroporto. Concierge pessoal. Rotas curadas pela ilha.",
-  pr_tg:"Tarifas",pr_h:"Preços Transparentes,<br/><em>Duas Temporadas</em>",
-  pr_nt:"Todas as tarifas incluem quilometragem ilimitada em Aruba. Preços em USD.",pr_ct:"Contato",
-  th_v:"Veículo",th_1:"1 Dia",th_3:"3 Dias",th_7:"7 Dias",pb:"Popular",pr_rs:"Reservar",
   ar_tg:"Explorar Aruba",ar_h:"Aruba Além<br/><em>do Cartão-Postal</em>",
   ar_q:"“Aruba não é só um destino. No veículo certo, ela se torna uma experiência.”",
   ar_b:"Aruba tem 32 quilômetros de <em>penhascos vulcânicos, enseadas escondidas, trilhas de deserto e praias</em> que a maioria nunca vê.",
@@ -2377,8 +2313,6 @@ pt:{
   ins_3t:"Roubo e assistência",
   ins_4n:"Cobertura Total",
   ad_h:"Extras na <em>Ilha</em>",
-  th_lo:"Época baixa&nbsp;/dia",
-  th_hi:"Época alta&nbsp;/dia",
   ch_wa:"Falar com uma pessoa no WhatsApp",
   bc_tg:"Seletivo",
   bc_cta:"Junte-se ao OCC Black Card",
@@ -2419,13 +2353,17 @@ pt:{
 };
 
 let lang = 'en';
+let season = 'lo';
 function setL(l) {
   lang = l;
   document.querySelectorAll('.lbtn').forEach(b => b.classList.remove('on'));
   document.querySelector(`.lbtn[onclick="setL('${l}')"]`).classList.add('on');
   const d = T[l];
   document.querySelectorAll('[data-t]').forEach(el => {
-    const k = el.getAttribute('data-t');
+    let k = el.getAttribute('data-t');
+    if (season === 'hi' && el.hasAttribute('data-t-hi')) {
+      k = el.getAttribute('data-t-hi');
+    }
     if (d[k] !== undefined) el.innerHTML = d[k];
   });
   document.querySelectorAll('[data-t-ph]').forEach(el => {
@@ -2510,20 +2448,12 @@ function submitOcc(e){
 /* Nav scroll */
 window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('sc', scrollY > 60));
 
-/* Fleet season */
-const FP = {
-  lo: { co:{d1:60,d3:165,d7:315}, se:{d1:75,d3:180,d7:350}, s5:{d1:90,d3:225,d7:490}, je:{d1:175,d3:450,d7:875}, v7:{d1:100,d3:270,d7:560} },
-  hi: { co:{d1:75,d3:180,d7:350}, se:{d1:90,d3:225,d7:420}, s5:{d1:100,d3:255,d7:525}, je:{d1:185,d3:500,d7:900}, v7:{d1:125,d3:300,d7:630} }
-};
+/* Fleet season toggle — re-renders translations with low/high price variant */
 function setFS(s) {
+  season = s;
   document.getElementById('flo').classList.toggle('on', s === 'lo');
   document.getElementById('fhi').classList.toggle('on', s === 'hi');
-  const p = FP[s];
-  const ids = [['pco','ptco',p.co],['pse','ptse',p.se],['ps5','pts5',p.s5],['pje','ptje',p.je],['pv7','ptv7',p.v7]];
-  ids.forEach(([n,sub,d]) => {
-    document.getElementById(n).textContent = '$' + d.d1;
-    document.getElementById(sub).textContent = '3d $' + d.d3 + ' · 7d $' + d.d7;
-  });
+  setL(lang);
 }
 
 /* Pricing tab */
@@ -2689,7 +2619,7 @@ body.occ-mb-open{overflow:hidden}
 .occ-mb-bd{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;padding:20px;animation:occFade 200ms ease}
 .occ-mb-bd[data-open]{display:flex}
 @keyframes occFade{from{opacity:0}to{opacity:1}}
-.occ-mb{max-width:560px;width:100%;max-height:calc(100vh - 40px);overflow-y:auto;background:rgba(10,10,10,.95);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border:1px solid rgba(201,169,97,.3);border-radius:12px;padding:32px;position:relative;color:var(--off)}
+.occ-mb{max-width:560px;width:100%;max-height:calc(100vh - 40px);overflow-y:auto;background:rgba(0,0,0,.95);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border:1px solid rgba(201,169,97,.3);border-radius:12px;padding:32px;position:relative;color:var(--off)}
 .occ-mb-close{position:absolute;top:14px;right:14px;background:none;border:none;color:var(--muted);font-size:1.4rem;cursor:pointer;padding:6px 10px;line-height:1;border-radius:4px}
 .occ-mb-close:hover{color:var(--white)}
 .occ-mb-close:focus-visible{outline:2px solid #C9A961;outline-offset:2px}
@@ -2718,7 +2648,7 @@ body.occ-mb-open{overflow:hidden}
 .ch-wa-handoff:hover{background:rgba(201,169,97,.08)}
 
 /* Chat bubble (floating, always visible) */
-#chat-tease{position:fixed;bottom:24px;right:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:rgba(15,23,42,.55);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:transform 200ms ease,border-color 200ms ease}
+#chat-tease{position:fixed;bottom:24px;right:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:rgba(10,10,10,.55);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:transform 200ms ease,border-color 200ms ease}
 #chat-tease:hover{transform:scale(1.05);border-color:rgba(255,255,255,.16)}
 #chat-tease:focus-visible{outline:2px solid #C9A961;outline-offset:2px}
 #chat-tease svg{width:24px;height:24px}
