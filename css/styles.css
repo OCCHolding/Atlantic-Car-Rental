@@ -36,7 +36,7 @@ a{color:inherit;text-decoration:none}
 #nav{
   position:fixed;top:0;left:0;right:0;z-index:400;
   display:flex;align-items:center;justify-content:space-between;
-  padding:26px 52px;
+  padding:26px 40px;
   background:var(--ink);
 }
 .nav-wm{display:flex;flex-direction:column;gap:4px;cursor:pointer;line-height:1}
@@ -48,10 +48,10 @@ a{color:inherit;text-decoration:none}
   font-size:.6rem;font-weight:500;letter-spacing:.36em;
   text-transform:uppercase;color:var(--gold);
 }
-.nlinks{display:flex;gap:36px;list-style:none;align-items:center}
+.nlinks{display:flex;gap:22px;list-style:none;align-items:center}
 .nlinks a{
-  font-size:.85rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;
-  color:rgba(250,250,249,.75);transition:color .25s;position:relative;padding-bottom:3px;
+  font-size:.76rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;
+  color:rgba(250,250,249,.75);transition:color .25s;position:relative;padding-bottom:3px;white-space:nowrap;
 }
 .nlinks a::after{
   content:'';position:absolute;bottom:0;left:0;width:0;height:1px;
@@ -62,45 +62,7 @@ a{color:inherit;text-decoration:none}
 .nlinks-utility{display:none}
 .nav-toggle{display:none}
 
-/* About nav dropdown -- hover reveals on desktop (min-width:769px block
-   below), click/tap-toggle (.open class, via JS) drives it on mobile where
-   hover doesn't exist, and also works as a desktop click/keyboard fallback. */
-.nav-drop{position:relative}
-.nav-drop-btn{
-  background:none;border:none;cursor:pointer;padding:0;
-  font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;
-  color:rgba(250,250,249,.75);transition:color .25s;
-  display:inline-flex;align-items:center;gap:5px;
-}
-.nav-drop-btn:hover{color:var(--white)}
-.nav-drop-caret{font-size:.55rem;color:var(--gold);transition:transform .25s var(--ease);display:inline-block}
-.nav-drop-menu{
-  position:absolute;top:100%;left:50%;
-  min-width:210px;margin-top:16px;padding:8px 0;
-  background:var(--ink-2);border:1px solid var(--ink-4);border-radius:var(--r);
-  box-shadow:0 16px 40px rgba(0,0,0,.45);
-  list-style:none;
-  opacity:0;visibility:hidden;pointer-events:none;
-  transform:translateX(-50%) translateY(-6px);
-  transition:opacity .2s var(--ease),transform .2s var(--ease),visibility .2s;
-  z-index:500;
-}
-.nav-drop-menu a{
-  display:block;padding:11px 22px;
-  font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:400;letter-spacing:.03em;text-transform:none;
-  color:rgba(250,250,249,.75);white-space:nowrap;transition:color .2s,background .2s;
-}
-.nav-drop-menu a:hover{color:var(--gold);background:var(--ink-3)}
-@media(min-width:769px){
-  .nav-drop:hover .nav-drop-menu,
-  .nav-drop.open .nav-drop-menu{
-    opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0);
-  }
-  .nav-drop:hover .nav-drop-caret,
-  .nav-drop.open .nav-drop-caret{transform:rotate(180deg)}
-}
-
-.nav-right{display:flex;align-items:center;gap:24px}
+.nav-right{display:flex;align-items:center;gap:16px}
 .nav-whatsapp{display:flex}
 /* Hides the header WhatsApp icon through phone-landscape/tablet widths too,
    not just the <=768px hamburger breakpoint below -- there isn't room for
@@ -806,20 +768,10 @@ footer{background:var(--ink-2);border-top:1px solid var(--ink-4);padding:0 52px}
   }
   .nlinks.open{display:flex}
   .nlinks li{width:100%}
-  .nlinks a{display:block;width:100%;padding:14px 0;border-bottom:1px solid var(--ink-4);font-size:.85rem}
+  .nlinks a{display:block;width:100%;padding:14px 0;border-bottom:1px solid var(--ink-4);font-size:.85rem;white-space:normal}
   .nlinks li:last-child a{border-bottom:none}
   .nlinks-utility{display:list-item}
   .nlinks-cta{color:var(--gold);font-weight:600}
-  .nav-drop{width:100%}
-  .nav-drop-btn{width:100%;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--ink-4);font-size:.85rem;color:rgba(250,250,249,.75)}
-  .nav-drop.open .nav-drop-btn{border-bottom-color:transparent}
-  .nav-drop-menu{
-    position:static;transform:none;opacity:1;visibility:visible;pointer-events:auto;
-    max-height:0;overflow:hidden;margin-top:0;padding:0;border:none;background:transparent;box-shadow:none;
-    transition:max-height .3s var(--ease);
-  }
-  .nav-drop.open .nav-drop-menu{max-height:220px;border-bottom:1px solid var(--ink-4)}
-  .nav-drop-menu a{padding:10px 0 10px 18px;color:var(--muted);font-size:.8rem}
   .sec,#about{padding:80px 18px}
   .h-inner{padding:clamp(80px,12vh,120px) 20px 0}
   .h-accent{left:20px}

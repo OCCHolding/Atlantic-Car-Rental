@@ -34,15 +34,9 @@
   <ul class="nlinks" id="nlinks">
     <li><a href="index.html#fleet" onclick="closeMNav()">Fleet</a></li>
     <li><a href="index.html#aruba" onclick="closeMNav()">Explore Aruba</a></li>
-    <li class="nav-drop">
-      <button type="button" class="nav-drop-btn" onclick="toggleAboutDrop(event)" aria-expanded="false" aria-haspopup="true">
-        <span>About</span><span class="nav-drop-caret" aria-hidden="true">&#9662;</span>
-      </button>
-      <ul class="nav-drop-menu">
-        <li><a href="faq.html" onclick="closeMNav()">FAQ &amp; Driving Guide</a></li>
-        <li><a href="add-ons.html" onclick="closeMNav()">Add-ons</a></li>
-      </ul>
-    </li>
+    <li><a href="faq.html" onclick="closeMNav()">FAQ &amp; Driving Guide</a></li>
+    <li><a href="add-ons.html" onclick="closeMNav()">Add-ons</a></li>
+    <li><a href="index.html#about" onclick="closeMNav()">About</a></li>
     <li class="nlinks-utility"><a href="https://wa.me/2975931982" target="_blank" onclick="closeMNav()">WhatsApp</a></li>
     <li class="nlinks-utility"><a href="index.html#contact" class="nlinks-cta" onclick="closeMNav()">Reservation Request</a></li>
   </ul>
@@ -231,23 +225,6 @@ function closeMNav(){
   document.getElementById('nlinks').classList.remove('open');
   document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
 }
-
-/* About nav dropdown -- hover handles desktop via CSS; this click/tap
-   toggle is what drives it on mobile (no hover there), and doubles as a
-   keyboard/click fallback on desktop. */
-function toggleAboutDrop(e){
-  e.preventDefault();
-  const drop = e.currentTarget.closest('.nav-drop');
-  const isOpen = drop.classList.toggle('open');
-  e.currentTarget.setAttribute('aria-expanded', String(isOpen));
-}
-document.addEventListener('click', function(e){
-  const openDrop = document.querySelector('.nav-drop.open');
-  if (openDrop && !openDrop.contains(e.target)) {
-    openDrop.classList.remove('open');
-    openDrop.querySelector('.nav-drop-btn').setAttribute('aria-expanded', 'false');
-  }
-});
 
 /* Scroll reveal */
 document.querySelectorAll('.rv').forEach(el => {
