@@ -1139,7 +1139,10 @@ input[type="date"]::-webkit-datetime-edit-text {
        via timeupdate instead of re-encoding the file. Nudge this value after
        seeing it live. */
     const HERO_LOOP_CUTOFF = 8; // seconds -- logo confirmed visible ~10s in, cutting with margin before that
-    document.getElementById('hero-video').addEventListener('timeupdate', function () {
+    const HERO_PLAYBACK_RATE = 0.5; // 1 = normal speed, lower = slower. Nudge by eye.
+    const heroVideo = document.getElementById('hero-video');
+    heroVideo.playbackRate = HERO_PLAYBACK_RATE;
+    heroVideo.addEventListener('timeupdate', function () {
       if (this.currentTime >= HERO_LOOP_CUTOFF) this.currentTime = 0;
     });
   </script>
