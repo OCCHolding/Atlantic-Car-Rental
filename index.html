@@ -55,13 +55,21 @@
     <span class="nav-wm-b">Car Rental &nbsp;&middot;&nbsp; Aruba</span>
   </a>
   <ul class="nlinks" id="nlinks">
-    <li><a href="#fleet"    data-t="n_fl" onclick="closeMNav()">Fleet</a></li>
-    <li><a href="#aruba"    data-t="n_ar" onclick="closeMNav()">Explore Aruba</a></li>
-    <li><a href="faq.html"     data-t="n_faq" onclick="closeMNav()">FAQ &amp; Driving Guide</a></li>
-    <li><a href="add-ons.html" data-t="n_ao"  onclick="closeMNav()">Add-ons</a></li>
-    <li><a href="#about"    data-t="n_ab" onclick="closeMNav()">About</a></li>
+    <li><a href="#fleet" data-t="n_fl" onclick="closeMNav()">Fleet</a></li>
+    <li><a href="#aruba" data-t="n_ar" onclick="closeMNav()">Explore Aruba</a></li>
+    <li class="nav-drop">
+      <button type="button" class="nav-drop-btn" onclick="toggleGtkDrop(event)" aria-expanded="false" aria-haspopup="true">
+        <span data-t="n_gtk">Good to Know</span><span class="nav-drop-caret" aria-hidden="true">&#9662;</span>
+      </button>
+      <ul class="nav-drop-menu">
+        <li><a href="driving-in-aruba.html" data-t="n_dr" onclick="closeMNav()">Driving in Aruba</a></li>
+        <li><a href="insurance.html" data-t="n_ins" onclick="closeMNav()">Insurance</a></li>
+        <li><a href="reservation-requirements.html" data-t="n_rr" onclick="closeMNav()">Reservation Requirements</a></li>
+        <li><a href="add-ons.html" data-t="n_ao" onclick="closeMNav()">Add-ons</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html" data-t="n_ab" onclick="closeMNav()">About</a></li>
     <li class="nlinks-utility"><a href="https://wa.me/2975931982" target="_blank" data-t="ft_wa" onclick="closeMNav()">WhatsApp</a></li>
-    <li class="nlinks-utility"><a href="#contact" class="nlinks-cta" data-t="n_ct" onclick="closeMNav();document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Reservation Request</a></li>
   </ul>
   <div class="nav-right">
     <a href="tel:+2975931982" class="nav-phone" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.65);font-size:.85rem;font-weight:500;letter-spacing:.04em;transition:color .2s;text-decoration:none">
@@ -71,7 +79,7 @@
     <a href="https://wa.me/2975931982" target="_blank" class="nav-whatsapp" aria-label="WhatsApp" style="align-items:center;color:rgba(255,255,255,.65);transition:color .2s;text-decoration:none">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
-    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" data-t="n_ct">Reservation Request</button>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"><span class="cta-full" data-t="n_ct">Reservation Request</span><span class="cta-short" data-t="n_ct_s">Reserve</span></button>
     <div class="nav-lang">
       <button class="lbtn on" onclick="setL('en')">EN</button>
       <button class="lbtn" onclick="setL('es')">ES</button>
@@ -81,7 +89,6 @@
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="toggleMNav()">&#9776;</button>
   </div>
 </nav>
-
 <!-- HERO -->
 <section id="hero">
   <div class="h-bg"></div>
@@ -324,6 +331,32 @@
   </div>
 </div>
 
+<!-- HOW IT WORKS -->
+<section id="how" class="sec">
+  <div style="text-align:center;margin-bottom:48px">
+    <div class="tag rv" style="justify-content:center" data-t="hiw_tg">Simple Process</div>
+    <h2 class="sh rv d1" data-t="hiw_h">How It <em>Works</em></h2>
+    <div class="rule rv d2" style="margin-left:auto;margin-right:auto"></div>
+  </div>
+  <div class="hiw-grid rv">
+    <div class="hiw-card">
+      <div class="hiw-num">01</div>
+      <div class="hiw-t" data-t="hiw_1t">Request</div>
+      <div class="hiw-s" data-t="hiw_1s">Send a reservation request. No payment required.</div>
+    </div>
+    <div class="hiw-card">
+      <div class="hiw-num">02</div>
+      <div class="hiw-t" data-t="hiw_2t">Confirm</div>
+      <div class="hiw-s" data-t="hiw_2s">We confirm by WhatsApp within 1 hour.</div>
+    </div>
+    <div class="hiw-card">
+      <div class="hiw-num">03</div>
+      <div class="hiw-t" data-t="hiw_3t">Delivered</div>
+      <div class="hiw-s" data-t="hiw_3s">We bring the car to you — airport, hotel, or villa.</div>
+    </div>
+  </div>
+</section>
+
 <!-- BENEFITS -->
 <section id="benefits" class="sec sec-alt">
   <div style="max-width:640px;margin:0 auto">
@@ -367,19 +400,40 @@
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div>
-    <div class="tag rv" data-t="ab_tg">About Atlantic</div>
-    <h2 class="sh rv d1" data-t="ab_h">Born in Aruba,<br/><em>Built on Trust</em></h2>
-    <div class="rule rv d2"></div>
-    <p class="abodytxt rv" data-t="ab_p1">Atlantic Car Rental was founded in 2020 on one conviction: the moment you land in Aruba, the adventure should begin &mdash; not the stress. We are based at the airport and we are the first friendly face after baggage claim.</p>
-    <p class="abodytxt rv" data-t="ab_p2">We built our reputation on three things: vehicles in exceptional condition, pricing with no fine print, and service that feels personal. Small by design &mdash; because every guest deserves real attention.</p>
-    <div class="avals rv">
-      <div><div class="avt" data-t="av1t">Anywhere Delivery</div><div class="avb" data-t="av1b">Airport, hotel, villa &mdash; we come to you.</div></div>
-      <div><div class="avt" data-t="av2t">Immaculate Fleet</div><div class="avb" data-t="av2b">Detailed and inspected before every rental.</div></div>
-      <div><div class="avt" data-t="av3t">Always Reachable</div><div class="avb" data-t="av3b">Real people &mdash; call or WhatsApp anytime.</div></div>
-      <div><div class="avt" data-t="av4t">Island Experts</div><div class="avb" data-t="av4b">We know every road and shortcut in Aruba.</div></div>
+<!-- OCC BLACK CARD -->
+<section class="sec" style="background:linear-gradient(135deg,#0a0a0a 0%,#1a1a1a 100%);position:relative;overflow:hidden">
+  <div class="bcard-wrap">
+    <div class="bcard-left rv">
+      <div class="tag" data-t="bc_tg" style="color:var(--gold-l)">Selective</div>
+      <h2 class="sh" data-t="bc_h">OCC <em>Black Card</em></h2>
+      <div class="rule"></div>
+      <p style="font-size:.92rem;line-height:1.8;color:var(--body);font-weight:300;margin-bottom:32px">Our private membership for returning guests and longstanding clients of Atlantic Corporation. Reserved for those who travel often, expect more, and value a quiet relationship with their concierge.</p>
+      <ul class="bcard-list">
+        <li><span class="bc-dot"></span><span data-t="mb1"><strong>Priority dispatch</strong> — first to know about new vehicles, best vehicles held for you</span></li>
+        <li><span class="bc-dot"></span><span data-t="mb2"><strong>Preferential member rate</strong> — automatic, no codes, applied across all services</span></li>
+        <li><span class="bc-dot"></span><span data-t="mb3"><strong>Complimentary upgrades</strong> — next class up at no charge when available</span></li>
+        <li><span class="bc-dot"></span><span data-t="mb4"><strong>Named concierge</strong> — one dedicated point of contact</span></li>
+        <li><span class="bc-dot"></span><span data-t="mb5"><strong>WhatsApp priority line</strong> — direct access, no queue</span></li>
+        <li><span class="bc-dot"></span><span data-t="mb6"><strong>Priority delivery</strong> — anywhere on the island</span></li>
+        <li><span class="bc-dot"></span><span data-t="mb7"><strong>Preferences kept on file</strong> — child seats, GPS, vehicle type</span></li>
+      </ul>
+      <p style="font-size:.92rem;line-height:1.8;color:var(--body);font-weight:300;margin-top:32px" data-t="bc_inv">By invitation. Inquire through your existing Atlantic contact.</p>
+      <button type="button" class="btn-gold" id="occ-invite-trigger" style="margin-top:20px" data-t="bc_cta" onclick="openOccModal()">Request an Invitation</button>
+      <div style="margin-top:20px;font-size:.7rem;color:var(--muted);line-height:1.7;font-weight:300">
+        Concierge: <a href="https://wa.me/2975931982" target="_blank" style="color:var(--gold-l);text-decoration:none">WhatsApp +297 593 1982</a> &nbsp;&middot;&nbsp; <a href="mailto:info@atlanticcarrentalaruba.com" style="color:var(--gold-l);text-decoration:none">info@atlanticcarrentalaruba.com</a>
+      </div>
+    </div>
+    <div class="bcard-right rv d2">
+      <div class="bcard-visual">
+        <div class="bcard-card">
+          <div class="bcard-card-top">
+            <div class="bcard-card-brand">ATLANTIC</div>
+            <div class="bcard-card-sub">OCC BLACK · ARUBA</div>
+          </div>
+          <div class="bcard-card-mid">MEMBER</div>
+          <div class="bcard-card-bot">EST. 2020</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -485,48 +539,11 @@
       <div style="font-size:.7rem;color:var(--muted);line-height:1.75;margin:18px 0 6px;font-weight:300">
         <div data-t="f_req">Driver's license and credit card. Minimum age 23. $200 deposit (cash or card).</div>
         <div data-t="f_pay" style="margin-top:6px">Payment: cash, card, bank transfer, or crypto (BTC, ETH, USDT).</div>
+        <div data-t="f_ins" style="margin-top:6px">Insurance can be added at pickup or in your request — <a href="insurance.html" style="color:var(--gold);text-decoration:none">see insurance options</a>.</div>
         <div data-t="f_eml" style="margin-top:10px">Questions? Email <a href="mailto:info@atlanticcarrentalaruba.com" style="color:var(--gold);text-decoration:none">info@atlanticcarrentalaruba.com</a> or WhatsApp us.</div>
       </div>
 
       <button class="fsub" id="fsub" onclick="doSub()" data-t="f_sb">Send Reservation Request</button>
-    </div>
-  </div>
-</section>
-
-<!-- OCC BLACK CARD -->
-<section class="sec" style="background:linear-gradient(135deg,#0a0a0a 0%,#1a1a1a 100%);position:relative;overflow:hidden">
-  <div class="bcard-wrap">
-    <div class="bcard-left rv">
-      <div class="tag" data-t="bc_tg" style="color:var(--gold-l)">Selective</div>
-      <h2 class="sh" data-t="bc_h">OCC <em>Black Card</em></h2>
-      <div class="rule"></div>
-      <p style="font-size:.92rem;line-height:1.8;color:var(--body);font-weight:300;margin-bottom:32px">Our private membership for returning guests and longstanding clients of Atlantic Corporation. Reserved for those who travel often, expect more, and value a quiet relationship with their concierge.</p>
-      <ul class="bcard-list">
-        <li><span class="bc-dot"></span><span data-t="mb1"><strong>Priority dispatch</strong> — first to know about new vehicles, best vehicles held for you</span></li>
-        <li><span class="bc-dot"></span><span data-t="mb2"><strong>Preferential member rate</strong> — automatic, no codes, applied across all services</span></li>
-        <li><span class="bc-dot"></span><span data-t="mb3"><strong>Complimentary upgrades</strong> — next class up at no charge when available</span></li>
-        <li><span class="bc-dot"></span><span data-t="mb4"><strong>Named concierge</strong> — one dedicated point of contact</span></li>
-        <li><span class="bc-dot"></span><span data-t="mb5"><strong>WhatsApp priority line</strong> — direct access, no queue</span></li>
-        <li><span class="bc-dot"></span><span data-t="mb6"><strong>Priority delivery</strong> — anywhere on the island</span></li>
-        <li><span class="bc-dot"></span><span data-t="mb7"><strong>Preferences kept on file</strong> — child seats, GPS, vehicle type</span></li>
-      </ul>
-      <p style="font-size:.92rem;line-height:1.8;color:var(--body);font-weight:300;margin-top:32px" data-t="bc_inv">By invitation. Inquire through your existing Atlantic contact.</p>
-      <button type="button" class="btn-gold" id="occ-invite-trigger" style="margin-top:20px" data-t="bc_cta" onclick="openOccModal()">Request an Invitation</button>
-      <div style="margin-top:20px;font-size:.7rem;color:var(--muted);line-height:1.7;font-weight:300">
-        Concierge: <a href="https://wa.me/2975931982" target="_blank" style="color:var(--gold-l);text-decoration:none">WhatsApp +297 593 1982</a> &nbsp;&middot;&nbsp; <a href="mailto:info@atlanticcarrentalaruba.com" style="color:var(--gold-l);text-decoration:none">info@atlanticcarrentalaruba.com</a>
-      </div>
-    </div>
-    <div class="bcard-right rv d2">
-      <div class="bcard-visual">
-        <div class="bcard-card">
-          <div class="bcard-card-top">
-            <div class="bcard-card-brand">ATLANTIC</div>
-            <div class="bcard-card-sub">OCC BLACK · ARUBA</div>
-          </div>
-          <div class="bcard-card-mid">MEMBER</div>
-          <div class="bcard-card-bot">EST. 2020</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -555,10 +572,22 @@
     <div>
       <div class="ftch" data-t="ft_nv">Navigate</div>
       <ul class="ftlinks">
-        <li><a href="#fleet"   data-t="n_fl">Fleet</a></li>
-        <li><a href="#aruba"   data-t="n_ar">Explore Aruba</a></li>
-        <li><a href="#about"   data-t="n_ab">About</a></li>
+        <li><a href="#fleet" data-t="n_fl">Fleet</a></li>
+        <li><a href="#aruba" data-t="n_ar">Explore Aruba</a></li>
+        <li><a href="about.html" data-t="n_ab">About</a></li>
         <li><a href="#contact" data-t="n_ct">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ftch" data-t="ft_gtk">Good to Know</div>
+      <ul class="ftlinks">
+        <li><a href="driving-in-aruba.html">Driving in Aruba</a></li>
+        <li><a href="insurance.html">Insurance</a></li>
+        <li><a href="reservation-requirements.html">Reservation Requirements</a></li>
+        <li><a href="add-ons.html">Add-ons</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="https://wa.me/2975931982" target="_blank">WhatsApp</a></li>
+        <li><a href="mailto:info@atlanticcarrentalaruba.com">Email Us</a></li>
       </ul>
     </div>
     <div>
@@ -608,8 +637,14 @@
 /* ── TRANSLATIONS ── */
 const T = {
 en:{
-  n_fl:"Fleet",n_ar:"Explore Aruba",n_rv:"Reviews",n_ab:"About",n_ct:"Reservation Request",
-  n_faq:"FAQ &amp; Driving Guide",n_ao:"Add-ons",
+  n_fl:"Fleet",n_ar:"Explore Aruba",n_rv:"Reviews",n_ab:"About",n_ct:"Reservation Request",n_ct_s:"Reserve",
+  n_gtk:"Good to Know",n_dr:"Driving in Aruba",n_ins:"Insurance",n_rr:"Reservation Requirements",n_ao:"Add-ons",
+  ft_gtk:"Good to Know",
+  hiw_tg:"Simple Process",hiw_h:"How It <em>Works</em>",
+  hiw_1t:"Request",hiw_1s:"Send a reservation request. No payment required.",
+  hiw_2t:"Confirm",hiw_2s:"We confirm by WhatsApp within 1 hour.",
+  hiw_3t:"Delivered",hiw_3s:"We bring the car to you — airport, hotel, or villa.",
+  f_ins:"Insurance can be added at pickup or in your request — <a href=\"insurance.html\" style=\"color:var(--gold);text-decoration:none\">see insurance options</a>.",
   h_t1:"Discover Aruba",h_t2:"Without",h_t3:"Limits",
   h_sb:"Curated vehicles. We deliver anywhere. Your private concierge for the island.",
   h_c1:"Reservation Request",h_c2:"Explore Fleet",
@@ -757,8 +792,14 @@ en:{
   f_eml:"Questions? Email <a href='mailto:info@atlanticcarrentalaruba.com' style='color:var(--gold);text-decoration:none'>info@atlanticcarrentalaruba.com</a> or WhatsApp us."
 },
 es:{
-  n_fl:"Flota",n_ar:"Explorar Aruba",n_rv:"Opiniones",n_ab:"Nosotros",n_ct:"Reservar Ahora",
-  n_faq:"FAQ y Guía de Manejo",n_ao:"Extras",
+  n_fl:"Flota",n_ar:"Explorar Aruba",n_rv:"Opiniones",n_ab:"Nosotros",n_ct:"Reservar Ahora",n_ct_s:"Reservar",
+  n_gtk:"Información Útil",n_dr:"Conducir en Aruba",n_ins:"Seguro",n_rr:"Requisitos de Reserva",n_ao:"Extras",
+  ft_gtk:"Información Útil",
+  hiw_tg:"Proceso Simple",hiw_h:"Cómo <em>Funciona</em>",
+  hiw_1t:"Solicitud",hiw_1s:"Envía una solicitud de reserva. No se requiere pago.",
+  hiw_2t:"Confirmación",hiw_2s:"Confirmamos por WhatsApp dentro de 1 hora.",
+  hiw_3t:"Entrega",hiw_3s:"Llevamos el auto hasta ti — aeropuerto, hotel o villa.",
+  f_ins:"El seguro se puede agregar al retirar el vehículo o en tu solicitud — <a href=\"insurance.html\" style=\"color:var(--gold);text-decoration:none\">ver opciones de seguro</a>.",
   h_t1:"Descubre Aruba",h_t2:"Sin",h_t3:"Límites",
   h_sb:"Vehiculos curados. Entrega en aeropuerto. Tu concierge privado para la isla.",
   h_c1:"Reserva Tu Experiencia",h_c2:"Ver Flota",
@@ -906,8 +947,14 @@ es:{
   f_eml:"¿Preguntas? Escríbenos a <a href='mailto:info@atlanticcarrentalaruba.com' style='color:var(--gold);text-decoration:none'>info@atlanticcarrentalaruba.com</a> o por WhatsApp."
 },
 nl:{
-  n_fl:"Vloot",n_ar:"Ontdek Aruba",n_rv:"Recensies",n_ab:"Over Ons",n_ct:"Nu Reserveren",
-  n_faq:"FAQ &amp; Rijgids",n_ao:"Extra's",
+  n_fl:"Vloot",n_ar:"Ontdek Aruba",n_rv:"Recensies",n_ab:"Over Ons",n_ct:"Nu Reserveren",n_ct_s:"Reserveer",
+  n_gtk:"Goed om te Weten",n_dr:"Rijden in Aruba",n_ins:"Verzekering",n_rr:"Reserveringsvereisten",n_ao:"Extra's",
+  ft_gtk:"Goed om te Weten",
+  hiw_tg:"Eenvoudig Proces",hiw_h:"Hoe Het <em>Werkt</em>",
+  hiw_1t:"Aanvraag",hiw_1s:"Stuur een reserveringsaanvraag. Geen betaling vereist.",
+  hiw_2t:"Bevestiging",hiw_2s:"We bevestigen via WhatsApp binnen 1 uur.",
+  hiw_3t:"Levering",hiw_3s:"We brengen de auto naar u toe — luchthaven, hotel of villa.",
+  f_ins:"Verzekering kan worden toegevoegd bij ophalen of in uw aanvraag — <a href=\"insurance.html\" style=\"color:var(--gold);text-decoration:none\">bekijk verzekeringsopties</a>.",
   h_t1:"Ontdek Aruba",h_t2:"Zonder",h_t3:"Grenzen",
   h_sb:"Gecureerde voertuigen. Luchthavenbezorging. Uw privé concierge voor het eiland.",
   h_c1:"Reserveer Uw Ervaring",h_c2:"Bekijk Vloot",
@@ -1055,8 +1102,14 @@ nl:{
   f_eml:"Vragen? Mail <a href='mailto:info@atlanticcarrentalaruba.com' style='color:var(--gold);text-decoration:none'>info@atlanticcarrentalaruba.com</a> of WhatsApp ons."
 },
 pt:{
-  n_fl:"Frota",n_ar:"Explorar Aruba",n_rv:"Avaliações",n_ab:"Sobre Nós",n_ct:"Reservar Agora",
-  n_faq:"FAQ e Guia de Condução",n_ao:"Extras",
+  n_fl:"Frota",n_ar:"Explorar Aruba",n_rv:"Avaliações",n_ab:"Sobre Nós",n_ct:"Reservar Agora",n_ct_s:"Reservar",
+  n_gtk:"Bom Saber",n_dr:"Dirigindo em Aruba",n_ins:"Seguro",n_rr:"Requisitos de Reserva",n_ao:"Extras",
+  ft_gtk:"Bom Saber",
+  hiw_tg:"Processo Simples",hiw_h:"Como <em>Funciona</em>",
+  hiw_1t:"Solicitação",hiw_1s:"Envie uma solicitação de reserva. Nenhum pagamento necessário.",
+  hiw_2t:"Confirmação",hiw_2s:"Confirmamos pelo WhatsApp em até 1 hora.",
+  hiw_3t:"Entrega",hiw_3s:"Levamos o carro até você — aeroporto, hotel ou vila.",
+  f_ins:"O seguro pode ser adicionado na retirada ou no seu pedido — <a href=\"insurance.html\" style=\"color:var(--gold);text-decoration:none\">ver opções de seguro</a>.",
   h_t1:"Descubra Aruba",h_t2:"Sem",h_t3:"Limites",
   h_sb:"Veículos curados. Entrega no aeroporto. Seu concierge privado para a ilha.",
   h_c1:"Reserve Sua Experiência",h_c2:"Ver Frota",
@@ -1308,6 +1361,22 @@ function closeMNav(){
   document.getElementById('nlinks').classList.remove('open');
   document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
 }
+
+/* Good to Know nav dropdown -- click-toggle on desktop; always expanded
+   (flat, non-interactive) inside the mobile hamburger via CSS. */
+function toggleGtkDrop(e){
+  e.preventDefault();
+  const drop = e.currentTarget.closest('.nav-drop');
+  const isOpen = drop.classList.toggle('open');
+  e.currentTarget.setAttribute('aria-expanded', String(isOpen));
+}
+document.addEventListener('click', function(e){
+  const openDrop = document.querySelector('.nav-drop.open');
+  if (openDrop && !openDrop.contains(e.target)) {
+    openDrop.classList.remove('open');
+    openDrop.querySelector('.nav-drop-btn').setAttribute('aria-expanded', 'false');
+  }
+});
 
 /* Fleet season toggle — re-renders translations with low/high price variant */
 function setFS(s) {

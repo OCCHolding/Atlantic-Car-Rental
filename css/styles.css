@@ -48,9 +48,9 @@ a{color:inherit;text-decoration:none}
   font-size:.6rem;font-weight:500;letter-spacing:.36em;
   text-transform:uppercase;color:var(--gold);
 }
-.nlinks{display:flex;gap:22px;list-style:none;align-items:center}
+.nlinks{display:flex;gap:28px;list-style:none;align-items:center}
 .nlinks a{
-  font-size:.76rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;
+  font-size:.8rem;font-weight:400;letter-spacing:.07em;text-transform:uppercase;
   color:rgba(250,250,249,.75);transition:color .25s;position:relative;padding-bottom:3px;white-space:nowrap;
 }
 .nlinks a::after{
@@ -62,7 +62,42 @@ a{color:inherit;text-decoration:none}
 .nlinks-utility{display:none}
 .nav-toggle{display:none}
 
+/* Good to Know nav dropdown -- click-toggle only (no hover), matching the
+   dark/gold panel styling used elsewhere on the site. Mobile override
+   below turns it into a flat, always-expanded list inside the hamburger. */
+.nav-drop{position:relative}
+.nav-drop-btn{
+  background:none;border:none;cursor:pointer;padding:0;
+  font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:400;letter-spacing:.07em;text-transform:uppercase;
+  color:rgba(250,250,249,.75);transition:color .25s;
+  display:inline-flex;align-items:center;gap:5px;white-space:nowrap;
+}
+.nav-drop-btn:hover{color:var(--white)}
+.nav-drop-caret{font-size:.55rem;color:var(--gold);transition:transform .25s var(--ease);display:inline-block}
+.nav-drop-menu{
+  position:absolute;top:100%;left:50%;
+  min-width:230px;margin-top:16px;padding:8px 0;
+  background:var(--ink-2);border:1px solid var(--ink-4);border-radius:var(--r);
+  box-shadow:0 16px 40px rgba(0,0,0,.45);
+  list-style:none;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:translateX(-50%) translateY(-6px);
+  transition:opacity .2s var(--ease),transform .2s var(--ease),visibility .2s;
+  z-index:500;
+}
+.nav-drop-menu a{
+  display:block;padding:11px 22px;
+  font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:400;letter-spacing:.03em;text-transform:none;
+  color:rgba(250,250,249,.75);white-space:nowrap;transition:color .2s,background .2s;
+}
+.nav-drop-menu a:hover{color:var(--gold);background:var(--ink-3)}
+.nav-drop.open .nav-drop-menu{
+  opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0);
+}
+.nav-drop.open .nav-drop-caret{transform:rotate(180deg)}
+
 .nav-right{display:flex;align-items:center;gap:16px}
+.cta-short{display:none}
 .nav-whatsapp{display:flex}
 /* Hides the header WhatsApp icon through phone-landscape/tablet widths too,
    not just the <=768px hamburger breakpoint below -- there isn't room for
@@ -701,8 +736,8 @@ a{color:inherit;text-decoration:none}
 ═══════════════════════════════ */
 footer{background:var(--ink-2);border-top:1px solid var(--ink-4);padding:0 52px}
 .ftop{
-  display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;
-  gap:52px;padding:68px 0 56px;
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;
+  gap:40px;padding:68px 0 56px;
   border-bottom:1px solid var(--ink-4);
 }
 .ft-wm{font-family:'Cormorant',serif;font-size:1.7rem;font-weight:600;letter-spacing:.18em;color:var(--white);margin-bottom:5px}
@@ -754,12 +789,15 @@ footer{background:var(--ink-2);border-top:1px solid var(--ink-4);padding:0 52px}
   .ftop{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
-  .lbtn{font-size:.58rem;padding:0 6px}
-  #nav{padding:14px 18px}
-  .nav-wm-a{font-size:1.15rem}
-  .nav-wm-b{font-size:.5rem}
-  .nav-toggle{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;background:none;border:none;color:var(--white);font-size:1.35rem;line-height:1;cursor:pointer;padding:0}
-  .nav-cta{display:none}
+  .lbtn{font-size:.54rem;padding:0 4px}
+  #nav{padding:12px 14px}
+  .nav-right{gap:10px}
+  .nav-wm-a{font-size:1.02rem;letter-spacing:.18em}
+  .nav-wm-b{font-size:.46rem}
+  .nav-toggle{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;background:none;border:none;color:var(--white);font-size:1.3rem;line-height:1;cursor:pointer;padding:0}
+  .nav-cta{padding:8px 10px;font-size:.58rem;letter-spacing:.05em;white-space:nowrap}
+  .cta-full{display:none}
+  .cta-short{display:inline}
   .nlinks{
     display:none;position:absolute;top:100%;left:0;right:0;z-index:400;
     flex-direction:column;align-items:stretch;gap:0;
@@ -771,7 +809,15 @@ footer{background:var(--ink-2);border-top:1px solid var(--ink-4);padding:0 52px}
   .nlinks a{display:block;width:100%;padding:14px 0;border-bottom:1px solid var(--ink-4);font-size:.85rem;white-space:normal}
   .nlinks li:last-child a{border-bottom:none}
   .nlinks-utility{display:list-item}
-  .nlinks-cta{color:var(--gold);font-weight:600}
+  .nav-drop{width:100%}
+  .nav-drop-btn{width:100%;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--ink-4);font-size:.85rem;color:rgba(250,250,249,.75);cursor:default}
+  .nav-drop-caret{display:none}
+  .nav-drop-menu{
+    position:static;transform:none;opacity:1;visibility:visible;pointer-events:auto;
+    max-height:none;overflow:visible;margin-top:0;padding:0;border:none;background:transparent;box-shadow:none;
+  }
+  .nav-drop-menu a{display:block;padding:12px 0 12px 18px;color:var(--muted);font-size:.8rem;border-bottom:1px solid var(--ink-4);white-space:normal}
+  .nav-drop-menu li:last-child a{border-bottom:none}
   .sec,#about{padding:80px 18px}
   .h-inner{padding:clamp(80px,12vh,120px) 20px 0}
   .h-accent{left:20px}
@@ -900,6 +946,22 @@ input[type="date"]::-webkit-datetime-edit-text {
 
 
 .nav-wm{display:flex;flex-direction:column;gap:3px;cursor:pointer;line-height:1;text-decoration:none}
+/* ═══════════════════════════════
+   HOW IT WORKS
+═══════════════════════════════ */
+.hiw-grid{max-width:980px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.hiw-card{
+  background:var(--ink-2);border:1px solid var(--ink-4);border-radius:var(--r);
+  padding:32px 26px;text-align:center;transition:border-color .3s var(--ease),transform .3s var(--ease);
+}
+.hiw-card:hover{border-color:var(--gold);transform:translateY(-4px)}
+.hiw-num{font-family:'Cormorant',serif;font-size:2.2rem;font-weight:600;color:var(--gold);margin-bottom:10px;line-height:1}
+.hiw-t{font-family:'Cormorant',serif;font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:8px}
+.hiw-s{font-size:.82rem;font-weight:300;color:var(--muted);line-height:1.6}
+@media(max-width:768px){
+  .hiw-grid{grid-template-columns:1fr;gap:14px}
+}
+
 /* ═══════════════════════════════
    INSURANCE COMPARISON
 ═══════════════════════════════ */
