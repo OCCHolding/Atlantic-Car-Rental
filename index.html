@@ -1128,11 +1128,21 @@ input[type="date"]::-webkit-datetime-edit-text {
   <div class="h-bg"></div>
   <!-- YouTube Aruba drone video — loads when online -->
   <div class="h-vid">
-    <video autoplay muted loop playsinline preload="auto"
+    <video id="hero-video" autoplay muted playsinline preload="auto"
       style="position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;transform:translate(-50%,-50%);object-fit:cover">
       <source src="assets/hero.mp4" type="video/mp4"/>
     </video>
   </div>
+  <script>
+    /* hero.mp4 (~19s total) has a branded end-card baked into the last few
+       seconds of the file itself -- not an HTML/CSS overlay. Looping early
+       via timeupdate instead of re-encoding the file. Nudge this value after
+       seeing it live. */
+    const HERO_LOOP_CUTOFF = 15; // seconds
+    document.getElementById('hero-video').addEventListener('timeupdate', function () {
+      if (this.currentTime >= HERO_LOOP_CUTOFF) this.currentTime = 0;
+    });
+  </script>
   <div class="h-ov"></div>
   <div class="h-noise"></div>
   <div class="h-accent"></div>
