@@ -971,6 +971,8 @@ input[type="date"]::-webkit-datetime-edit-text {
   display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
   max-width:1200px;margin:0 auto;
 }
+.ins-grid-1{grid-template-columns:1fr;max-width:420px}
+.ins-grid-2{grid-template-columns:repeat(2,1fr);max-width:720px}
 .ins-card{
   background:var(--ink-3);border:1px solid var(--ink-4);
   border-radius:var(--r);padding:32px 24px;
@@ -1071,7 +1073,7 @@ input[type="date"]::-webkit-datetime-edit-text {
    MOBILE — NEW SECTIONS
 ═══════════════════════════════ */
 @media(max-width:768px){
-  .ins-grid{grid-template-columns:1fr;gap:14px}
+  .ins-grid,.ins-grid-1,.ins-grid-2{grid-template-columns:1fr;gap:14px}
   .ins-card{padding:24px 20px}
   .bcard-wrap{grid-template-columns:1fr;gap:40px;padding:20px 0}
   .bcard-left{padding-right:0}
