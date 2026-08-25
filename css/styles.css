@@ -372,23 +372,14 @@ a{color:inherit;text-decoration:none}
   background:linear-gradient(145deg,#1A1A1A,#0A0A0A);
   display:flex;align-items:center;justify-content:center;
 }
-/* vignette: blends the cars' white studio-photo backgrounds into the dark card
-   (source photos aren't cut out — rembg cutouts left ragged edges on wheels/antenna) */
-.car-img-wrap::before{
-  content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:
-    linear-gradient(to bottom, var(--ink-3) 0%, rgba(22,22,22,.5) 16%, transparent 34%),
-    linear-gradient(to right, rgba(10,10,10,.85) 0%, transparent 14%),
-    linear-gradient(to left,  rgba(10,10,10,.85) 0%, transparent 14%);
-}
 .car-img-wrap::after{
-  content:'';position:absolute;bottom:0;left:0;right:0;height:44%;z-index:2;pointer-events:none;
-  background:linear-gradient(to top, var(--ink-3) 0%, rgba(22,22,22,.75) 20%, transparent 100%);
+  content:'';position:absolute;bottom:0;left:0;right:0;height:50%;
+  background:linear-gradient(to top,var(--ink-3),transparent);z-index:1;
 }
 .car-img{
   width:100%;height:100%;object-fit:contain;object-position:center;
   padding:18px 24px;transition:transform .65s var(--ease);
-  position:relative;z-index:0;
+  filter:drop-shadow(0 16px 14px rgba(0,0,0,.5)) drop-shadow(0 4px 6px rgba(0,0,0,.35));
 }
 
 /* category badge */
