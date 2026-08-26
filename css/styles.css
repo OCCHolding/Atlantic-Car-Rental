@@ -456,6 +456,36 @@ a{color:inherit;text-decoration:none}
 .cc-cta:hover{background:var(--gold);color:var(--ink)}
 
 /* ═══════════════════════════════
+   ATLANTIC GROUP BAND (sister-company cross-sell)
+═══════════════════════════════ */
+.gb-grid{
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;
+  gap:28px;max-width:900px;margin:0 auto;text-align:left;
+}
+.gb-path{
+  background:var(--ink-3);border:1px solid var(--ink-4);border-radius:var(--r);
+  padding:34px 30px;transition:border-color .3s,transform .3s;
+}
+.gb-path:hover{border-color:rgba(200,169,110,.35);transform:translateY(-4px)}
+.gb-path-icon{color:var(--gold);margin-bottom:16px}
+.gb-path-icon svg{width:30px;height:30px}
+.gb-path-name{font-family:'Cormorant',serif;font-size:1.35rem;font-weight:600;color:var(--white);margin-bottom:8px}
+.gb-path-sub{font-size:.8rem;font-weight:300;color:var(--body);line-height:1.7;margin-bottom:22px}
+.gb-path-link{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--white);border-bottom:1px solid var(--ink-5);padding-bottom:2px;
+  text-decoration:none;transition:color .2s,border-color .2s;
+}
+.gb-path-link:hover{color:var(--gold);border-color:var(--gold)}
+.gb-path-link-gold{color:var(--gold-l);border-color:var(--gold-d)}
+.gb-path-link-gold:hover{color:var(--gold);border-color:var(--gold)}
+.gb-divider{
+  display:flex;align-items:center;justify-content:center;padding:0 4px;
+  font-family:'Cormorant',serif;font-style:italic;font-size:1rem;color:var(--ink-5);
+}
+
+/* ═══════════════════════════════
    ARUBA EDITORIAL
 ═══════════════════════════════ */
 
@@ -501,6 +531,13 @@ a{color:inherit;text-decoration:none}
   font-size:.48rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
   color:var(--ink);background:var(--gold);padding:4px 10px;border-radius:2px;
 }
+.dtour-link{
+  display:block;margin-top:10px;
+  font-size:.68rem;font-weight:500;color:var(--gold-l);
+  text-decoration:none;border-bottom:1px solid rgba(200,169,110,.4);
+  width:fit-content;transition:color .2s,border-color .2s;
+}
+.dtour-link:hover{color:var(--white);border-color:var(--white)}
 
 /* ═══════════════════════════════
    ABOUT
@@ -517,6 +554,10 @@ a{color:inherit;text-decoration:none}
    CONTACT
 ═══════════════════════════════ */
 .cgrid{display:grid;grid-template-columns:1fr 1.6fr;gap:80px}
+.co-arrival-note{
+  font-size:.8rem;font-weight:300;font-style:italic;color:var(--muted);
+  line-height:1.6;margin:-6px 0 22px;
+}
 .cil{font-size:.56rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d);margin-bottom:7px}
 .civ{font-size:.88rem;font-weight:300;color:var(--white);line-height:1.72}
 .civ a{color:var(--white);transition:color .2s}.civ a:hover{color:var(--gold)}
@@ -549,6 +590,19 @@ a{color:inherit;text-decoration:none}
 .fg select option{background:var(--ink-3)}
 .fg textarea{resize:vertical;min-height:90px}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* reservation form — optional cross-sell checkboxes (light-touch, not a second form) */
+.fg-addon label{margin-bottom:10px}
+.addon-check-row{display:flex;flex-direction:column;gap:8px}
+.addon-check{
+  display:flex;align-items:center;gap:9px;
+  font-size:.78rem;font-weight:300;color:var(--body);
+  cursor:pointer;
+}
+.addon-check input{
+  width:15px;height:15px;flex-shrink:0;margin:0;
+  accent-color:var(--gold);cursor:pointer;
+}
 
 /* trust box */
 .ftrust-box{
@@ -664,6 +718,8 @@ footer{background:var(--bg-base);border-top:1px solid var(--ink-4);padding:0 52p
   .qb-btn{width:100%;height:52px;text-align:center}
   #quickbook{padding:16px 18px}
   .cc-inner{flex-direction:column;gap:16px}
+  .gb-grid{grid-template-columns:1fr}
+  .gb-divider{padding:2px 0}
   .fl-head{grid-template-columns:1fr;gap:18px}
   .fgrid{grid-template-columns:1fr}
   .aruba-intro{grid-template-columns:1fr;gap:32px}
@@ -858,6 +914,9 @@ input[type="date"]::-webkit-datetime-edit-text {
 .addon-icon svg{width:32px;height:32px}
 .addon-name{font-family:'Cormorant',serif;font-size:1.1rem;font-weight:500;color:var(--white);margin-bottom:4px}
 .addon-sub{font-size:.68rem;color:var(--muted);font-weight:300;letter-spacing:.04em}
+.addon-sub a{color:var(--gold-l);text-decoration:none;border-bottom:1px solid var(--gold-d)}
+.addon-sub a:hover{color:var(--gold)}
+.addon-partner{border-top:2px solid var(--gold-d)}
 
 /* ═══════════════════════════════
    FAQ
