@@ -29,7 +29,7 @@ KEY FACTS:
 - All vehicles automatic, all rentals unlimited mileage
 - Minimum driver age: 23, valid license + passport required
 - $200 refundable security deposit at pickup
-- NO payment required to reserve, free cancellation up to 24h before
+- NO payment required to reserve, free cancellation more than 48h before pickup
 - We confirm reservations via WhatsApp within 1 hour
 
 FLEET (5 categories, NEVER mention car brands):

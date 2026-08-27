@@ -255,6 +255,8 @@ a{color:inherit;text-decoration:none}
   display:flex;align-items:center;justify-content:center;flex-shrink:0;
 }
 .trust-dot svg{width:12px;height:12px;stroke:var(--gold);fill:none;stroke-width:1.8}
+.trust-text{display:flex;flex-direction:column;gap:2px}
+.trust-sub{font-size:.6rem;color:var(--ink-5);font-weight:300}
 
 /* scroll cue */
 .scroll-cue{
