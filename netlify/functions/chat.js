@@ -37,24 +37,32 @@ FLEET (6 categories, NEVER mention car brands):
 2. Sedan — 5 seats, business/couples
 3. SUV — 5 seats, families/groups
 4. Large SUV — 7 seats, premium, groups/extended families
-5. Jeep 4x4 — 5 seats, REQUIRED for Natural Pool and Arikok off-road trails
-6. Van — 7+ seats, large groups
+5. Jeep 4x4 — 5 seats, REQUIRED for Natural Pool and Arikok off-road trails (our SUV is 2WD and may not go on unpaved roads)
+6. Van — 10 seats, large groups
 
-PRICING (Low / High Season; High = Dec 15 - Apr 15):
-- Compact: $45 / $60 per day
-- Sedan: $60 / $80 per day
-- SUV: $85 / $110 per day
-- Large SUV: $110 / $155 per day
-- Jeep 4x4: $130 / $190 per day
-- Van: $110 / $145 per day
+PRICING (rates depend on rental length; quote the tier the customer asks about):
+Low Season (Apr 16 - Dec 14):
+- Compact: $60/1 day, $160/3 days, $305/7 days
+- Sedan: $65/1 day, $175/3 days, $340/7 days
+- SUV: $90/1 day, $240/3 days, $465/7 days
+- Large SUV: $110/1 day, $300/3 days, $580/7 days
+- Jeep 4x4: $145/1 day, $400/3 days, $770/7 days
+- Van: $130/1 day, $350/3 days, $685/7 days
+High Season (Dec 15 - Apr 15):
+- Compact: $70/1 day, $190/3 days, $370/7 days
+- Sedan: $80/1 day, $215/3 days, $415/7 days
+- SUV: $105/1 day, $290/3 days, $560/7 days
+- Large SUV: $130/1 day, $355/3 days, $695/7 days
+- Jeep 4x4: $180/1 day, $480/3 days, $925/7 days
+- Van: $160/1 day, $420/3 days, $820/7 days
 All include unlimited mileage and basic TPL insurance.
 
 INSURANCE ADD-ONS:
 - TPL: included, free
-- CDW: $10/day (deductible $750–$1,500 by vehicle class)
-- Theft Protection: $7.50/day (deductible $500)
-- Standard: $20/day (deductible $400, includes tyres & windscreen)
-- Premium (Zero Deductible): $30/day ($0 deductible, tyres & windscreen, roadside assistance, lost key)
+- CDW: $15/day (deductible $750–$1,500 by vehicle class)
+- Theft Protection: $10/day (deductible $500)
+- Standard: $25/day (deductible $400, includes tyres & windscreen)
+- Premium (Zero Deductible): $35/day ($0 deductible, tyres & windscreen, roadside assistance, lost key)
 
 PAYMENT: Card, Cash (USD/AWG/EUR), Bank Transfer, Crypto (BTC/ETH/USDT)
 POLICIES: No smoking ($250 fee), no pets, accident protocol = don't move vehicle, call police 100, then us
@@ -64,7 +72,7 @@ ARUBA TIPS:
 - Natural Pool/Conchi: Jeep 4x4 REQUIRED
 - California Lighthouse: any vehicle
 - Baby Beach: any vehicle, families
-- Arikok: SUV or Jeep recommended
+- Arikok: Jeep 4x4 required (our SUV is 2WD, not permitted on unpaved park roads)
 
 CONVERSION: Guide ready customers to the Reservation Request form or WhatsApp +297 593 1982
 

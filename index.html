@@ -51,6 +51,27 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Atlantic Car Rental",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Italiestraat 38 (Sasaki Building)",
+    "addressLocality": "Oranjestad",
+    "addressCountry": "AW"
+  },
+  "telephone": "+297-593-1982",
+  "email": "info@atlanticcarrentalaruba.com",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "07:00",
+    "closes": "22:00"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="css/styles.css?v=1"/>
@@ -78,7 +99,6 @@
       </ul>
     </li>
     <li><a href="about.html" data-t="n_ab" onclick="closeMNav()">About</a></li>
-    <li class="nlinks-utility"><a href="https://wa.me/2975931982" target="_blank" data-t="ft_wa" onclick="closeMNav()">WhatsApp</a></li>
   </ul>
   <div class="nav-right">
     <a href="tel:+2975931982" class="nav-phone" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.65);font-size:.85rem;font-weight:500;letter-spacing:.04em;transition:color .2s;text-decoration:none">
@@ -225,8 +245,14 @@
       <div class="ccard-body">
         <div class="ccard-category" data-t="c_co">Compact &nbsp;&middot;&nbsp; Economy</div>
         <div class="ccard-ideal" data-t="c_co_i">Ideal for couples &amp; solo travelers</div>
-        <div class="ccard-price" data-t="pr_co" data-t-hi="pr_co_hi">From <strong>$45</strong>/day</div>
-        <div class="ccard-benefits" data-t="bn_li">3-day minimum &nbsp;&middot;&nbsp; Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
+        <div class="ccard-pricing">
+          <div class="cpr-hero"><span data-t="pr_co_1" data-t-hi="pr_co_1_hi"><strong>$60</strong>/1 day</span></div>
+          <div class="cpr-sub">
+            <span class="cpr-sub-item" data-t="pr_co_3" data-t-hi="pr_co_3_hi"><strong>$160</strong>/3 days</span>
+            <span class="cpr-sub-item" data-t="pr_co_7" data-t-hi="pr_co_7_hi"><strong>$305</strong>/7 days</span>
+          </div>
+        </div>
+        <div class="ccard-benefits" data-t="bn_li">Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
         <div class="ccard-specs">
           <span class="cspec">5 seats</span>
           <span class="cspec">Automatic</span><span class="cspec">Unlimited km</span>
@@ -243,8 +269,14 @@
       <div class="ccard-body">
         <div class="ccard-category" data-t="c_se">Sedan &nbsp;&middot;&nbsp; Comfort</div>
         <div class="ccard-ideal" data-t="c_se_i">Ideal for business &amp; couples</div>
-        <div class="ccard-price" data-t="pr_se" data-t-hi="pr_se_hi">From <strong>$60</strong>/day</div>
-        <div class="ccard-benefits" data-t="bn_li">3-day minimum &nbsp;&middot;&nbsp; Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
+        <div class="ccard-pricing">
+          <div class="cpr-hero"><span data-t="pr_se_1" data-t-hi="pr_se_1_hi"><strong>$65</strong>/1 day</span></div>
+          <div class="cpr-sub">
+            <span class="cpr-sub-item" data-t="pr_se_3" data-t-hi="pr_se_3_hi"><strong>$175</strong>/3 days</span>
+            <span class="cpr-sub-item" data-t="pr_se_7" data-t-hi="pr_se_7_hi"><strong>$340</strong>/7 days</span>
+          </div>
+        </div>
+        <div class="ccard-benefits" data-t="bn_li">Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
         <div class="ccard-specs">
           <span class="cspec">5 seats</span>
           <span class="cspec">Automatic</span><span class="cspec">Unlimited km</span>
@@ -261,8 +293,14 @@
       <div class="ccard-body">
         <div class="ccard-category" data-t="c_su">SUV &nbsp;&middot;&nbsp; Spacious</div>
         <div class="ccard-ideal" data-t="c_su_i">Ideal for families &amp; groups</div>
-        <div class="ccard-price" data-t="pr_su" data-t-hi="pr_su_hi">From <strong>$85</strong>/day</div>
-        <div class="ccard-benefits" data-t="bn_li">3-day minimum &nbsp;&middot;&nbsp; Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
+        <div class="ccard-pricing">
+          <div class="cpr-hero"><span data-t="pr_su_1" data-t-hi="pr_su_1_hi"><strong>$90</strong>/1 day</span></div>
+          <div class="cpr-sub">
+            <span class="cpr-sub-item" data-t="pr_su_3" data-t-hi="pr_su_3_hi"><strong>$240</strong>/3 days</span>
+            <span class="cpr-sub-item" data-t="pr_su_7" data-t-hi="pr_su_7_hi"><strong>$465</strong>/7 days</span>
+          </div>
+        </div>
+        <div class="ccard-benefits" data-t="bn_li">Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
         <div class="ccard-specs">
           <span class="cspec">5 seats</span>
           <span class="cspec">Automatic</span><span class="cspec">Unlimited km</span>
@@ -278,8 +316,14 @@
       <div class="ccard-body">
         <div class="ccard-category" data-t="c_lsu">Large SUV</div>
         <div class="ccard-ideal" data-t="c_lsu_i">Ideal for groups &amp; extended families</div>
-        <div class="ccard-price" data-t="pr_lsu" data-t-hi="pr_lsu_hi">From <strong>$110</strong>/day</div>
-        <div class="ccard-benefits" data-t="bn_li">3-day minimum &nbsp;&middot;&nbsp; Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
+        <div class="ccard-pricing">
+          <div class="cpr-hero"><span data-t="pr_lsu_1" data-t-hi="pr_lsu_1_hi"><strong>$110</strong>/1 day</span></div>
+          <div class="cpr-sub">
+            <span class="cpr-sub-item" data-t="pr_lsu_3" data-t-hi="pr_lsu_3_hi"><strong>$300</strong>/3 days</span>
+            <span class="cpr-sub-item" data-t="pr_lsu_7" data-t-hi="pr_lsu_7_hi"><strong>$580</strong>/7 days</span>
+          </div>
+        </div>
+        <div class="ccard-benefits" data-t="bn_li">Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
         <div class="ccard-specs">
           <span class="cspec">7 seats</span>
           <span class="cspec">Automatic</span><span class="cspec">Unlimited km</span>
@@ -296,8 +340,14 @@
       <div class="ccard-body">
         <div class="ccard-category" data-t="c_je">Jeep 4x4 &nbsp;&middot;&nbsp; Adventure</div>
         <div class="ccard-ideal" data-t="c_je_i">Ideal for off-road &amp; adventure</div>
-        <div class="ccard-price" data-t="pr_je" data-t-hi="pr_je_hi">From <strong>$130</strong>/day</div>
-        <div class="ccard-benefits" data-t="bn_li">3-day minimum &nbsp;&middot;&nbsp; Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
+        <div class="ccard-pricing">
+          <div class="cpr-hero"><span data-t="pr_je_1" data-t-hi="pr_je_1_hi"><strong>$145</strong>/1 day</span></div>
+          <div class="cpr-sub">
+            <span class="cpr-sub-item" data-t="pr_je_3" data-t-hi="pr_je_3_hi"><strong>$400</strong>/3 days</span>
+            <span class="cpr-sub-item" data-t="pr_je_7" data-t-hi="pr_je_7_hi"><strong>$770</strong>/7 days</span>
+          </div>
+        </div>
+        <div class="ccard-benefits" data-t="bn_li">Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
         <div class="ccard-specs">
           <span class="cspec">5 seats</span>
           <span class="cspec">Automatic</span><span class="cspec">Unlimited km</span>
@@ -313,10 +363,16 @@
       <div class="ccard-body">
         <div class="ccard-category" data-t="c_va">Van</div>
         <div class="ccard-ideal" data-t="c_va_i">Ideal for groups &amp; families</div>
-        <div class="ccard-price" data-t="pr_va" data-t-hi="pr_va_hi">From <strong>$110</strong>/day</div>
-        <div class="ccard-benefits" data-t="bn_li">3-day minimum &nbsp;&middot;&nbsp; Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
+        <div class="ccard-pricing">
+          <div class="cpr-hero"><span data-t="pr_va_1" data-t-hi="pr_va_1_hi"><strong>$130</strong>/1 day</span></div>
+          <div class="cpr-sub">
+            <span class="cpr-sub-item" data-t="pr_va_3" data-t-hi="pr_va_3_hi"><strong>$350</strong>/3 days</span>
+            <span class="cpr-sub-item" data-t="pr_va_7" data-t-hi="pr_va_7_hi"><strong>$685</strong>/7 days</span>
+          </div>
+        </div>
+        <div class="ccard-benefits" data-t="bn_li">Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
         <div class="ccard-specs">
-          <span class="cspec">7+ seats</span>
+          <span class="cspec">10 seats</span>
           <span class="cspec">Automatic</span><span class="cspec">Unlimited km</span>
         </div>
       </div>
@@ -428,7 +484,7 @@
     <div class="dcard rv d1"><img class="dimg" src="assets/Conchi_new.jpg" onerror="this.parentElement.style.background='#222'" alt="Natural Pool"/><div class="dov"><div class="dnum">02</div><div class="dtit" data-t="d2t">Natural Pool (Conchi)</div><div class="dsub" data-t="d2s">A hidden volcanic pool sculpted by the sea, inside Arikok National Park. Reachable only by 4x4.</div><div class="dtag" data-t="d2g">Jeep Required</div><a class="dtour-link" href="https://atlantictoursaruba.com/?utm_source=carrental&amp;utm_medium=referral&amp;utm_campaign=conchi_card" data-t="d2tour">No 4×4? We'll take you — guided Conchi tour.</a></div></div>
     <div class="dcard rv d2"><img class="dimg" src="assets/Lighthouse_new.jpg" onerror="this.parentElement.style.background='#222'" alt="California Lighthouse"/><div class="dov"><div class="dnum">03</div><div class="dtit" data-t="d3t">California Lighthouse</div><div class="dsub" data-t="d3s">Built in 1916 on Aruba's northwest tip. Panoramic 360° coastal views. Unmatched at sunset.</div><div class="dtag" data-t="d3g">All Vehicles</div></div></div>
     <div class="dcard rv d3"><img class="dimg" src="assets/BabyBeach_new.jpg" onerror="this.parentElement.style.background='#222'" alt="Baby Beach"/><div class="dov"><div class="dnum">04</div><div class="dtit" data-t="d4t">Baby Beach</div><div class="dsub" data-t="d4s">A sheltered crescent lagoon on Aruba's southern tip. Calm, shallow waters ideal for families and snorkeling.</div><div class="dtag" data-t="d4g">All Vehicles</div></div></div>
-    <div class="dcard rv d4"><img class="dimg" src="assets/Arikok_new.jpg" onerror="this.parentElement.style.background='#222'" alt="Arikok"/><div class="dov"><div class="dnum">05</div><div class="dtit" data-t="d5t">Arikok National Park</div><div class="dsub" data-t="d5s">Aruba's protected wilderness — nearly 20% of the island. Desert landscapes, ancient caves, and Arawak rock paintings.</div><div class="dtag" data-t="d5g">SUV or Jeep</div></div></div>
+    <div class="dcard rv d4"><img class="dimg" src="assets/Arikok_new.jpg" onerror="this.parentElement.style.background='#222'" alt="Arikok"/><div class="dov"><div class="dnum">05</div><div class="dtit" data-t="d5t">Arikok National Park</div><div class="dsub" data-t="d5s">Aruba's protected wilderness — nearly 20% of the island. Desert landscapes, ancient caves, and Arawak rock paintings.</div><div class="dtag" data-t="d5g">Jeep 4x4 Required</div></div></div>
   </div>
 </section>
 
@@ -439,7 +495,7 @@
       <div class="tag" data-t="bc_tg" style="color:var(--gold-l)">Selective</div>
       <h2 class="sh" data-t="bc_h">OCC <em>Black Card</em></h2>
       <div class="rule"></div>
-      <p style="font-size:.92rem;line-height:1.8;color:var(--body);font-weight:300;margin-bottom:32px">Our private membership for returning guests and longstanding clients of Atlantic Corporation. Reserved for those who travel often, expect more, and value a quiet relationship with their concierge.</p>
+      <p style="font-size:.92rem;line-height:1.8;color:var(--body);font-weight:300;margin-bottom:32px">Our private membership for returning guests and longstanding clients of Atlantic. Reserved for those who travel often, expect more, and value a quiet relationship with their concierge.</p>
       <ul class="bcard-list">
         <li><span class="bc-dot"></span><span data-t="mb1"><strong>Priority dispatch</strong> — first to know about new vehicles, best vehicles held for you</span></li>
         <li><span class="bc-dot"></span><span data-t="mb2"><strong>Preferential member rate</strong> — automatic, no codes, applied across all services</span></li>
@@ -544,10 +600,10 @@
       <div class="fg"><label data-t="f_insel">Insurance</label>
         <select id="fins">
           <option value="tpl" data-t="f_insel_tpl">Third Party Liability (included, free)</option>
-          <option value="cdw" data-t="f_insel_cdw">CDW — $10/day</option>
-          <option value="theft" data-t="f_insel_theft">Theft Protection — $7.50/day</option>
-          <option value="standard" data-t="f_insel_std">Standard Protection — $20/day</option>
-          <option value="premium" data-t="f_insel_prem">Premium / Zero Deductible — $30/day</option>
+          <option value="cdw" data-t="f_insel_cdw">CDW — $15/day</option>
+          <option value="theft" data-t="f_insel_theft">Theft Protection — $10/day</option>
+          <option value="standard" data-t="f_insel_std">Standard Protection — $25/day</option>
+          <option value="premium" data-t="f_insel_prem">Premium / Zero Deductible — $35/day</option>
         </select>
       </div>
       <div class="fg"><label data-t="f_pl">Pickup Location</label>
@@ -638,8 +694,6 @@
         <li><a href="reservation-requirements.html">Reservation Requirements</a></li>
         <li><a href="add-ons.html">Add-ons</a></li>
         <li><a href="https://atlantictoursaruba.com/?utm_source=carrental&amp;utm_medium=referral&amp;utm_campaign=footer">Atlantic Tours &amp; Transfers</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#fleet">Fleet</a></li>
         <li><a href="https://wa.me/2975931982" target="_blank">WhatsApp</a></li>
         <li><a href="mailto:info@atlanticcarrentalaruba.com">Email Us</a></li>
       </ul>
@@ -724,20 +778,26 @@ en:{
   c_je:"Jeep  · 4×4",c_je_b:"Adventure Collection",c_je_i:"Ideal for off-road & adventure",
   c_va:"Van",c_va_b:"Family Premium",c_va_i:"Ideal for groups & families",
   fl_rs:"Reservation Request",from:"per day",
-  pr_co:"From <strong>$45</strong>/day",
-  pr_se:"From <strong>$60</strong>/day",
-  pr_su:"From <strong>$85</strong>/day",
-  pr_je:"From <strong>$130</strong>/day",
-  pr_lsu:"From <strong>$110</strong>/day",
-  pr_va:"From <strong>$110</strong>/day",
-  pr_co_hi:"From <strong>$60</strong>/day",
-  pr_se_hi:"From <strong>$80</strong>/day",
-  pr_su_hi:"From <strong>$110</strong>/day",
-  pr_lsu_hi:"From <strong>$155</strong>/day",
-  pr_je_hi:"From <strong>$190</strong>/day",
-  pr_va_hi:"From <strong>$145</strong>/day",
+  pr_co_1:"<strong>$60</strong>/1 day",pr_co_1_hi:"<strong>$70</strong>/1 day",
+  pr_co_3:"<strong>$160</strong>/3 days",pr_co_3_hi:"<strong>$190</strong>/3 days",
+  pr_co_7:"<strong>$305</strong>/7 days",pr_co_7_hi:"<strong>$370</strong>/7 days",
+  pr_se_1:"<strong>$65</strong>/1 day",pr_se_1_hi:"<strong>$80</strong>/1 day",
+  pr_se_3:"<strong>$175</strong>/3 days",pr_se_3_hi:"<strong>$215</strong>/3 days",
+  pr_se_7:"<strong>$340</strong>/7 days",pr_se_7_hi:"<strong>$415</strong>/7 days",
+  pr_su_1:"<strong>$90</strong>/1 day",pr_su_1_hi:"<strong>$105</strong>/1 day",
+  pr_su_3:"<strong>$240</strong>/3 days",pr_su_3_hi:"<strong>$290</strong>/3 days",
+  pr_su_7:"<strong>$465</strong>/7 days",pr_su_7_hi:"<strong>$560</strong>/7 days",
+  pr_lsu_1:"<strong>$110</strong>/1 day",pr_lsu_1_hi:"<strong>$130</strong>/1 day",
+  pr_lsu_3:"<strong>$300</strong>/3 days",pr_lsu_3_hi:"<strong>$355</strong>/3 days",
+  pr_lsu_7:"<strong>$580</strong>/7 days",pr_lsu_7_hi:"<strong>$695</strong>/7 days",
+  pr_je_1:"<strong>$145</strong>/1 day",pr_je_1_hi:"<strong>$180</strong>/1 day",
+  pr_je_3:"<strong>$400</strong>/3 days",pr_je_3_hi:"<strong>$480</strong>/3 days",
+  pr_je_7:"<strong>$770</strong>/7 days",pr_je_7_hi:"<strong>$925</strong>/7 days",
+  pr_va_1:"<strong>$130</strong>/1 day",pr_va_1_hi:"<strong>$160</strong>/1 day",
+  pr_va_3:"<strong>$350</strong>/3 days",pr_va_3_hi:"<strong>$420</strong>/3 days",
+  pr_va_7:"<strong>$685</strong>/7 days",pr_va_7_hi:"<strong>$820</strong>/7 days",
   usd_note:"All prices in US dollars. We accept all major credit cards; foreign cards may incur your bank's conversion fee. Images are representative of each vehicle class — specific make and model assigned at delivery based on availability.",
-  bn_li:"3-day minimum &middot; Free delivery &middot; Unlimited mileage",
+  bn_li:"Free delivery &middot; Unlimited mileage",
   cc_t:"“Not sure which vehicle fits your plans?”",
   cc_s:"Our team on WhatsApp will help you choose the perfect car for your Aruba experience.",
   cc_btn:"WhatsApp Concierge",
@@ -767,7 +827,7 @@ en:{
   d2t:"Natural Pool (Conchi)",d2s:"A hidden volcanic pool sculpted by the sea, inside Arikok National Park. Reachable only by 4x4.",d2g:"Jeep Required",d2tour:"No 4×4? We'll take you — guided Conchi tour.",
   d3t:"California Lighthouse",d3s:"Built in 1916 on Aruba's northwest tip. Panoramic 360° coastal views. Unmatched at sunset.",d3g:"All Vehicles",
   d4t:"Baby Beach",d4s:"A sheltered crescent lagoon on Aruba's southern tip. Calm, shallow waters ideal for families and snorkeling.",d4g:"All Vehicles",
-  d5t:"Arikok National Park",d5s:"Aruba's protected wilderness — nearly 20% of the island. Desert landscapes, ancient caves, and Arawak rock paintings.",d5g:"SUV or Jeep",
+  d5t:"Arikok National Park",d5s:"Aruba's protected wilderness — nearly 20% of the island. Desert landscapes, ancient caves, and Arawak rock paintings.",d5g:"Jeep 4x4 Required",
   rv_tg:"Guest Reviews",rv_h:"What Our Guests Say",rv_fb:"Read All on Facebook",
   rv1:"“Best car rental on the island. The Jeep was spotless and waiting. Atlantic turned our Aruba trip into something truly unforgettable.”",
   rv2:"“Immaculate vehicle, always a WhatsApp away. Zero surprises on pricing. We will 100% be back.”",
@@ -789,7 +849,7 @@ en:{
   co_ph:"Phone & WhatsApp",co_hr:"Hours",co_hv:"Daily · 7:00 AM – 10:00 PM<br/>After-hours available on request",
   f_fn:"First Name",f_ln:"Last Name",f_em:"Email",f_ph:"Phone / WhatsApp",
   f_pk:"Pickup Date",f_rt:"Return Date",f_vh:"Vehicle",f_pl:"Pickup Location",
-  f_insel:"Insurance",f_insel_tpl:"Third Party Liability (included, free)",f_insel_cdw:"CDW — $10/day",f_insel_theft:"Theft Protection — $7.50/day",f_insel_std:"Standard Protection — $20/day",f_insel_prem:"Premium / Zero Deductible — $30/day",
+  f_insel:"Insurance",f_insel_tpl:"Third Party Liability (included, free)",f_insel_cdw:"CDW — $15/day",f_insel_theft:"Theft Protection — $10/day",f_insel_std:"Standard Protection — $25/day",f_insel_prem:"Premium / Zero Deductible — $35/day",
   f_flt:"Flight Number (optional)",f_stay:"Where You're Staying (optional)",
   f_consent:"By submitting, you agree to our <a href=\"terms.html\" style=\"color:var(--gold);text-decoration:none\">Terms and Conditions</a> and <a href=\"privacy.html\" style=\"color:var(--gold);text-decoration:none\">Privacy Policy</a>.",
   f_air:"Aruba Airport (Queen Beatrix International)",f_hd:"Hotel / Villa Delivery",
@@ -881,20 +941,26 @@ es:{
   c_je:"Jeep  · 4x4",c_je_b:"Colección Aventura",c_je_i:"Ideal para off-road y aventura",
   c_va:"Van",c_va_b:"Familiar Premium",c_va_i:"Ideal para grupos y familias",
   fl_rs:"Reservar",from:"por día",
-  pr_co:"Desde <strong>$45</strong>/día",
-  pr_se:"Desde <strong>$60</strong>/día",
-  pr_su:"Desde <strong>$85</strong>/día",
-  pr_je:"Desde <strong>$130</strong>/día",
-  pr_lsu:"Desde <strong>$110</strong>/día",
-  pr_va:"Desde <strong>$110</strong>/día",
-  pr_co_hi:"Desde <strong>$60</strong>/día",
-  pr_se_hi:"Desde <strong>$80</strong>/día",
-  pr_su_hi:"Desde <strong>$110</strong>/día",
-  pr_lsu_hi:"Desde <strong>$155</strong>/día",
-  pr_je_hi:"Desde <strong>$190</strong>/día",
-  pr_va_hi:"Desde <strong>$145</strong>/día",
+  pr_co_1:"<strong>$60</strong>/1 día",pr_co_1_hi:"<strong>$70</strong>/1 día",
+  pr_co_3:"<strong>$160</strong>/3 días",pr_co_3_hi:"<strong>$190</strong>/3 días",
+  pr_co_7:"<strong>$305</strong>/7 días",pr_co_7_hi:"<strong>$370</strong>/7 días",
+  pr_se_1:"<strong>$65</strong>/1 día",pr_se_1_hi:"<strong>$80</strong>/1 día",
+  pr_se_3:"<strong>$175</strong>/3 días",pr_se_3_hi:"<strong>$215</strong>/3 días",
+  pr_se_7:"<strong>$340</strong>/7 días",pr_se_7_hi:"<strong>$415</strong>/7 días",
+  pr_su_1:"<strong>$90</strong>/1 día",pr_su_1_hi:"<strong>$105</strong>/1 día",
+  pr_su_3:"<strong>$240</strong>/3 días",pr_su_3_hi:"<strong>$290</strong>/3 días",
+  pr_su_7:"<strong>$465</strong>/7 días",pr_su_7_hi:"<strong>$560</strong>/7 días",
+  pr_lsu_1:"<strong>$110</strong>/1 día",pr_lsu_1_hi:"<strong>$130</strong>/1 día",
+  pr_lsu_3:"<strong>$300</strong>/3 días",pr_lsu_3_hi:"<strong>$355</strong>/3 días",
+  pr_lsu_7:"<strong>$580</strong>/7 días",pr_lsu_7_hi:"<strong>$695</strong>/7 días",
+  pr_je_1:"<strong>$145</strong>/1 día",pr_je_1_hi:"<strong>$180</strong>/1 día",
+  pr_je_3:"<strong>$400</strong>/3 días",pr_je_3_hi:"<strong>$480</strong>/3 días",
+  pr_je_7:"<strong>$770</strong>/7 días",pr_je_7_hi:"<strong>$925</strong>/7 días",
+  pr_va_1:"<strong>$130</strong>/1 día",pr_va_1_hi:"<strong>$160</strong>/1 día",
+  pr_va_3:"<strong>$350</strong>/3 días",pr_va_3_hi:"<strong>$420</strong>/3 días",
+  pr_va_7:"<strong>$685</strong>/7 días",pr_va_7_hi:"<strong>$820</strong>/7 días",
   usd_note:"Todos los precios en dólares estadounidenses. Aceptamos todas las tarjetas de crédito principales; las tarjetas extranjeras pueden incurrir en la tarifa de conversión de su banco. Las imágenes son representativas de cada clase de vehículo — marca y modelo específicos asignados en la entrega según disponibilidad.",
-  bn_li:"Mínimo 3 días &middot; Entrega gratuita &middot; Kilometraje ilimitado",
+  bn_li:"Entrega gratuita &middot; Kilometraje ilimitado",
   cc_t:"“¿No sabe qué vehiculo se adapta a sus planes?”",
   cc_s:"Nuestro equipo en WhatsApp le ayudará a elegir el auto perfecto para su experiencia en Aruba.",
   cc_btn:"Concierge WhatsApp",
@@ -924,7 +990,7 @@ es:{
   d2t:"Piscina Natural",d2s:"En Arikok. Salvaje y dramático. Solo 4x4.",d2g:"Jeep Requerido",d2tour:"¿Sin 4x4? Nosotros te llevamos — tour guiado a Conchi.",
   d3t:"Faro California",d3s:"360° vistas del norte salvaje de Aruba al atardecer.",d3g:"Todos los vehiculos",
   d4t:"Baby Beach",d4s:"Laguna sur. Tranquila y cristalina.",d4g:"Todos los vehiculos",
-  d5t:"Parque Nacional Arikok",d5s:"Senderos de desierto y paisajes salvajes de Aruba.",d5g:"SUV o Jeep",
+  d5t:"Parque Nacional Arikok",d5s:"Senderos de desierto y paisajes salvajes de Aruba.",d5g:"Se requiere Jeep 4x4",
   rv_tg:"Opiniones",rv_h:"Lo Que Dicen Nuestros Huéspedes",rv_fb:"Ver Todas en Facebook",
   rv1:"“El mejor alquiler de la isla. El Jeep estaba impecable. Atlantic hizo nuestro viaje inolvidable.”",
   rv2:"“Vehiculo impecable, siempre disponibles por WhatsApp. Cero sorpresas. Volvemos al 100%.”",
@@ -946,7 +1012,7 @@ es:{
   co_ph:"Teléfono y WhatsApp",co_hr:"Horario",co_hv:"Diario · 7:00 AM – 10:00 PM",
   f_fn:"Nombre",f_ln:"Apellido",f_em:"Correo",f_ph:"Teléfono / WhatsApp",
   f_pk:"Fecha de Recogida",f_rt:"Fecha de Devolución",f_vh:"Vehículo",f_pl:"Lugar de Recogida",
-  f_insel:"Seguro",f_insel_tpl:"Responsabilidad Civil (incluido, gratis)",f_insel_cdw:"CDW — $10/día",f_insel_theft:"Protección contra Robo — $7.50/día",f_insel_std:"Protección Estándar — $20/día",f_insel_prem:"Premium / Deducible Cero — $30/día",
+  f_insel:"Seguro",f_insel_tpl:"Responsabilidad Civil (incluido, gratis)",f_insel_cdw:"CDW — $15/día",f_insel_theft:"Protección contra Robo — $10/día",f_insel_std:"Protección Estándar — $25/día",f_insel_prem:"Premium / Deducible Cero — $35/día",
   f_flt:"Número de Vuelo (opcional)",f_stay:"Dónde te Hospedas (opcional)",
   f_consent:"Al enviar, aceptas nuestros <a href=\"terms.html\" style=\"color:var(--gold);text-decoration:none\">Términos y Condiciones</a> y nuestra <a href=\"privacy.html\" style=\"color:var(--gold);text-decoration:none\">Política de Privacidad</a>.",
   f_air:"Aeropuerto de Aruba (Queen Beatrix)",f_hd:"Entrega en Hotel / Villa",
@@ -1038,20 +1104,26 @@ nl:{
   c_je:"Jeep  · 4x4",c_je_b:"Avontuur Collectie",c_je_i:"Ideaal voor off-road en avontuur",
   c_va:"Van",c_va_b:"Familie Premium",c_va_i:"Ideaal voor groepen en families",
   fl_rs:"Reserveren",from:"per dag",
-  pr_co:"Vanaf <strong>$45</strong>/dag",
-  pr_se:"Vanaf <strong>$60</strong>/dag",
-  pr_su:"Vanaf <strong>$85</strong>/dag",
-  pr_je:"Vanaf <strong>$130</strong>/dag",
-  pr_lsu:"Vanaf <strong>$110</strong>/dag",
-  pr_va:"Vanaf <strong>$110</strong>/dag",
-  pr_co_hi:"Vanaf <strong>$60</strong>/dag",
-  pr_se_hi:"Vanaf <strong>$80</strong>/dag",
-  pr_su_hi:"Vanaf <strong>$110</strong>/dag",
-  pr_lsu_hi:"Vanaf <strong>$155</strong>/dag",
-  pr_je_hi:"Vanaf <strong>$190</strong>/dag",
-  pr_va_hi:"Vanaf <strong>$145</strong>/dag",
+  pr_co_1:"<strong>$60</strong>/1 dag",pr_co_1_hi:"<strong>$70</strong>/1 dag",
+  pr_co_3:"<strong>$160</strong>/3 dagen",pr_co_3_hi:"<strong>$190</strong>/3 dagen",
+  pr_co_7:"<strong>$305</strong>/7 dagen",pr_co_7_hi:"<strong>$370</strong>/7 dagen",
+  pr_se_1:"<strong>$65</strong>/1 dag",pr_se_1_hi:"<strong>$80</strong>/1 dag",
+  pr_se_3:"<strong>$175</strong>/3 dagen",pr_se_3_hi:"<strong>$215</strong>/3 dagen",
+  pr_se_7:"<strong>$340</strong>/7 dagen",pr_se_7_hi:"<strong>$415</strong>/7 dagen",
+  pr_su_1:"<strong>$90</strong>/1 dag",pr_su_1_hi:"<strong>$105</strong>/1 dag",
+  pr_su_3:"<strong>$240</strong>/3 dagen",pr_su_3_hi:"<strong>$290</strong>/3 dagen",
+  pr_su_7:"<strong>$465</strong>/7 dagen",pr_su_7_hi:"<strong>$560</strong>/7 dagen",
+  pr_lsu_1:"<strong>$110</strong>/1 dag",pr_lsu_1_hi:"<strong>$130</strong>/1 dag",
+  pr_lsu_3:"<strong>$300</strong>/3 dagen",pr_lsu_3_hi:"<strong>$355</strong>/3 dagen",
+  pr_lsu_7:"<strong>$580</strong>/7 dagen",pr_lsu_7_hi:"<strong>$695</strong>/7 dagen",
+  pr_je_1:"<strong>$145</strong>/1 dag",pr_je_1_hi:"<strong>$180</strong>/1 dag",
+  pr_je_3:"<strong>$400</strong>/3 dagen",pr_je_3_hi:"<strong>$480</strong>/3 dagen",
+  pr_je_7:"<strong>$770</strong>/7 dagen",pr_je_7_hi:"<strong>$925</strong>/7 dagen",
+  pr_va_1:"<strong>$130</strong>/1 dag",pr_va_1_hi:"<strong>$160</strong>/1 dag",
+  pr_va_3:"<strong>$350</strong>/3 dagen",pr_va_3_hi:"<strong>$420</strong>/3 dagen",
+  pr_va_7:"<strong>$685</strong>/7 dagen",pr_va_7_hi:"<strong>$820</strong>/7 dagen",
   usd_note:"Alle prijzen in Amerikaanse dollars. Wij accepteren alle grote creditcards; buitenlandse kaarten kunnen de wisselkoerskosten van uw bank met zich meebrengen. Afbeeldingen zijn representatief voor elke voertuigklasse — specifiek merk en model toegewezen bij levering op basis van beschikbaarheid.",
-  bn_li:"Minimum 3 dagen &middot; Gratis bezorging &middot; Onbeperkte kilometers",
+  bn_li:"Gratis bezorging &middot; Onbeperkte kilometers",
   cc_t:"“Weet u niet welk voertuig bij uw plannen past?”",
   cc_s:"Ons team op WhatsApp helpt u de perfecte auto kiezen voor uw Aruba-ervaring.",
   cc_btn:"WhatsApp Concierge",
@@ -1081,7 +1153,7 @@ nl:{
   d2t:"Natuurlijk Zwembad",d2s:"In Arikok. Wild en dramatisch. Alleen 4x4.",d2g:"Jeep Vereist",d2tour:"Geen 4x4? Wij nemen u mee — begeleide Conchi-tour.",
   d3t:"California Vuurtoren",d3s:"360° uitzicht over Aruba's wilde noorden bij zonsondergang.",d3g:"Alle voertuigen",
   d4t:"Baby Beach",d4s:"Zuidelijke lagune. Kalm en kristalhelder.",d4g:"Alle voertuigen",
-  d5t:"Arikok Nationaal Park",d5s:"Woestijnpaden en Aruba's rauwste landschappen.",d5g:"SUV of Jeep",
+  d5t:"Arikok Nationaal Park",d5s:"Woestijnpaden en Aruba's rauwste landschappen.",d5g:"Jeep 4x4 Vereist",
   rv_tg:"Recensies",rv_h:"Wat Onze Gasten Zeggen",rv_fb:"Lees Alles op Facebook",
   rv1:"“De beste autoverhuur op het eiland. De Jeep was onberispelijk. Atlantic maakte onze trip onvergetelijk.”",
   rv2:"“Onberispelijk voertuig, altijd bereikbaar per WhatsApp. Nul verrassingen. We komen terug.”",
@@ -1103,7 +1175,7 @@ nl:{
   co_ph:"Telefoon & WhatsApp",co_hr:"Openingstijden",co_hv:"Dagelijks · 7:00 – 22:00",
   f_fn:"Voornaam",f_ln:"Achternaam",f_em:"E-mail",f_ph:"Telefoon / WhatsApp",
   f_pk:"Ophaaldatum",f_rt:"Retourdatum",f_vh:"Voertuig",f_pl:"Ophaallocatie",
-  f_insel:"Verzekering",f_insel_tpl:"Aansprakelijkheidsverzekering (inbegrepen, gratis)",f_insel_cdw:"CDW — $10/dag",f_insel_theft:"Diefstalbescherming — $7.50/dag",f_insel_std:"Standaardbescherming — $20/dag",f_insel_prem:"Premium / Geen Eigen Risico — $30/dag",
+  f_insel:"Verzekering",f_insel_tpl:"Aansprakelijkheidsverzekering (inbegrepen, gratis)",f_insel_cdw:"CDW — $15/dag",f_insel_theft:"Diefstalbescherming — $10/dag",f_insel_std:"Standaardbescherming — $25/dag",f_insel_prem:"Premium / Geen Eigen Risico — $35/dag",
   f_flt:"Vluchtnummer (optioneel)",f_stay:"Waar U Verblijft (optioneel)",
   f_consent:"Door te verzenden gaat u akkoord met onze <a href=\"terms.html\" style=\"color:var(--gold);text-decoration:none\">Algemene Voorwaarden</a> en ons <a href=\"privacy.html\" style=\"color:var(--gold);text-decoration:none\">Privacybeleid</a>.",
   f_air:"Aruba Airport (Queen Beatrix International)",f_hd:"Hotel / Villa Bezorging",
@@ -1195,20 +1267,26 @@ pt:{
   c_je:"Jeep  · 4x4",c_je_b:"Coleção Aventura",c_je_i:"Ideal para off-road e aventura",
   c_va:"Van",c_va_b:"Família Premium",c_va_i:"Ideal para grupos e famílias",
   fl_rs:"Reservar",from:"por dia",
-  pr_co:"A partir de <strong>$45</strong>/dia",
-  pr_se:"A partir de <strong>$60</strong>/dia",
-  pr_su:"A partir de <strong>$85</strong>/dia",
-  pr_je:"A partir de <strong>$130</strong>/dia",
-  pr_lsu:"A partir de <strong>$110</strong>/dia",
-  pr_va:"A partir de <strong>$110</strong>/dia",
-  pr_co_hi:"A partir de <strong>$60</strong>/dia",
-  pr_se_hi:"A partir de <strong>$80</strong>/dia",
-  pr_su_hi:"A partir de <strong>$110</strong>/dia",
-  pr_lsu_hi:"A partir de <strong>$155</strong>/dia",
-  pr_je_hi:"A partir de <strong>$190</strong>/dia",
-  pr_va_hi:"A partir de <strong>$145</strong>/dia",
+  pr_co_1:"<strong>$60</strong>/1 dia",pr_co_1_hi:"<strong>$70</strong>/1 dia",
+  pr_co_3:"<strong>$160</strong>/3 dias",pr_co_3_hi:"<strong>$190</strong>/3 dias",
+  pr_co_7:"<strong>$305</strong>/7 dias",pr_co_7_hi:"<strong>$370</strong>/7 dias",
+  pr_se_1:"<strong>$65</strong>/1 dia",pr_se_1_hi:"<strong>$80</strong>/1 dia",
+  pr_se_3:"<strong>$175</strong>/3 dias",pr_se_3_hi:"<strong>$215</strong>/3 dias",
+  pr_se_7:"<strong>$340</strong>/7 dias",pr_se_7_hi:"<strong>$415</strong>/7 dias",
+  pr_su_1:"<strong>$90</strong>/1 dia",pr_su_1_hi:"<strong>$105</strong>/1 dia",
+  pr_su_3:"<strong>$240</strong>/3 dias",pr_su_3_hi:"<strong>$290</strong>/3 dias",
+  pr_su_7:"<strong>$465</strong>/7 dias",pr_su_7_hi:"<strong>$560</strong>/7 dias",
+  pr_lsu_1:"<strong>$110</strong>/1 dia",pr_lsu_1_hi:"<strong>$130</strong>/1 dia",
+  pr_lsu_3:"<strong>$300</strong>/3 dias",pr_lsu_3_hi:"<strong>$355</strong>/3 dias",
+  pr_lsu_7:"<strong>$580</strong>/7 dias",pr_lsu_7_hi:"<strong>$695</strong>/7 dias",
+  pr_je_1:"<strong>$145</strong>/1 dia",pr_je_1_hi:"<strong>$180</strong>/1 dia",
+  pr_je_3:"<strong>$400</strong>/3 dias",pr_je_3_hi:"<strong>$480</strong>/3 dias",
+  pr_je_7:"<strong>$770</strong>/7 dias",pr_je_7_hi:"<strong>$925</strong>/7 dias",
+  pr_va_1:"<strong>$130</strong>/1 dia",pr_va_1_hi:"<strong>$160</strong>/1 dia",
+  pr_va_3:"<strong>$350</strong>/3 dias",pr_va_3_hi:"<strong>$420</strong>/3 dias",
+  pr_va_7:"<strong>$685</strong>/7 dias",pr_va_7_hi:"<strong>$820</strong>/7 dias",
   usd_note:"Todos os preços em dólares americanos. Aceitamos todos os principais cartões de crédito; cartões estrangeiros podem incorrer na taxa de conversão do seu banco. As imagens são representativas de cada classe de veículo — marca e modelo específicos atribuídos na entrega com base na disponibilidade.",
-  bn_li:"Mínimo 3 dias &middot; Entrega grátis &middot; Quilometragem ilimitada",
+  bn_li:"Entrega grátis &middot; Quilometragem ilimitada",
   cc_t:"“Não sabe qual veículo se encaixa nos seus planos?”",
   cc_s:"Nossa equipe no WhatsApp ajuda você a escolher o carro perfeito para sua experiência em Aruba.",
   cc_btn:"Concierge WhatsApp",
@@ -1238,7 +1316,7 @@ pt:{
   d2t:"Piscina Natural",d2s:"Em Arikok. Selvagem e dramático. Apenas 4x4.",d2g:"Jeep Necessário",d2tour:"Sem 4x4? Nós levamos você — tour guiado a Conchi.",
   d3t:"Farol da Califórnia",d3s:"360° vistas do norte selvagem de Aruba ao pôr do sol.",d3g:"Todos os veículos",
   d4t:"Baby Beach",d4s:"Lagoa sul. Calma e cristalina.",d4g:"Todos os veículos",
-  d5t:"Parque Nacional Arikok",d5s:"Trilhas de deserto e paisagens selvagens de Aruba.",d5g:"SUV ou Jeep",
+  d5t:"Parque Nacional Arikok",d5s:"Trilhas de deserto e paisagens selvagens de Aruba.",d5g:"Jeep 4x4 Necessário",
   rv_tg:"Avaliações",rv_h:"O Que Nossos Hóspedes Dizem",rv_fb:"Ver Todas no Facebook",
   rv1:"“Melhor aluguel da ilha. O Jeep estava impecável. Atlantic tornou a viagem inesquecível.”",
   rv2:"“Veículo impecável, sempre disponível por WhatsApp. Zero surpresas. Voltaremos.”",
@@ -1260,7 +1338,7 @@ pt:{
   co_ph:"Telefone & WhatsApp",co_hr:"Horário",co_hv:"Diário · 7:00 – 22:00",
   f_fn:"Nome",f_ln:"Sobrenome",f_em:"E-mail",f_ph:"Telefone / WhatsApp",
   f_pk:"Data de Retirada",f_rt:"Data de Devolução",f_vh:"Veículo",f_pl:"Local de Retirada",
-  f_insel:"Seguro",f_insel_tpl:"Responsabilidade Civil (incluído, grátis)",f_insel_cdw:"CDW — $10/dia",f_insel_theft:"Proteção contra Roubo — $7.50/dia",f_insel_std:"Proteção Padrão — $20/dia",f_insel_prem:"Premium / Franquia Zero — $30/dia",
+  f_insel:"Seguro",f_insel_tpl:"Responsabilidade Civil (incluído, grátis)",f_insel_cdw:"CDW — $15/dia",f_insel_theft:"Proteção contra Roubo — $10/dia",f_insel_std:"Proteção Padrão — $25/dia",f_insel_prem:"Premium / Franquia Zero — $35/dia",
   f_flt:"Número do Voo (opcional)",f_stay:"Onde Você Está Hospedado (opcional)",
   f_consent:"Ao enviar, você concorda com nossos <a href=\"terms.html\" style=\"color:var(--gold);text-decoration:none\">Termos e Condições</a> e nossa <a href=\"privacy.html\" style=\"color:var(--gold);text-decoration:none\">Política de Privacidade</a>.",
   f_air:"Aeroporto de Aruba (Queen Beatrix)",f_hd:"Entrega em Hotel / Villa",
