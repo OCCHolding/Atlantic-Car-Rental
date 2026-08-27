@@ -32,27 +32,29 @@ KEY FACTS:
 - NO payment required to reserve, free cancellation more than 48h before pickup
 - We confirm reservations via WhatsApp within 1 hour
 
-FLEET (5 categories, NEVER mention car brands):
+FLEET (6 categories, NEVER mention car brands):
 1. Compact — 5 seats, couples/solo
 2. Sedan — 5 seats, business/couples
 3. SUV — 5 seats, families/groups
-4. Jeep 4x4 — 5 seats, REQUIRED for Natural Pool and Arikok off-road trails
-5. Van — 10 seats, large groups
+4. Large SUV — 7 seats, premium, groups/extended families
+5. Jeep 4x4 — 5 seats, REQUIRED for Natural Pool and Arikok off-road trails
+6. Van — 7+ seats, large groups
 
 PRICING (Low / High Season; High = Dec 15 - Apr 15):
-- Compact: $60 / $75 per day
-- Sedan: $75 / $90 per day
-- SUV: $90 / $100 per day
-- Jeep 4x4: $175 / $185 per day
-- Van: $130 / $150 per day
+- Compact: $45 / $60 per day
+- Sedan: $60 / $80 per day
+- SUV: $85 / $110 per day
+- Large SUV: $110 / $155 per day
+- Jeep 4x4: $130 / $190 per day
+- Van: $110 / $145 per day
 All include unlimited mileage and basic TPL insurance.
 
 INSURANCE ADD-ONS:
-- TPL: FREE included
-- CDW: +$10/day
-- Theft Protection: +$7.50/day
-- Standard Package: +$20/day
-- Premium Zero Deductible: +$30/day
+- TPL: included, free
+- CDW: $10/day (deductible $750–$1,500 by vehicle class)
+- Theft Protection: $7.50/day (deductible $500)
+- Standard: $20/day (deductible $400, includes tyres & windscreen)
+- Premium (Zero Deductible): $30/day ($0 deductible, tyres & windscreen, roadside assistance, lost key)
 
 PAYMENT: Card, Cash (USD/AWG/EUR), Bank Transfer, Crypto (BTC/ETH/USDT)
 POLICIES: No smoking ($250 fee), no pets, accident protocol = don't move vehicle, call police 100, then us
