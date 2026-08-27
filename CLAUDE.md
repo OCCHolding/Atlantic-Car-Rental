@@ -9,7 +9,7 @@
 - No OCC watermarks
 - Minimum rental age: 23
 - No smoking policy fee: $250
-- Vehicle cards display: vehicle category + three duration prices (1-day, 3-day, 7-day totals) for the currently selected season, updated live by the Low/High season toggle + small benefits line ("Free delivery · Unlimited mileage"). No minimum-rental line on cards — a 1-day rate is shown.
+- Vehicle cards display: vehicle category + three duration prices (1-day, 3-day, 7-day totals) for the currently selected season, updated live by the Low/High season toggle + a small "3-day minimum booking" note + benefits line ("Free delivery · Unlimited mileage"). The 1-day price is shown for reference only — it is not an independently bookable option.
 
 # Pricing & Policies
 
@@ -28,7 +28,7 @@
   - Jeep 4x4: $180 / $480 / $925
   - Van: $160 / $420 / $820
 - Van seats 10; Large SUV seats 7 (premium positioning) — other vehicles seat 5
-- No stated minimum rental period; a 1-day rate is offered. NOTE: terms.html section 2.4 still states "a minimum rental period of three (3) days applies" — this is an unresolved contradiction with actual site display, flagged but not resolved as of this update. Confirm with the business owner which is correct before treating either as final.
+- 3-day minimum rental applies to all bookings (confirmed policy — matches terms.html section 2.4). The 1-day price shown on vehicle cards is a per-day reference/pricing component only; it does not mean 1-day bookings are accepted.
 - Free delivery anywhere on the island
 - Unlimited mileage on all rentals
 - Always display the benefits line ("Free delivery · Unlimited mileage") on every vehicle card in the local language

@@ -437,6 +437,7 @@ a{color:inherit;text-decoration:none}
 .cpr-sub{display:flex;gap:14px;margin-top:5px;flex-wrap:wrap}
 .cpr-sub-item{font-size:.68rem;color:var(--muted);font-weight:400}
 .cpr-sub-item strong{color:var(--gold-l);font-weight:600}
+.cpr-note{font-size:.62rem;color:var(--ink-5);font-weight:300;margin-top:5px}
 .ccard-benefits{
   font-size:.58rem;font-weight:400;letter-spacing:.04em;
   color:var(--muted);line-height:1.6;margin-bottom:14px;
