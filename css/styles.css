@@ -824,11 +824,12 @@ input[type="date"]::-webkit-datetime-edit-year-field {
 
 
 /* Reduce excessive spacing */
-.sec { padding: 80px 52px !important; }
-#about { padding: 80px 52px !important; }
+.sec { padding: 80px 52px; }
+#about { padding: 80px 52px; }
 @media(max-width:768px) {
-  .sec, #about { padding: 52px 18px !important; }
+  .sec, #about { padding: 52px 18px; }
   .sh { font-size: clamp(1.8rem, 6vw, 2.8rem) !important; }
+  nav + section.sec { padding-top: 130px; }
 }
 
 
