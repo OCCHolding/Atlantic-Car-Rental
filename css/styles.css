@@ -436,8 +436,9 @@ nav + section.sec{padding-top:170px}
   font-size:2.1rem;color:var(--gold);
   font-family:'Cormorant',serif;font-weight:500;line-height:1;
 }
+.cpr-dur{font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .cpr-sub{display:flex;gap:14px;margin-top:5px;flex-wrap:wrap}
-.cpr-sub-item{font-size:.68rem;color:var(--muted);font-weight:400}
+.cpr-sub-item{display:inline-flex;align-items:baseline;gap:5px;font-size:.68rem;color:var(--muted);font-weight:400}
 .cpr-sub-item strong{color:var(--gold-l);font-weight:600}
 .cpr-note{font-size:.62rem;color:var(--ink-5);font-weight:300;margin-top:5px}
 .ccard-benefits{
