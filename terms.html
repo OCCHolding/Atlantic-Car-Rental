@@ -33,20 +33,20 @@
     <span class="nav-wm-b">Car Rental &nbsp;&middot;&nbsp; Aruba</span>
   </a>
   <ul class="nlinks" id="nlinks">
-    <li><a href="index.html#fleet" onclick="closeMNav()">Fleet</a></li>
-    <li><a href="index.html#aruba" onclick="closeMNav()">Explore Aruba</a></li>
+    <li><a href="index.html#fleet" data-t="n_fl" onclick="closeMNav()">Fleet</a></li>
+    <li><a href="index.html#aruba" data-t="n_ar" onclick="closeMNav()">Explore Aruba</a></li>
     <li class="nav-drop">
       <button type="button" class="nav-drop-btn" onclick="toggleGtkDrop(event)" aria-expanded="false" aria-haspopup="true">
-        <span>Good to Know</span><span class="nav-drop-caret" aria-hidden="true">&#9662;</span>
+        <span data-t="n_gtk">Good to Know</span><span class="nav-drop-caret" aria-hidden="true">&#9662;</span>
       </button>
       <ul class="nav-drop-menu">
-        <li><a href="driving-in-aruba.html" onclick="closeMNav()">Driving in Aruba</a></li>
-        <li><a href="insurance.html" onclick="closeMNav()">Insurance</a></li>
-        <li><a href="reservation-requirements.html" onclick="closeMNav()">Reservation Requirements</a></li>
-        <li><a href="add-ons.html" onclick="closeMNav()">Add-ons</a></li>
+        <li><a href="driving-in-aruba.html" data-t="n_dr" onclick="closeMNav()">Driving in Aruba</a></li>
+        <li><a href="insurance.html" data-t="n_ins" onclick="closeMNav()">Insurance</a></li>
+        <li><a href="reservation-requirements.html" data-t="n_rr" onclick="closeMNav()">Reservation Requirements</a></li>
+        <li><a href="add-ons.html" data-t="n_ao" onclick="closeMNav()">Add-ons</a></li>
       </ul>
     </li>
-    <li><a href="about.html" onclick="closeMNav()">About</a></li>
+    <li><a href="about.html" data-t="n_ab" onclick="closeMNav()">About</a></li>
   </ul>
   <div class="nav-right">
     <a href="tel:+2975931982" class="nav-phone" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.65);font-size:.85rem;font-weight:500;letter-spacing:.04em;transition:color .2s;text-decoration:none">
@@ -56,7 +56,13 @@
     <a href="https://wa.me/2975931982" target="_blank" class="nav-whatsapp" aria-label="WhatsApp" style="align-items:center;color:rgba(255,255,255,.65);transition:color .2s;text-decoration:none">
       <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
-    <button class="nav-cta" onclick="location.href='index.html#contact'"><span class="cta-full">Reservation Request</span><span class="cta-short">Reserve</span></button>
+    <button class="nav-cta" onclick="location.href='index.html#contact'"><span class="cta-full" data-t="n_ct">Reservation Request</span><span class="cta-short" data-t="n_ct_s">Reserve</span></button>
+    <div class="nav-lang">
+      <button class="lbtn on" onclick="setL('en')">EN</button>
+      <button class="lbtn" onclick="setL('es')">ES</button>
+      <button class="lbtn" onclick="setL('nl')">NL</button>
+      <button class="lbtn" onclick="setL('pt')">PT</button>
+    </div>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="toggleMNav()">&#9776;</button>
   </div>
 </nav>
@@ -64,178 +70,178 @@
 <!-- TERMS -->
 <section class="sec sec-alt">
   <div style="text-align:center;margin-bottom:40px">
-    <div class="tag rv" style="justify-content:center">Legal</div>
-    <h1 class="sh rv d1">Terms and <em>Conditions</em></h1>
+    <div class="tag rv" style="justify-content:center" data-t="tag_l">Legal</div>
+    <h1 class="sh rv d1" data-t="h1t">Terms and <em>Conditions</em></h1>
     <div class="rule rv d2" style="margin-left:auto;margin-right:auto"></div>
-    <p class="legal-meta rv d3">Last updated: August 27, 2026</p>
+    <p class="legal-meta rv d3" data-t="lu">Last updated: August 27, 2026</p>
   </div>
 
   <div class="legal-doc rv d4">
 
-    <h2>1. Who You Are Contracting With</h2>
-    <p>Atlantic Car Rental is a brand of <strong>Atlantic Tours Transfers and Rentals</strong>, the registered trade name of <strong>OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A.</strong>, a limited liability company registered in Aruba with the Chamber of Commerce and Industry Aruba under number <strong>H51819.5</strong>, with its registered address at Italiestraat 38, Eagle/Paardenbaai, Oranjestad West, Aruba.</p>
-    <p>Referred to in these Terms as &ldquo;Atlantic,&rdquo; &ldquo;we,&rdquo; or &ldquo;us.&rdquo;</p>
-    <p><strong>Offices</strong><br/>Main office: Italiestraat 38 (Sasaki Building), Oranjestad, Aruba &middot; P.O. Box 477<br/>Airport delivery: Wayaca 6B, Aeromall, Oranjestad &middot; Delivery at Queen Beatrix International Airport</p>
-    <p>By submitting a reservation request, collecting a vehicle, or signing a rental agreement, you (&ldquo;the Renter&rdquo;) accept these Terms.</p>
-    <p>These Terms form part of the rental agreement signed at delivery or collection. Where the two differ, the signed rental agreement prevails.</p>
-    <p>Where more than one person signs the rental agreement, each is jointly and individually responsible for everything owed under it.</p>
+    <h2 data-t="sh1">1. Who You Are Contracting With</h2>
+    <p data-t="p1_1">Atlantic Car Rental is a brand of <strong>Atlantic Tours Transfers and Rentals</strong>, the registered trade name of <strong>OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A.</strong>, a limited liability company registered in Aruba with the Chamber of Commerce and Industry Aruba under number <strong>H51819.5</strong>, with its registered address at Italiestraat 38, Eagle/Paardenbaai, Oranjestad West, Aruba.</p>
+    <p data-t="p1_2">Referred to in these Terms as &ldquo;Atlantic,&rdquo; &ldquo;we,&rdquo; or &ldquo;us.&rdquo;</p>
+    <p data-t="p1_3"><strong>Offices</strong><br/>Main office: Italiestraat 38 (Sasaki Building), Oranjestad, Aruba &middot; P.O. Box 477<br/>Airport delivery: Wayaca 6B, Aeromall, Oranjestad &middot; Delivery at Queen Beatrix International Airport</p>
+    <p data-t="p1_4">By submitting a reservation request, collecting a vehicle, or signing a rental agreement, you (&ldquo;the Renter&rdquo;) accept these Terms.</p>
+    <p data-t="p1_5">These Terms form part of the rental agreement signed at delivery or collection. Where the two differ, the signed rental agreement prevails.</p>
+    <p data-t="p1_6">Where more than one person signs the rental agreement, each is jointly and individually responsible for everything owed under it.</p>
 
-    <h2>2. Reservations</h2>
-    <p>2.1 A reservation request &mdash; by website, WhatsApp, email, or telephone &mdash; is not a confirmed booking. No payment is required to make one.</p>
-    <p>2.2 A reservation is confirmed only when Atlantic confirms availability directly with you, normally by WhatsApp.</p>
-    <p>2.3 Vehicle images on our website are representative of each class. The specific make and model is assigned at delivery based on availability. We do not guarantee a particular make, model, colour, or year.</p>
-    <p>2.4 A minimum rental period of three (3) days applies.</p>
-    <p>2.5 We contact you one day before arrival to coordinate delivery.</p>
-    <p>2.6 Atlantic may decline any reservation request at its discretion.</p>
+    <h2 data-t="sh2">2. Reservations</h2>
+    <p data-t="p2_1">2.1 A reservation request &mdash; by website, WhatsApp, email, or telephone &mdash; is not a confirmed booking. No payment is required to make one.</p>
+    <p data-t="p2_2">2.2 A reservation is confirmed only when Atlantic confirms availability directly with you, normally by WhatsApp.</p>
+    <p data-t="p2_3">2.3 Vehicle images on our website are representative of each class. The specific make and model is assigned at delivery based on availability. We do not guarantee a particular make, model, colour, or year.</p>
+    <p data-t="p2_4">2.4 A minimum rental period of three (3) days applies.</p>
+    <p data-t="p2_5">2.5 We contact you one day before arrival to coordinate delivery.</p>
+    <p data-t="p2_6">2.6 Atlantic may decline any reservation request at its discretion.</p>
 
-    <h2>3. Who May Drive</h2>
-    <p>3.1 Minimum age: 23 years.</p>
-    <p>3.2 Every driver must present at the time of rental:</p>
+    <h2 data-t="sh3">3. Who May Drive</h2>
+    <p data-t="p3_1">3.1 Minimum age: 23 years.</p>
+    <p data-t="p3_2">3.2 Every driver must present at the time of rental:</p>
     <ul>
-      <li>A valid driver&rsquo;s licence</li>
-      <li>A valid passport or government-issued identification</li>
-      <li>An International Driving Permit where the licence is not written in Latin script</li>
+      <li data-t="li3_1">A valid driver&rsquo;s licence</li>
+      <li data-t="li3_2">A valid passport or government-issued identification</li>
+      <li data-t="li3_3">An International Driving Permit where the licence is not written in Latin script</li>
     </ul>
-    <p>3.3 Only drivers named on the signed rental agreement may drive the vehicle. Additional drivers must be present at the time of rental, meet the same requirements, and be named on the agreement. Additional driver: $5 per day.</p>
-    <p>3.4 Allowing anyone not named on the agreement to drive ends all insurance cover immediately and makes you responsible for the full value of any loss or damage.</p>
+    <p data-t="p3_3">3.3 Only drivers named on the signed rental agreement may drive the vehicle. Additional drivers must be present at the time of rental, meet the same requirements, and be named on the agreement. Additional driver: $5 per day.</p>
+    <p data-t="p3_4">3.4 Allowing anyone not named on the agreement to drive ends all insurance cover immediately and makes you responsible for the full value of any loss or damage.</p>
 
-    <h2>4. Security Deposit</h2>
-    <p>4.1 A security deposit of USD $200 is required.</p>
-    <p>4.2 It may be paid by major credit card or in cash.</p>
-    <p>4.3 It is released or returned after the vehicle is returned and inspected.</p>
-    <p>4.4 We may deduct from it any amount you owe under these Terms &mdash; damage not covered by insurance, missing fuel, cleaning, traffic fines, late return, loss of use, or claim handling.</p>
-    <p>4.5 Where what you owe exceeds the deposit, you remain responsible for the balance.</p>
+    <h2 data-t="sh4">4. Security Deposit</h2>
+    <p data-t="p4_1">4.1 A security deposit of USD $200 is required.</p>
+    <p data-t="p4_2">4.2 It may be paid by major credit card or in cash.</p>
+    <p data-t="p4_3">4.3 It is released or returned after the vehicle is returned and inspected.</p>
+    <p data-t="p4_4">4.4 We may deduct from it any amount you owe under these Terms &mdash; damage not covered by insurance, missing fuel, cleaning, traffic fines, late return, loss of use, or claim handling.</p>
+    <p data-t="p4_5">4.5 Where what you owe exceeds the deposit, you remain responsible for the balance.</p>
 
-    <h2>5. Payment</h2>
-    <p>5.1 All charges are in United States dollars.</p>
-    <p>5.2 We accept cash and major credit cards. Payment by approved bank transfer or supported cryptocurrency can be arranged in advance.</p>
-    <p>5.3 Foreign cards may incur a conversion fee from your own bank. That fee is not ours and we cannot refund it.</p>
-    <p>5.4 Rental charges and the deposit are payable at delivery.</p>
-    <p>5.5 Amounts unpaid when due carry interest of 1% per month.</p>
-    <p>5.6 Where we have to take steps to recover what you owe, you are responsible for the reasonable costs of doing so.</p>
+    <h2 data-t="sh5">5. Payment</h2>
+    <p data-t="p5_1">5.1 All charges are in United States dollars.</p>
+    <p data-t="p5_2">5.2 We accept cash and major credit cards. Payment by approved bank transfer or supported cryptocurrency can be arranged in advance.</p>
+    <p data-t="p5_3">5.3 Foreign cards may incur a conversion fee from your own bank. That fee is not ours and we cannot refund it.</p>
+    <p data-t="p5_4">5.4 Rental charges and the deposit are payable at delivery.</p>
+    <p data-t="p5_5">5.5 Amounts unpaid when due carry interest of 1% per month.</p>
+    <p data-t="p5_6">5.6 Where we have to take steps to recover what you owe, you are responsible for the reasonable costs of doing so.</p>
 
-    <h2>6. Cancellation and Changes</h2>
-    <p>6.1 Cancel more than 48 hours before pickup: free.</p>
-    <p>6.2 Cancel within 48 hours: an administrative fee of USD $25 may apply.</p>
-    <p>6.3 Changes to a confirmed reservation are subject to availability.</p>
-    <p>6.4 If you do not collect the vehicle at the agreed time and do not contact us, we may release the reservation after two (2) hours and treat it as a late cancellation.</p>
+    <h2 data-t="sh6">6. Cancellation and Changes</h2>
+    <p data-t="p6_1">6.1 Cancel more than 48 hours before pickup: free.</p>
+    <p data-t="p6_2">6.2 Cancel within 48 hours: an administrative fee of USD $25 may apply.</p>
+    <p data-t="p6_3">6.3 Changes to a confirmed reservation are subject to availability.</p>
+    <p data-t="p6_4">6.4 If you do not collect the vehicle at the agreed time and do not contact us, we may release the reservation after two (2) hours and treat it as a late cancellation.</p>
 
-    <h2>7. Delivery and Return</h2>
-    <p>7.1 We deliver anywhere on Aruba at no charge &mdash; airport, hotel, villa, or agreed location.</p>
-    <p>7.2 You must be present at the agreed place and time with all required documents.</p>
-    <p>7.3 At delivery we record together the vehicle&rsquo;s condition, fuel level, and mileage. Raise any discrepancy then, not later.</p>
-    <p>7.4 Return the vehicle at the agreed date, time, and place, in the same condition and with the same fuel level, ordinary wear excepted.</p>
-    <p>7.5 If you return the vehicle outside our operating hours, you remain responsible for it until we inspect it when we next open.</p>
-    <p>7.6 You are responsible for returning the vehicle complete &mdash; keys, documents, spare tyre, tools, child seats, and any other equipment supplied. Missing items are charged at replacement cost.</p>
+    <h2 data-t="sh7">7. Delivery and Return</h2>
+    <p data-t="p7_1">7.1 We deliver anywhere on Aruba at no charge &mdash; airport, hotel, villa, or agreed location.</p>
+    <p data-t="p7_2">7.2 You must be present at the agreed place and time with all required documents.</p>
+    <p data-t="p7_3">7.3 At delivery we record together the vehicle&rsquo;s condition, fuel level, and mileage. Raise any discrepancy then, not later.</p>
+    <p data-t="p7_4">7.4 Return the vehicle at the agreed date, time, and place, in the same condition and with the same fuel level, ordinary wear excepted.</p>
+    <p data-t="p7_5">7.5 If you return the vehicle outside our operating hours, you remain responsible for it until we inspect it when we next open.</p>
+    <p data-t="p7_6">7.6 You are responsible for returning the vehicle complete &mdash; keys, documents, spare tyre, tools, child seats, and any other equipment supplied. Missing items are charged at replacement cost.</p>
 
-    <h2>8. Using the Vehicle</h2>
-    <p>8.1 All rentals include unlimited mileage.</p>
-    <p>8.2 You must drive in accordance with Aruban traffic law. In Aruba, we drive on the right.</p>
-    <p>8.3 The vehicle may <strong>not</strong> be used:</p>
+    <h2 data-t="sh8">8. Using the Vehicle</h2>
+    <p data-t="p8_1">8.1 All rentals include unlimited mileage.</p>
+    <p data-t="p8_2">8.2 You must drive in accordance with Aruban traffic law. In Aruba, we drive on the right.</p>
+    <p data-t="p8_3">8.3 The vehicle may <strong>not</strong> be used:</p>
     <ul>
-      <li>By anyone not named on the rental agreement, or without a valid licence</li>
-      <li>By anyone under the influence of alcohol or drugs, prescription or otherwise, affecting the ability to drive</li>
-      <li>For any illegal purpose</li>
-      <li>To carry passengers or goods for hire or reward</li>
-      <li>To push or tow anything</li>
-      <li>In any race, contest, rally, or driving lesson</li>
-      <li>Outside the island of Aruba</li>
-      <li>To carry more people than the vehicle is registered to seat</li>
-      <li>Where it is obvious that continuing to drive would damage the vehicle</li>
+      <li data-t="li8_1">By anyone not named on the rental agreement, or without a valid licence</li>
+      <li data-t="li8_2">By anyone under the influence of alcohol or drugs, prescription or otherwise, affecting the ability to drive</li>
+      <li data-t="li8_3">For any illegal purpose</li>
+      <li data-t="li8_4">To carry passengers or goods for hire or reward</li>
+      <li data-t="li8_5">To push or tow anything</li>
+      <li data-t="li8_6">In any race, contest, rally, or driving lesson</li>
+      <li data-t="li8_7">Outside the island of Aruba</li>
+      <li data-t="li8_8">To carry more people than the vehicle is registered to seat</li>
+      <li data-t="li8_9">Where it is obvious that continuing to drive would damage the vehicle</li>
     </ul>
-    <p><strong>8.4 Unpaved roads and Arikok</strong><br/>Four-wheel drive is recommended for exploring Arikok National Park. The route to the Natural Pool (Conchi) requires four-wheel drive and is not accessible by conventional car.</p>
-    <p>Damage from driving a vehicle on terrain it is not suited to is your full responsibility and is not covered by any insurance or waiver.</p>
-    <p>8.5 You are responsible for the vehicle throughout the rental, including while parked. Lock it and keep the keys secure when it is unattended.</p>
-    <p>8.6 You must check and maintain fluid levels and tyre pressure during longer rentals, and stop driving if a warning light appears.</p>
-    <p>8.7 No repairs, servicing, or replacement of parts without our prior written approval.</p>
+    <p data-t="p8_4"><strong>8.4 Unpaved roads and Arikok</strong><br/>Four-wheel drive is recommended for exploring Arikok National Park. The route to the Natural Pool (Conchi) requires four-wheel drive and is not accessible by conventional car.</p>
+    <p data-t="p8_5">Damage from driving a vehicle on terrain it is not suited to is your full responsibility and is not covered by any insurance or waiver.</p>
+    <p data-t="p8_6">8.5 You are responsible for the vehicle throughout the rental, including while parked. Lock it and keep the keys secure when it is unattended.</p>
+    <p data-t="p8_7">8.6 You must check and maintain fluid levels and tyre pressure during longer rentals, and stop driving if a warning light appears.</p>
+    <p data-t="p8_8">8.7 No repairs, servicing, or replacement of parts without our prior written approval.</p>
 
-    <h2>9. Smoking, Pets and Cleaning</h2>
-    <p>9.1 Smoking is not permitted in any Atlantic vehicle. A cleaning fee of USD $250 applies where there is evidence of smoking.</p>
-    <p>9.2 Pets are not permitted without prior arrangement. Where a pet has been carried without arrangement, a cleaning fee of up to USD $100 may apply.</p>
-    <p>9.3 Vehicles returned needing cleaning beyond normal use &mdash; sand, spillage, heavy soiling &mdash; may incur a cleaning charge of up to USD $100.</p>
+    <h2 data-t="sh9">9. Smoking, Pets and Cleaning</h2>
+    <p data-t="p9_1">9.1 Smoking is not permitted in any Atlantic vehicle. A cleaning fee of USD $250 applies where there is evidence of smoking.</p>
+    <p data-t="p9_2">9.2 Pets are not permitted without prior arrangement. Where a pet has been carried without arrangement, a cleaning fee of up to USD $100 may apply.</p>
+    <p data-t="p9_3">9.3 Vehicles returned needing cleaning beyond normal use &mdash; sand, spillage, heavy soiling &mdash; may incur a cleaning charge of up to USD $100.</p>
 
-    <h2>10. Fuel</h2>
-    <p>10.1 The vehicle is supplied at a recorded fuel level and must be returned at that level.</p>
-    <p>10.2 Returned with less fuel: the missing fuel is charged, plus a refuelling service fee of USD $15.</p>
+    <h2 data-t="sh10">10. Fuel</h2>
+    <p data-t="p10_1">10.1 The vehicle is supplied at a recorded fuel level and must be returned at that level.</p>
+    <p data-t="p10_2">10.2 Returned with less fuel: the missing fuel is charged, plus a refuelling service fee of USD $15.</p>
 
-    <h2>11. Insurance and Protection</h2>
-    <p>Rates below are current and apply per day of rental.</p>
-    <p>11.1 <strong>Third Party Liability</strong> &mdash; included, no charge. Covers damage or injury caused to third parties, as required by Aruban law. It does <strong>not</strong> cover damage to the rental vehicle.</p>
-    <p><strong>11.2 Optional protection</strong></p>
+    <h2 data-t="sh11">11. Insurance and Protection</h2>
+    <p data-t="p11_1">Rates below are current and apply per day of rental.</p>
+    <p data-t="p11_2">11.1 <strong>Third Party Liability</strong> &mdash; included, no charge. Covers damage or injury caused to third parties, as required by Aruban law. It does <strong>not</strong> cover damage to the rental vehicle.</p>
+    <p data-t="p11_3"><strong>11.2 Optional protection</strong></p>
     <div style="overflow-x:auto">
     <table class="legal-table">
-      <tr><th>Option</th><th>Price</th><th>What it covers</th><th>Deductible</th></tr>
-      <tr><td>CDW</td><td>$15/day</td><td>Damage to the rental vehicle</td><td>$750&ndash;$1,500 by vehicle class</td></tr>
-      <tr><td>Theft Protection</td><td>$10/day</td><td>Theft of the vehicle</td><td>$500</td></tr>
-      <tr><td>Standard</td><td>$25/day</td><td>CDW + Theft + tyres &amp; windscreen</td><td>$400</td></tr>
-      <tr><td>Premium (Zero Deductible)</td><td>$35/day</td><td>Full cover, tyres &amp; windscreen, roadside assistance, lost key</td><td>$0</td></tr>
+      <tr><th data-t="tbH1">Option</th><th data-t="tbH2">Price</th><th data-t="tbH3">What it covers</th><th data-t="tbH4">Deductible</th></tr>
+      <tr><td data-t="tbR1c1">CDW</td><td data-t="tbR1c2">$15/day</td><td data-t="tbR1c3">Damage to the rental vehicle</td><td data-t="tbR1c4">$750&ndash;$1,500 by vehicle class</td></tr>
+      <tr><td data-t="tbR2c1">Theft Protection</td><td data-t="tbR2c2">$10/day</td><td data-t="tbR2c3">Theft of the vehicle</td><td data-t="tbR2c4">$500</td></tr>
+      <tr><td data-t="tbR3c1">Standard</td><td data-t="tbR3c2">$25/day</td><td data-t="tbR3c3">CDW + Theft + tyres &amp; windscreen</td><td data-t="tbR3c4">$400</td></tr>
+      <tr><td data-t="tbR4c1">Premium (Zero Deductible)</td><td data-t="tbR4c2">$35/day</td><td data-t="tbR4c3">Full cover, tyres &amp; windscreen, roadside assistance, lost key</td><td data-t="tbR4c4">$0</td></tr>
     </table>
     </div>
-    <p>Optional protection is not mandatory. Without it, you are responsible for the full cost of damage to or theft of the vehicle.</p>
-    <p><strong>11.3 What is not covered</strong></p>
-    <p>No protection covers:</p>
+    <p data-t="p11_4">Optional protection is not mandatory. Without it, you are responsible for the full cost of damage to or theft of the vehicle.</p>
+    <p data-t="p11_5"><strong>11.3 What is not covered</strong></p>
+    <p data-t="p11_6">No protection covers:</p>
     <ul>
-      <li>Damage while the driver was under the influence of alcohol or drugs</li>
-      <li>Damage while someone not named on the agreement was driving</li>
-      <li>Damage arising from any breach of these Terms, including unauthorised driving on unpaved roads</li>
-      <li>Tyres and windscreen, unless you hold Standard or Premium</li>
-      <li>Roadside assistance and lost key replacement, unless you hold Premium</li>
-      <li>Loss of or damage to personal property in or taken from the vehicle</li>
+      <li data-t="li11_1">Damage while the driver was under the influence of alcohol or drugs</li>
+      <li data-t="li11_2">Damage while someone not named on the agreement was driving</li>
+      <li data-t="li11_3">Damage arising from any breach of these Terms, including unauthorised driving on unpaved roads</li>
+      <li data-t="li11_4">Tyres and windscreen, unless you hold Standard or Premium</li>
+      <li data-t="li11_5">Roadside assistance and lost key replacement, unless you hold Premium</li>
+      <li data-t="li11_6">Loss of or damage to personal property in or taken from the vehicle</li>
     </ul>
-    <p>If you are unsure whether a specific situation is covered, ask us before you book &mdash; we would rather have that conversation now than after.</p>
-    <p>11.4 Where a claim arises, you are responsible for the applicable deductible, for our loss of use of the vehicle while it is off the road (section 12.5), and for our reasonable costs of handling the claim.</p>
-    <p>11.5 Coverage, deductibles and exclusions are confirmed with your reservation and form part of your rental agreement.</p>
+    <p data-t="p11_7">If you are unsure whether a specific situation is covered, ask us before you book &mdash; we would rather have that conversation now than after.</p>
+    <p data-t="p11_8">11.4 Where a claim arises, you are responsible for the applicable deductible, for our loss of use of the vehicle while it is off the road (section 12.5), and for our reasonable costs of handling the claim.</p>
+    <p data-t="p11_9">11.5 Coverage, deductibles and exclusions are confirmed with your reservation and form part of your rental agreement.</p>
 
-    <h2>12. Damage, Accidents and Breakdown</h2>
-    <p>12.1 You are responsible for damage to, loss of, or theft of the vehicle during the rental, except to the extent covered by protection you have taken.</p>
-    <p>12.2 In an accident you must:</p>
+    <h2 data-t="sh12">12. Damage, Accidents and Breakdown</h2>
+    <p data-t="p12_1">12.1 You are responsible for damage to, loss of, or theft of the vehicle during the rental, except to the extent covered by protection you have taken.</p>
+    <p data-t="p12_2">12.2 In an accident you must:</p>
     <ul>
-      <li>Make sure everyone is safe</li>
-      <li>Call the police and obtain a police report</li>
-      <li>Notify Atlantic immediately on +297 593 1982</li>
-      <li>Not admit liability or settle with anyone</li>
-      <li>Record the other party&rsquo;s details and those of any witnesses</li>
+      <li data-t="li12_1">Make sure everyone is safe</li>
+      <li data-t="li12_2">Call the police and obtain a police report</li>
+      <li data-t="li12_3">Notify Atlantic immediately on +297 593 1982</li>
+      <li data-t="li12_4">Not admit liability or settle with anyone</li>
+      <li data-t="li12_5">Record the other party&rsquo;s details and those of any witnesses</li>
     </ul>
-    <p>12.3 Failure to obtain a police report where one is required may end insurance cover and leave you fully responsible.</p>
-    <p>12.4 Report theft or vandalism to us and the police as soon as you discover it.</p>
-    <p>12.5 <strong>Loss of use.</strong> Where a vehicle is off the road for repair or replacement because of damage you are responsible for, you are also responsible for our loss of use of that vehicle &mdash; calculated as the daily rental rate for the class, for the period the vehicle is unavailable, up to a maximum of 14 days.</p>
-    <p>12.6 In a breakdown, contact us immediately. Do not arrange repairs yourself without our written approval.</p>
-    <p>12.7 Where a breakdown is caused by mechanical failure not attributable to you, we will provide a replacement vehicle as soon as reasonably possible, subject to availability.</p>
-    <p>12.8 Lost keys &mdash; including electronic keys, remotes and reprogramming &mdash; are charged at USD $150, unless you hold Premium protection.</p>
+    <p data-t="p12_3">12.3 Failure to obtain a police report where one is required may end insurance cover and leave you fully responsible.</p>
+    <p data-t="p12_4">12.4 Report theft or vandalism to us and the police as soon as you discover it.</p>
+    <p data-t="p12_5">12.5 <strong>Loss of use.</strong> Where a vehicle is off the road for repair or replacement because of damage you are responsible for, you are also responsible for our loss of use of that vehicle &mdash; calculated as the daily rental rate for the class, for the period the vehicle is unavailable, up to a maximum of 14 days.</p>
+    <p data-t="p12_6">12.6 In a breakdown, contact us immediately. Do not arrange repairs yourself without our written approval.</p>
+    <p data-t="p12_7">12.7 Where a breakdown is caused by mechanical failure not attributable to you, we will provide a replacement vehicle as soon as reasonably possible, subject to availability.</p>
+    <p data-t="p12_8">12.8 Lost keys &mdash; including electronic keys, remotes and reprogramming &mdash; are charged at USD $150, unless you hold Premium protection.</p>
 
-    <h2>13. Traffic Fines</h2>
-    <p>13.1 You are responsible for all traffic fines, penalties, tolls, and related costs incurred during the rental.</p>
-    <p>13.2 Where a fine reaches us after the rental has ended, an administrative handling fee of USD $25 applies in addition to the fine.</p>
+    <h2 data-t="sh13">13. Traffic Fines</h2>
+    <p data-t="p13_1">13.1 You are responsible for all traffic fines, penalties, tolls, and related costs incurred during the rental.</p>
+    <p data-t="p13_2">13.2 Where a fine reaches us after the rental has ended, an administrative handling fee of USD $25 applies in addition to the fine.</p>
 
-    <h2>14. Late Return</h2>
-    <p>14.1 Grace period: one (1) hour.</p>
-    <p>14.2 Beyond that, a full additional rental day is charged for each day or part-day.</p>
-    <p>14.3 Not returning the vehicle without contacting us may be treated as unauthorised use and reported to the authorities.</p>
+    <h2 data-t="sh14">14. Late Return</h2>
+    <p data-t="p14_1">14.1 Grace period: one (1) hour.</p>
+    <p data-t="p14_2">14.2 Beyond that, a full additional rental day is charged for each day or part-day.</p>
+    <p data-t="p14_3">14.3 Not returning the vehicle without contacting us may be treated as unauthorised use and reported to the authorities.</p>
 
-    <h2>15. Your Property</h2>
-    <p>We are not responsible for personal property left in or taken from the vehicle, or left at our offices, however that loss occurs. Take your belongings with you.</p>
+    <h2 data-t="sh15">15. Your Property</h2>
+    <p data-t="p15_1">We are not responsible for personal property left in or taken from the vehicle, or left at our offices, however that loss occurs. Take your belongings with you.</p>
 
-    <h2>16. Ending the Rental Early</h2>
-    <p>We may end a rental and recover the vehicle immediately, without refund, where you breach these Terms, gave false information to obtain the vehicle, or are using it in a way that risks damage, injury, or legal liability. Where we have to recover the vehicle, you are responsible for the reasonable cost of doing so.</p>
+    <h2 data-t="sh16">16. Ending the Rental Early</h2>
+    <p data-t="p16_1">We may end a rental and recover the vehicle immediately, without refund, where you breach these Terms, gave false information to obtain the vehicle, or are using it in a way that risks damage, injury, or legal liability. Where we have to recover the vehicle, you are responsible for the reasonable cost of doing so.</p>
 
-    <h2>17. Limits of Our Responsibility</h2>
-    <p>We are not responsible for indirect or consequential loss &mdash; missed flights, missed activities, loss of enjoyment, or additional accommodation &mdash; arising from vehicle unavailability, breakdown, or delay, except where it results from our negligence and to the extent liability cannot be excluded by law.</p>
-    <p>Nothing here excludes responsibility for death or personal injury caused by negligence.</p>
+    <h2 data-t="sh17">17. Limits of Our Responsibility</h2>
+    <p data-t="p17_1">We are not responsible for indirect or consequential loss &mdash; missed flights, missed activities, loss of enjoyment, or additional accommodation &mdash; arising from vehicle unavailability, breakdown, or delay, except where it results from our negligence and to the extent liability cannot be excluded by law.</p>
+    <p data-t="p17_2">Nothing here excludes responsibility for death or personal injury caused by negligence.</p>
 
-    <h2>18. General</h2>
-    <p>18.1 These Terms, together with the signed rental agreement, are the whole agreement between us. Anything said or agreed beforehand that is not written into them does not apply.</p>
-    <p>18.2 Changes must be in writing and signed by us. To extend a rental, contact us before the return date &mdash; extensions are subject to availability and written confirmation.</p>
-    <p>18.3 If we do not enforce a term on one occasion, that does not mean we give up the right to enforce it later.</p>
-    <p>18.4 If any part of these Terms is found invalid, the rest continues to apply.</p>
+    <h2 data-t="sh18">18. General</h2>
+    <p data-t="p18_1">18.1 These Terms, together with the signed rental agreement, are the whole agreement between us. Anything said or agreed beforehand that is not written into them does not apply.</p>
+    <p data-t="p18_2">18.2 Changes must be in writing and signed by us. To extend a rental, contact us before the return date &mdash; extensions are subject to availability and written confirmation.</p>
+    <p data-t="p18_3">18.3 If we do not enforce a term on one occasion, that does not mean we give up the right to enforce it later.</p>
+    <p data-t="p18_4">18.4 If any part of these Terms is found invalid, the rest continues to apply.</p>
 
-    <h2>19. Personal Data</h2>
-    <p>Personal information you give us is handled in line with our <a href="privacy.html" style="color:var(--gold);text-decoration:none">Privacy Policy</a>.</p>
+    <h2 data-t="sh19">19. Personal Data</h2>
+    <p data-t="p19_1">Personal information you give us is handled in line with our <a href="privacy.html" style="color:var(--gold);text-decoration:none">Privacy Policy</a>.</p>
 
-    <h2>20. Governing Law</h2>
-    <p>These Terms are governed by the law of Aruba. Disputes are subject to the jurisdiction of the competent court in Aruba.</p>
+    <h2 data-t="sh20">20. Governing Law</h2>
+    <p data-t="p20_1">These Terms are governed by the law of Aruba. Disputes are subject to the jurisdiction of the competent court in Aruba.</p>
 
-    <h2>21. Contact</h2>
-    <p><strong>Atlantic Car Rental</strong><br/>A brand of Atlantic Tours Transfers and Rentals<br/>OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A.<br/>Chamber of Commerce Aruba: H51819.5<br/>Italiestraat 38 (Sasaki Building), Oranjestad, Aruba &middot; P.O. Box 477<br/>Airport delivery: Wayaca 6B, Aeromall, Oranjestad<br/>WhatsApp / Telephone: <a href="tel:+2975931982" style="color:var(--gold);text-decoration:none">+297 593 1982</a><br/>Email: <a href="mailto:info@atlanticcarrentalaruba.com" style="color:var(--gold);text-decoration:none">info@atlanticcarrentalaruba.com</a></p>
+    <h2 data-t="sh21">21. Contact</h2>
+    <p data-t="p21_1"><strong>Atlantic Car Rental</strong><br/>A brand of Atlantic Tours Transfers and Rentals<br/>OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A.<br/>Chamber of Commerce Aruba: H51819.5<br/>Italiestraat 38 (Sasaki Building), Oranjestad, Aruba &middot; P.O. Box 477<br/>Airport delivery: Wayaca 6B, Aeromall, Oranjestad<br/>WhatsApp / Telephone: <a href="tel:+2975931982" style="color:var(--gold);text-decoration:none">+297 593 1982</a><br/>Email: <a href="mailto:info@atlanticcarrentalaruba.com" style="color:var(--gold);text-decoration:none">info@atlanticcarrentalaruba.com</a></p>
 
   </div>
 </section>
@@ -246,7 +252,7 @@
     <div>
       <div class="ft-wm">Atlantic</div>
       <span class="ft-wm-sub">Car Rental &nbsp;&middot;&nbsp; Aruba &nbsp;&middot;&nbsp; Est. 2020</span>
-      <p class="fttag">We deliver anywhere. Curated vehicles. Your private concierge for the island.</p>
+      <p class="fttag" data-t="ft_tg">We deliver anywhere. Curated vehicles. Your private concierge for the island.</p>
       <div class="ftsoc">
         <a class="ftsb" href="https://www.instagram.com/atlanticcarrentalaruba" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
         <a class="ftsb" href="https://www.facebook.com/share/18JVxDgM2i/" target="_blank" aria-label="Facebook"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
@@ -254,16 +260,16 @@
       </div>
     </div>
     <div>
-      <div class="ftch">Navigate</div>
+      <div class="ftch" data-t="ft_nv">Navigate</div>
       <ul class="ftlinks">
-        <li><a href="index.html#fleet">Fleet</a></li>
-        <li><a href="index.html#aruba">Explore Aruba</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#fleet" data-t="n_fl">Fleet</a></li>
+        <li><a href="index.html#aruba" data-t="n_ar">Explore Aruba</a></li>
+        <li><a href="about.html" data-t="n_ab">About</a></li>
+        <li><a href="index.html#contact" data-t="ft_contact">Contact</a></li>
       </ul>
     </div>
     <div>
-      <div class="ftch">Good to Know</div>
+      <div class="ftch" data-t="ft_gtk">Good to Know</div>
       <ul class="ftlinks">
         <li><a href="driving-in-aruba.html">Driving in Aruba</a></li>
         <li><a href="insurance.html">Insurance</a></li>
@@ -275,7 +281,7 @@
       </ul>
     </div>
     <div>
-      <div class="ftch">Our Fleet</div>
+      <div class="ftch" data-t="ft_fl">Our Fleet</div>
       <ul class="ftlinks">
         <li><a href="index.html#fleet">Compact</a></li>
         <li><a href="index.html#fleet">Sedan</a></li>
@@ -286,16 +292,16 @@
       </ul>
     </div>
     <div>
-      <div class="ftch">Contact</div>
+      <div class="ftch" data-t="ft_co">Contact</div>
       <div class="ftci">
-        <strong>Main Office</strong><br/>
+        <strong data-t="co_main">Main Office</strong><br/>
         Italiestraat 38 (Sasaki Building)<br/>
         Oranjestad, Aruba &middot; P.O. Box 477<br/><br/>
-        <strong>Airport Delivery</strong><br/>
+        <strong data-t="co_air2">Airport Delivery</strong><br/>
         Wayaca 6B, Aeromall<br/>
         Oranjestad, Aruba<br/><br/>
         <a href="tel:+2975931982">+297 593 1982</a><br/>
-        <a href="https://wa.me/2975931982" target="_blank">WhatsApp</a><br/>
+        <a href="https://wa.me/2975931982" target="_blank" data-t="ft_wa">WhatsApp</a><br/>
         <a href="mailto:info@atlanticcarrentalaruba.com" style="display:inline-flex;align-items:center;gap:6px">
           <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="flex-shrink:0"><path d="M4 6h16c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2z"/><path d="m22 8-10 6L2 8"/></svg>
           info@atlanticcarrentalaruba.com
@@ -304,22 +310,609 @@
       </div>
     </div>
   </div>
-  <div class="ftrev" style="position:relative;z-index:1;text-align:center;font-size:.58rem;color:var(--ink-5);padding:18px 0 4px;letter-spacing:.04em">Happy with your rental? Leave a review on Google or Facebook.</div>
+  <div class="ftrev" style="position:relative;z-index:1;text-align:center;font-size:.58rem;color:var(--ink-5);padding:18px 0 4px;letter-spacing:.04em" data-t="ft_rev">Happy with your rental? Leave a review on Google or Facebook.</div>
   <div class="fbot" style="position:relative;z-index:1">
-    <div class="fcp">&copy; 2026 Atlantic Car Rental &middot; Aruba. All rights reserved.</div>
+    <div class="fcp" data-t="ft_cp">&copy; 2026 Atlantic Car Rental &middot; Aruba. All rights reserved.</div>
     <div class="focc">
       <img src="assets/occ-logo.png" alt="OCC Holding &amp; Consultancy" class="occ-footer-logo"/>
-      <span class="focctxt">Part of OCC Holding &amp; Consultancy</span>
+      <span class="focctxt" data-t="ft_oc">Part of OCC Holding &amp; Consultancy</span>
     </div>
     <div class="fleg">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
+      <a href="privacy.html" data-t="ft_pr">Privacy</a>
+      <a href="terms.html" data-t="ft_tc">Terms</a>
     </div>
   </div>
   <div style="position:relative;z-index:1;text-align:center;font-size:.62rem;color:var(--ink-5);padding:10px 20px 20px;max-width:820px;margin:0 auto;line-height:1.6">Atlantic Car Rental is a brand of Atlantic Tours Transfers and Rentals, registered trade name of OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A., Chamber of Commerce Aruba H51819.5.</div>
 </footer>
 
 <script>
+const T = {
+en:{
+  n_fl:"Fleet",n_ar:"Explore Aruba",n_ab:"About",n_ct:"Reservation Request",n_ct_s:"Reserve",
+  n_gtk:"Good to Know",n_dr:"Driving in Aruba",n_ins:"Insurance",n_rr:"Reservation Requirements",n_ao:"Add-ons",
+  ft_tg:"We deliver anywhere. Curated vehicles. Your private concierge for the island.",
+  ft_nv:"Navigate",ft_gtk:"Good to Know",ft_fl:"Our Fleet",ft_co:"Contact",ft_contact:"Contact",ft_wa:"WhatsApp",
+  ft_cp:"&copy; 2026 Atlantic Car Rental &middot; Aruba. All rights reserved.",
+  ft_oc:"Part of OCC Holding &amp; Consultancy",ft_pr:"Privacy",ft_tc:"Terms",
+  ft_rev:"Happy with your rental? Leave a review on Google or Facebook.",
+  co_main:"Main Office",co_air2:"Airport Delivery",
+  tag_l:"Legal",h1t:"Terms and <em>Conditions</em>",lu:"Last updated: August 27, 2026",
+  sh1:"1. Who You Are Contracting With",
+  p1_1:"Atlantic Car Rental is a brand of <strong>Atlantic Tours Transfers and Rentals</strong>, the registered trade name of <strong>OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A.</strong>, a limited liability company registered in Aruba with the Chamber of Commerce and Industry Aruba under number <strong>H51819.5</strong>, with its registered address at Italiestraat 38, Eagle/Paardenbaai, Oranjestad West, Aruba.",
+  p1_2:"Referred to in these Terms as &ldquo;Atlantic,&rdquo; &ldquo;we,&rdquo; or &ldquo;us.&rdquo;",
+  p1_3:"<strong>Offices</strong><br/>Main office: Italiestraat 38 (Sasaki Building), Oranjestad, Aruba &middot; P.O. Box 477<br/>Airport delivery: Wayaca 6B, Aeromall, Oranjestad &middot; Delivery at Queen Beatrix International Airport",
+  p1_4:"By submitting a reservation request, collecting a vehicle, or signing a rental agreement, you (&ldquo;the Renter&rdquo;) accept these Terms.",
+  p1_5:"These Terms form part of the rental agreement signed at delivery or collection. Where the two differ, the signed rental agreement prevails.",
+  p1_6:"Where more than one person signs the rental agreement, each is jointly and individually responsible for everything owed under it.",
+  sh2:"2. Reservations",
+  p2_1:"2.1 A reservation request &mdash; by website, WhatsApp, email, or telephone &mdash; is not a confirmed booking. No payment is required to make one.",
+  p2_2:"2.2 A reservation is confirmed only when Atlantic confirms availability directly with you, normally by WhatsApp.",
+  p2_3:"2.3 Vehicle images on our website are representative of each class. The specific make and model is assigned at delivery based on availability. We do not guarantee a particular make, model, colour, or year.",
+  p2_4:"2.4 A minimum rental period of three (3) days applies.",
+  p2_5:"2.5 We contact you one day before arrival to coordinate delivery.",
+  p2_6:"2.6 Atlantic may decline any reservation request at its discretion.",
+  sh3:"3. Who May Drive",
+  p3_1:"3.1 Minimum age: 23 years.",
+  p3_2:"3.2 Every driver must present at the time of rental:",
+  li3_1:"A valid driver&rsquo;s licence",li3_2:"A valid passport or government-issued identification",li3_3:"An International Driving Permit where the licence is not written in Latin script",
+  p3_3:"3.3 Only drivers named on the signed rental agreement may drive the vehicle. Additional drivers must be present at the time of rental, meet the same requirements, and be named on the agreement. Additional driver: $5 per day.",
+  p3_4:"3.4 Allowing anyone not named on the agreement to drive ends all insurance cover immediately and makes you responsible for the full value of any loss or damage.",
+  sh4:"4. Security Deposit",
+  p4_1:"4.1 A security deposit of USD $200 is required.",
+  p4_2:"4.2 It may be paid by major credit card or in cash.",
+  p4_3:"4.3 It is released or returned after the vehicle is returned and inspected.",
+  p4_4:"4.4 We may deduct from it any amount you owe under these Terms &mdash; damage not covered by insurance, missing fuel, cleaning, traffic fines, late return, loss of use, or claim handling.",
+  p4_5:"4.5 Where what you owe exceeds the deposit, you remain responsible for the balance.",
+  sh5:"5. Payment",
+  p5_1:"5.1 All charges are in United States dollars.",
+  p5_2:"5.2 We accept cash and major credit cards. Payment by approved bank transfer or supported cryptocurrency can be arranged in advance.",
+  p5_3:"5.3 Foreign cards may incur a conversion fee from your own bank. That fee is not ours and we cannot refund it.",
+  p5_4:"5.4 Rental charges and the deposit are payable at delivery.",
+  p5_5:"5.5 Amounts unpaid when due carry interest of 1% per month.",
+  p5_6:"5.6 Where we have to take steps to recover what you owe, you are responsible for the reasonable costs of doing so.",
+  sh6:"6. Cancellation and Changes",
+  p6_1:"6.1 Cancel more than 48 hours before pickup: free.",
+  p6_2:"6.2 Cancel within 48 hours: an administrative fee of USD $25 may apply.",
+  p6_3:"6.3 Changes to a confirmed reservation are subject to availability.",
+  p6_4:"6.4 If you do not collect the vehicle at the agreed time and do not contact us, we may release the reservation after two (2) hours and treat it as a late cancellation.",
+  sh7:"7. Delivery and Return",
+  p7_1:"7.1 We deliver anywhere on Aruba at no charge &mdash; airport, hotel, villa, or agreed location.",
+  p7_2:"7.2 You must be present at the agreed place and time with all required documents.",
+  p7_3:"7.3 At delivery we record together the vehicle&rsquo;s condition, fuel level, and mileage. Raise any discrepancy then, not later.",
+  p7_4:"7.4 Return the vehicle at the agreed date, time, and place, in the same condition and with the same fuel level, ordinary wear excepted.",
+  p7_5:"7.5 If you return the vehicle outside our operating hours, you remain responsible for it until we inspect it when we next open.",
+  p7_6:"7.6 You are responsible for returning the vehicle complete &mdash; keys, documents, spare tyre, tools, child seats, and any other equipment supplied. Missing items are charged at replacement cost.",
+  sh8:"8. Using the Vehicle",
+  p8_1:"8.1 All rentals include unlimited mileage.",
+  p8_2:"8.2 You must drive in accordance with Aruban traffic law. In Aruba, we drive on the right.",
+  p8_3:"8.3 The vehicle may <strong>not</strong> be used:",
+  li8_1:"By anyone not named on the rental agreement, or without a valid licence",
+  li8_2:"By anyone under the influence of alcohol or drugs, prescription or otherwise, affecting the ability to drive",
+  li8_3:"For any illegal purpose",
+  li8_4:"To carry passengers or goods for hire or reward",
+  li8_5:"To push or tow anything",
+  li8_6:"In any race, contest, rally, or driving lesson",
+  li8_7:"Outside the island of Aruba",
+  li8_8:"To carry more people than the vehicle is registered to seat",
+  li8_9:"Where it is obvious that continuing to drive would damage the vehicle",
+  p8_4:"<strong>8.4 Unpaved roads and Arikok</strong><br/>Four-wheel drive is recommended for exploring Arikok National Park. The route to the Natural Pool (Conchi) requires four-wheel drive and is not accessible by conventional car.",
+  p8_5:"Damage from driving a vehicle on terrain it is not suited to is your full responsibility and is not covered by any insurance or waiver.",
+  p8_6:"8.5 You are responsible for the vehicle throughout the rental, including while parked. Lock it and keep the keys secure when it is unattended.",
+  p8_7:"8.6 You must check and maintain fluid levels and tyre pressure during longer rentals, and stop driving if a warning light appears.",
+  p8_8:"8.7 No repairs, servicing, or replacement of parts without our prior written approval.",
+  sh9:"9. Smoking, Pets and Cleaning",
+  p9_1:"9.1 Smoking is not permitted in any Atlantic vehicle. A cleaning fee of USD $250 applies where there is evidence of smoking.",
+  p9_2:"9.2 Pets are not permitted without prior arrangement. Where a pet has been carried without arrangement, a cleaning fee of up to USD $100 may apply.",
+  p9_3:"9.3 Vehicles returned needing cleaning beyond normal use &mdash; sand, spillage, heavy soiling &mdash; may incur a cleaning charge of up to USD $100.",
+  sh10:"10. Fuel",
+  p10_1:"10.1 The vehicle is supplied at a recorded fuel level and must be returned at that level.",
+  p10_2:"10.2 Returned with less fuel: the missing fuel is charged, plus a refuelling service fee of USD $15.",
+  sh11:"11. Insurance and Protection",
+  p11_1:"Rates below are current and apply per day of rental.",
+  p11_2:"11.1 <strong>Third Party Liability</strong> &mdash; included, no charge. Covers damage or injury caused to third parties, as required by Aruban law. It does <strong>not</strong> cover damage to the rental vehicle.",
+  p11_3:"<strong>11.2 Optional protection</strong>",
+  tbH1:"Option",tbH2:"Price",tbH3:"What it covers",tbH4:"Deductible",
+  tbR1c1:"CDW",tbR1c2:"$15/day",tbR1c3:"Damage to the rental vehicle",tbR1c4:"$750&ndash;$1,500 by vehicle class",
+  tbR2c1:"Theft Protection",tbR2c2:"$10/day",tbR2c3:"Theft of the vehicle",tbR2c4:"$500",
+  tbR3c1:"Standard",tbR3c2:"$25/day",tbR3c3:"CDW + Theft + tyres &amp; windscreen",tbR3c4:"$400",
+  tbR4c1:"Premium (Zero Deductible)",tbR4c2:"$35/day",tbR4c3:"Full cover, tyres &amp; windscreen, roadside assistance, lost key",tbR4c4:"$0",
+  p11_4:"Optional protection is not mandatory. Without it, you are responsible for the full cost of damage to or theft of the vehicle.",
+  p11_5:"<strong>11.3 What is not covered</strong>",
+  p11_6:"No protection covers:",
+  li11_1:"Damage while the driver was under the influence of alcohol or drugs",
+  li11_2:"Damage while someone not named on the agreement was driving",
+  li11_3:"Damage arising from any breach of these Terms, including unauthorised driving on unpaved roads",
+  li11_4:"Tyres and windscreen, unless you hold Standard or Premium",
+  li11_5:"Roadside assistance and lost key replacement, unless you hold Premium",
+  li11_6:"Loss of or damage to personal property in or taken from the vehicle",
+  p11_7:"If you are unsure whether a specific situation is covered, ask us before you book &mdash; we would rather have that conversation now than after.",
+  p11_8:"11.4 Where a claim arises, you are responsible for the applicable deductible, for our loss of use of the vehicle while it is off the road (section 12.5), and for our reasonable costs of handling the claim.",
+  p11_9:"11.5 Coverage, deductibles and exclusions are confirmed with your reservation and form part of your rental agreement.",
+  sh12:"12. Damage, Accidents and Breakdown",
+  p12_1:"12.1 You are responsible for damage to, loss of, or theft of the vehicle during the rental, except to the extent covered by protection you have taken.",
+  p12_2:"12.2 In an accident you must:",
+  li12_1:"Make sure everyone is safe",
+  li12_2:"Call the police and obtain a police report",
+  li12_3:"Notify Atlantic immediately on +297 593 1982",
+  li12_4:"Not admit liability or settle with anyone",
+  li12_5:"Record the other party&rsquo;s details and those of any witnesses",
+  p12_3:"12.3 Failure to obtain a police report where one is required may end insurance cover and leave you fully responsible.",
+  p12_4:"12.4 Report theft or vandalism to us and the police as soon as you discover it.",
+  p12_5:"12.5 <strong>Loss of use.</strong> Where a vehicle is off the road for repair or replacement because of damage you are responsible for, you are also responsible for our loss of use of that vehicle &mdash; calculated as the daily rental rate for the class, for the period the vehicle is unavailable, up to a maximum of 14 days.",
+  p12_6:"12.6 In a breakdown, contact us immediately. Do not arrange repairs yourself without our written approval.",
+  p12_7:"12.7 Where a breakdown is caused by mechanical failure not attributable to you, we will provide a replacement vehicle as soon as reasonably possible, subject to availability.",
+  p12_8:"12.8 Lost keys &mdash; including electronic keys, remotes and reprogramming &mdash; are charged at USD $150, unless you hold Premium protection.",
+  sh13:"13. Traffic Fines",
+  p13_1:"13.1 You are responsible for all traffic fines, penalties, tolls, and related costs incurred during the rental.",
+  p13_2:"13.2 Where a fine reaches us after the rental has ended, an administrative handling fee of USD $25 applies in addition to the fine.",
+  sh14:"14. Late Return",
+  p14_1:"14.1 Grace period: one (1) hour.",
+  p14_2:"14.2 Beyond that, a full additional rental day is charged for each day or part-day.",
+  p14_3:"14.3 Not returning the vehicle without contacting us may be treated as unauthorised use and reported to the authorities.",
+  sh15:"15. Your Property",
+  p15_1:"We are not responsible for personal property left in or taken from the vehicle, or left at our offices, however that loss occurs. Take your belongings with you.",
+  sh16:"16. Ending the Rental Early",
+  p16_1:"We may end a rental and recover the vehicle immediately, without refund, where you breach these Terms, gave false information to obtain the vehicle, or are using it in a way that risks damage, injury, or legal liability. Where we have to recover the vehicle, you are responsible for the reasonable cost of doing so.",
+  sh17:"17. Limits of Our Responsibility",
+  p17_1:"We are not responsible for indirect or consequential loss &mdash; missed flights, missed activities, loss of enjoyment, or additional accommodation &mdash; arising from vehicle unavailability, breakdown, or delay, except where it results from our negligence and to the extent liability cannot be excluded by law.",
+  p17_2:"Nothing here excludes responsibility for death or personal injury caused by negligence.",
+  sh18:"18. General",
+  p18_1:"18.1 These Terms, together with the signed rental agreement, are the whole agreement between us. Anything said or agreed beforehand that is not written into them does not apply.",
+  p18_2:"18.2 Changes must be in writing and signed by us. To extend a rental, contact us before the return date &mdash; extensions are subject to availability and written confirmation.",
+  p18_3:"18.3 If we do not enforce a term on one occasion, that does not mean we give up the right to enforce it later.",
+  p18_4:"18.4 If any part of these Terms is found invalid, the rest continues to apply.",
+  sh19:"19. Personal Data",
+  p19_1:"Personal information you give us is handled in line with our <a href=\"privacy.html\" style=\"color:var(--gold);text-decoration:none\">Privacy Policy</a>.",
+  sh20:"20. Governing Law",
+  p20_1:"These Terms are governed by the law of Aruba. Disputes are subject to the jurisdiction of the competent court in Aruba.",
+  sh21:"21. Contact",
+  p21_1:"<strong>Atlantic Car Rental</strong><br/>A brand of Atlantic Tours Transfers and Rentals<br/>OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A.<br/>Chamber of Commerce Aruba: H51819.5<br/>Italiestraat 38 (Sasaki Building), Oranjestad, Aruba &middot; P.O. Box 477<br/>Airport delivery: Wayaca 6B, Aeromall, Oranjestad<br/>WhatsApp / Telephone: <a href=\"tel:+2975931982\" style=\"color:var(--gold);text-decoration:none\">+297 593 1982</a><br/>Email: <a href=\"mailto:info@atlanticcarrentalaruba.com\" style=\"color:var(--gold);text-decoration:none\">info@atlanticcarrentalaruba.com</a>"
+},
+es:{
+  n_fl:"Flota",n_ar:"Explorar Aruba",n_ab:"Nosotros",n_ct:"Reservar Ahora",n_ct_s:"Reservar",
+  n_gtk:"Información Útil",n_dr:"Conducir en Aruba",n_ins:"Seguro",n_rr:"Requisitos de Reserva",n_ao:"Extras",
+  ft_tg:"Entrega en aeropuerto. Vehículos curados. Tu concierge privado para la isla.",
+  ft_nv:"Navegar",ft_gtk:"Información Útil",ft_fl:"Nuestra Flota",ft_co:"Contacto",ft_contact:"Contacto",ft_wa:"WhatsApp",
+  ft_cp:"&copy; 2026 Atlantic Car Rental &middot; Aruba.",
+  ft_oc:"Parte de OCC Holding &amp; Consultancy",ft_pr:"Privacidad",ft_tc:"Términos",
+  ft_rev:"&iquest;Contento con tu alquiler? Déjanos una reseña en Google o Facebook.",
+  co_main:"Oficina Principal",co_air2:"Entrega en Aeropuerto",
+  tag_l:"Legal",h1t:"Términos y <em>Condiciones</em>",lu:"Última actualización: 27 de agosto de 2026",
+  sh1:"1. Con Quién Contrata",
+  p1_1:"Atlantic Car Rental es una marca de <strong>Atlantic Tours Transfers and Rentals</strong>, nombre comercial registrado de <strong>OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A.</strong>, sociedad de responsabilidad limitada registrada en Aruba ante la Cámara de Comercio e Industria de Aruba con el número <strong>H51819.5</strong>, con domicilio registrado en Italiestraat 38, Eagle/Paardenbaai, Oranjestad West, Aruba.",
+  p1_2:"Referida en estos Términos como &ldquo;Atlantic,&rdquo; &ldquo;nosotros&rdquo; o &ldquo;nos.&rdquo;",
+  p1_3:"<strong>Oficinas</strong><br/>Oficina principal: Italiestraat 38 (Edificio Sasaki), Oranjestad, Aruba &middot; Apartado Postal 477<br/>Entrega en aeropuerto: Wayaca 6B, Aeromall, Oranjestad &middot; Entrega en el Aeropuerto Internacional Queen Beatrix",
+  p1_4:"Al enviar una solicitud de reserva, recoger un vehículo o firmar un contrato de alquiler, usted (&ldquo;el Arrendatario&rdquo;) acepta estos Términos.",
+  p1_5:"Estos Términos forman parte del contrato de alquiler firmado en la entrega o recogida. Cuando ambos difieran, prevalece el contrato de alquiler firmado.",
+  p1_6:"Cuando más de una persona firme el contrato de alquiler, cada una es responsable conjunta e individualmente de todo lo adeudado en virtud del mismo.",
+  sh2:"2. Reservas",
+  p2_1:"2.1 Una solicitud de reserva &mdash; por sitio web, WhatsApp, correo electrónico o teléfono &mdash; no constituye una reserva confirmada. No se requiere pago alguno para hacerla.",
+  p2_2:"2.2 Una reserva se confirma únicamente cuando Atlantic confirma disponibilidad directamente con usted, normalmente por WhatsApp.",
+  p2_3:"2.3 Las imágenes de vehículos en nuestro sitio web son representativas de cada categoría. La marca y modelo específicos se asignan en la entrega según disponibilidad. No garantizamos una marca, modelo, color o año en particular.",
+  p2_4:"2.4 Se aplica un período mínimo de alquiler de tres (3) días.",
+  p2_5:"2.5 Le contactamos un día antes de su llegada para coordinar la entrega.",
+  p2_6:"2.6 Atlantic puede rechazar cualquier solicitud de reserva a su discreción.",
+  sh3:"3. Quién Puede Conducir",
+  p3_1:"3.1 Edad mínima: 23 años.",
+  p3_2:"3.2 Cada conductor debe presentar en el momento del alquiler:",
+  li3_1:"Una licencia de conducir válida",li3_2:"Un pasaporte válido o identificación emitida por el gobierno",li3_3:"Un Permiso Internacional de Conducir cuando la licencia no esté escrita en alfabeto latino",
+  p3_3:"3.3 Solo los conductores nombrados en el contrato de alquiler firmado pueden conducir el vehículo. Los conductores adicionales deben estar presentes en el momento del alquiler, cumplir los mismos requisitos y figurar en el contrato. Conductor adicional: $5 por día.",
+  p3_4:"3.4 Permitir que alguien no nombrado en el contrato conduzca finaliza de inmediato toda cobertura de seguro y le hace responsable del valor total de cualquier pérdida o daño.",
+  sh4:"4. Depósito de Garantía",
+  p4_1:"4.1 Se requiere un depósito de garantía de USD $200.",
+  p4_2:"4.2 Puede pagarse con tarjeta de crédito principal o en efectivo.",
+  p4_3:"4.3 Se libera o devuelve después de que el vehículo sea devuelto e inspeccionado.",
+  p4_4:"4.4 Podemos deducir de él cualquier monto que usted adeude conforme a estos Términos &mdash; daños no cubiertos por el seguro, combustible faltante, limpieza, multas de tránsito, devolución tardía, pérdida de uso o gestión de reclamaciones.",
+  p4_5:"4.5 Cuando lo adeudado exceda el depósito, usted sigue siendo responsable por el saldo.",
+  sh5:"5. Pago",
+  p5_1:"5.1 Todos los cargos se expresan en dólares estadounidenses.",
+  p5_2:"5.2 Aceptamos efectivo y tarjetas de crédito principales. El pago por transferencia bancaria aprobada o criptomoneda admitida puede acordarse con antelación.",
+  p5_3:"5.3 Las tarjetas extranjeras pueden generar una comisión de conversión de su propio banco. Esa comisión no es nuestra y no podemos reembolsarla.",
+  p5_4:"5.4 Los cargos del alquiler y el depósito son pagaderos en la entrega.",
+  p5_5:"5.5 Los montos impagos al vencimiento generan un interés del 1% mensual.",
+  p5_6:"5.6 Cuando debamos tomar medidas para recuperar lo adeudado, usted es responsable de los costos razonables de hacerlo.",
+  sh6:"6. Cancelación y Cambios",
+  p6_1:"6.1 Cancelación con más de 48 horas antes de la recogida: gratuita.",
+  p6_2:"6.2 Cancelación dentro de las 48 horas: puede aplicarse una tarifa administrativa de USD $25.",
+  p6_3:"6.3 Los cambios a una reserva confirmada están sujetos a disponibilidad.",
+  p6_4:"6.4 Si no recoge el vehículo en la hora acordada y no se comunica con nosotros, podemos liberar la reserva después de dos (2) horas y tratarla como una cancelación tardía.",
+  sh7:"7. Entrega y Devolución",
+  p7_1:"7.1 Entregamos en cualquier lugar de Aruba sin cargo &mdash; aeropuerto, hotel, villa o lugar acordado.",
+  p7_2:"7.2 Debe estar presente en el lugar y hora acordados con todos los documentos requeridos.",
+  p7_3:"7.3 En la entrega registramos juntos el estado del vehículo, el nivel de combustible y el kilometraje. Señale cualquier discrepancia en ese momento, no después.",
+  p7_4:"7.4 Devuelva el vehículo en la fecha, hora y lugar acordados, en el mismo estado y con el mismo nivel de combustible, salvo el desgaste normal.",
+  p7_5:"7.5 Si devuelve el vehículo fuera de nuestro horario de operación, usted sigue siendo responsable de él hasta que lo inspeccionemos cuando volvamos a abrir.",
+  p7_6:"7.6 Usted es responsable de devolver el vehículo completo &mdash; llaves, documentos, neumático de repuesto, herramientas, sillas para niños y cualquier otro equipo suministrado. Los artículos faltantes se cobran al costo de reposición.",
+  sh8:"8. Uso del Vehículo",
+  p8_1:"8.1 Todos los alquileres incluyen kilometraje ilimitado.",
+  p8_2:"8.2 Debe conducir conforme a la ley de tránsito de Aruba. En Aruba se conduce por la derecha.",
+  p8_3:"8.3 El vehículo <strong>no</strong> puede usarse:",
+  li8_1:"Por cualquier persona no nombrada en el contrato de alquiler, o sin licencia válida",
+  li8_2:"Por cualquier persona bajo la influencia de alcohol o drogas, con o sin receta, que afecte la capacidad de conducir",
+  li8_3:"Para cualquier propósito ilegal",
+  li8_4:"Para transportar pasajeros o mercancías a cambio de pago o recompensa",
+  li8_5:"Para empujar o remolcar cualquier cosa",
+  li8_6:"En cualquier carrera, competencia, rally o clase de manejo",
+  li8_7:"Fuera de la isla de Aruba",
+  li8_8:"Para transportar más personas de las que el vehículo tiene registradas para asientos",
+  li8_9:"Cuando sea evidente que continuar conduciendo dañaría el vehículo",
+  p8_4:"<strong>8.4 Caminos sin pavimentar y Arikok</strong><br/>Se recomienda tracción en las cuatro ruedas para explorar el Parque Nacional Arikok. La ruta a la Piscina Natural (Conchi) requiere tracción en las cuatro ruedas y no es accesible en un vehículo convencional.",
+  p8_5:"El daño por conducir un vehículo en un terreno para el que no está diseñado es su total responsabilidad y no está cubierto por ningún seguro o exención.",
+  p8_6:"8.5 Usted es responsable del vehículo durante todo el alquiler, incluso mientras esté estacionado. Ciérrelo con llave y mantenga las llaves seguras cuando no esté vigilado.",
+  p8_7:"8.6 Debe revisar y mantener los niveles de líquidos y la presión de los neumáticos durante alquileres más largos, y dejar de conducir si aparece una luz de advertencia.",
+  p8_8:"8.7 No se permiten reparaciones, mantenimiento ni reemplazo de piezas sin nuestra aprobación previa por escrito.",
+  sh9:"9. Fumar, Mascotas y Limpieza",
+  p9_1:"9.1 No se permite fumar en ningún vehículo de Atlantic. Se aplica una tarifa de limpieza de USD $250 cuando haya evidencia de haber fumado.",
+  p9_2:"9.2 No se permiten mascotas sin acuerdo previo. Cuando se haya transportado una mascota sin acuerdo, puede aplicarse una tarifa de limpieza de hasta USD $100.",
+  p9_3:"9.3 Los vehículos devueltos que requieran limpieza más allá del uso normal &mdash; arena, derrames, suciedad excesiva &mdash; pueden generar un cargo de limpieza de hasta USD $100.",
+  sh10:"10. Combustible",
+  p10_1:"10.1 El vehículo se entrega con un nivel de combustible registrado y debe devolverse con ese mismo nivel.",
+  p10_2:"10.2 Si se devuelve con menos combustible: se cobra el combustible faltante, más una tarifa de servicio de repostaje de USD $15.",
+  sh11:"11. Seguro y Protección",
+  p11_1:"Las tarifas a continuación están vigentes y se aplican por día de alquiler.",
+  p11_2:"11.1 <strong>Responsabilidad Civil frente a Terceros</strong> &mdash; incluida, sin costo. Cubre daños o lesiones causados a terceros, según lo exige la ley de Aruba. <strong>No</strong> cubre daños al vehículo alquilado.",
+  p11_3:"<strong>11.2 Protección opcional</strong>",
+  tbH1:"Opción",tbH2:"Precio",tbH3:"Qué cubre",tbH4:"Deducible",
+  tbR1c1:"CDW",tbR1c2:"$15/día",tbR1c3:"Daños al vehículo alquilado",tbR1c4:"$750&ndash;$1,500 según la categoría del vehículo",
+  tbR2c1:"Protección contra Robo",tbR2c2:"$10/día",tbR2c3:"Robo del vehículo",tbR2c4:"$500",
+  tbR3c1:"Estándar",tbR3c2:"$25/día",tbR3c3:"CDW + Robo + neumáticos y parabrisas",tbR3c4:"$400",
+  tbR4c1:"Premium (Deducible Cero)",tbR4c2:"$35/día",tbR4c3:"Cobertura total, neumáticos y parabrisas, asistencia en carretera, llave perdida",tbR4c4:"$0",
+  p11_4:"La protección opcional no es obligatoria. Sin ella, usted es responsable del costo total de daños al vehículo o su robo.",
+  p11_5:"<strong>11.3 Qué no está cubierto</strong>",
+  p11_6:"Ninguna protección cubre:",
+  li11_1:"Daños ocurridos mientras el conductor estaba bajo la influencia de alcohol o drogas",
+  li11_2:"Daños ocurridos mientras conducía alguien no nombrado en el contrato",
+  li11_3:"Daños derivados de cualquier incumplimiento de estos Términos, incluida la conducción no autorizada en caminos sin pavimentar",
+  li11_4:"Neumáticos y parabrisas, salvo que cuente con protección Estándar o Premium",
+  li11_5:"Asistencia en carretera y reemplazo de llave perdida, salvo que cuente con protección Premium",
+  li11_6:"Pérdida o daño de bienes personales dentro del vehículo o retirados de él",
+  p11_7:"Si no está seguro de si una situación específica está cubierta, consúltenos antes de reservar &mdash; preferimos tener esa conversación antes que después.",
+  p11_8:"11.4 Cuando surja un reclamo, usted es responsable del deducible aplicable, de nuestra pérdida de uso del vehículo mientras esté fuera de servicio (sección 12.5), y de nuestros costos razonables de gestión del reclamo.",
+  p11_9:"11.5 La cobertura, los deducibles y las exclusiones se confirman con su reserva y forman parte de su contrato de alquiler.",
+  sh12:"12. Daños, Accidentes y Averías",
+  p12_1:"12.1 Usted es responsable de los daños, la pérdida o el robo del vehículo durante el alquiler, salvo en la medida en que esté cubierto por la protección contratada.",
+  p12_2:"12.2 En caso de accidente debe:",
+  li12_1:"Asegurarse de que todos estén a salvo",
+  li12_2:"Llamar a la policía y obtener un informe policial",
+  li12_3:"Notificar a Atlantic de inmediato al +297 593 1982",
+  li12_4:"No admitir responsabilidad ni llegar a acuerdos con nadie",
+  li12_5:"Registrar los datos de la otra parte y de cualquier testigo",
+  p12_3:"12.3 No obtener un informe policial cuando se requiera puede poner fin a la cobertura de seguro y dejarlo totalmente responsable.",
+  p12_4:"12.4 Informe cualquier robo o vandalismo a nosotros y a la policía tan pronto lo descubra.",
+  p12_5:"12.5 <strong>Pérdida de uso.</strong> Cuando un vehículo esté fuera de servicio para reparación o reemplazo debido a daños de los que usted sea responsable, también será responsable de nuestra pérdida de uso de ese vehículo &mdash; calculada como la tarifa diaria de alquiler de esa categoría, durante el período en que el vehículo no esté disponible, hasta un máximo de 14 días.",
+  p12_6:"12.6 En caso de avería, contáctenos de inmediato. No organice reparaciones por su cuenta sin nuestra aprobación por escrito.",
+  p12_7:"12.7 Cuando una avería sea causada por una falla mecánica no atribuible a usted, le proporcionaremos un vehículo de reemplazo tan pronto como sea razonablemente posible, sujeto a disponibilidad.",
+  p12_8:"12.8 Las llaves perdidas &mdash; incluidas llaves electrónicas, mandos y reprogramación &mdash; se cobran a USD $150, salvo que cuente con protección Premium.",
+  sh13:"13. Multas de Tránsito",
+  p13_1:"13.1 Usted es responsable de todas las multas de tránsito, sanciones, peajes y costos relacionados incurridos durante el alquiler.",
+  p13_2:"13.2 Cuando una multa nos llegue después de finalizado el alquiler, se aplicará una tarifa administrativa de USD $25 además de la multa.",
+  sh14:"14. Devolución Tardía",
+  p14_1:"14.1 Período de gracia: una (1) hora.",
+  p14_2:"14.2 Superado ese plazo, se cobra un día completo adicional de alquiler por cada día o fracción de día.",
+  p14_3:"14.3 No devolver el vehículo sin contactarnos puede tratarse como uso no autorizado y reportarse a las autoridades.",
+  sh15:"15. Sus Bienes",
+  p15_1:"No somos responsables de bienes personales dejados en el vehículo o retirados de él, ni de los dejados en nuestras oficinas, sin importar cómo ocurra esa pérdida. Lleve sus pertenencias consigo.",
+  sh16:"16. Terminación Anticipada del Alquiler",
+  p16_1:"Podemos terminar un alquiler y recuperar el vehículo de inmediato, sin reembolso, cuando usted incumpla estos Términos, haya proporcionado información falsa para obtener el vehículo, o lo esté usando de una manera que arriesgue daños, lesiones o responsabilidad legal. Cuando debamos recuperar el vehículo, usted es responsable del costo razonable de hacerlo.",
+  sh17:"17. Límites de Nuestra Responsabilidad",
+  p17_1:"No somos responsables de pérdidas indirectas o consecuentes &mdash; vuelos perdidos, actividades perdidas, pérdida de disfrute o alojamiento adicional &mdash; derivadas de la indisponibilidad, avería o retraso del vehículo, salvo que resulten de nuestra negligencia y en la medida en que la responsabilidad no pueda excluirse por ley.",
+  p17_2:"Nada aquí excluye la responsabilidad por muerte o lesiones personales causadas por negligencia.",
+  sh18:"18. Disposiciones Generales",
+  p18_1:"18.1 Estos Términos, junto con el contrato de alquiler firmado, constituyen el acuerdo completo entre nosotros. Cualquier cosa dicha o acordada previamente que no esté incluida por escrito en ellos no se aplica.",
+  p18_2:"18.2 Los cambios deben hacerse por escrito y ser firmados por nosotros. Para extender un alquiler, contáctenos antes de la fecha de devolución &mdash; las extensiones están sujetas a disponibilidad y confirmación por escrito.",
+  p18_3:"18.3 Si no exigimos el cumplimiento de una condición en una ocasión, eso no significa que renunciemos al derecho de exigirlo posteriormente.",
+  p18_4:"18.4 Si alguna parte de estos Términos se considera inválida, el resto continúa vigente.",
+  sh19:"19. Datos Personales",
+  p19_1:"La información personal que usted nos proporciona se trata conforme a nuestra <a href=\"privacy.html\" style=\"color:var(--gold);text-decoration:none\">Política de Privacidad</a>.",
+  sh20:"20. Ley Aplicable",
+  p20_1:"Estos Términos se rigen por la ley de Aruba. Las controversias están sujetas a la jurisdicción del tribunal competente de Aruba.",
+  sh21:"21. Contacto",
+  p21_1:"<strong>Atlantic Car Rental</strong><br/>Una marca de Atlantic Tours Transfers and Rentals<br/>OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A.<br/>Cámara de Comercio de Aruba: H51819.5<br/>Italiestraat 38 (Edificio Sasaki), Oranjestad, Aruba &middot; Apartado Postal 477<br/>Entrega en aeropuerto: Wayaca 6B, Aeromall, Oranjestad<br/>WhatsApp / Teléfono: <a href=\"tel:+2975931982\" style=\"color:var(--gold);text-decoration:none\">+297 593 1982</a><br/>Correo electrónico: <a href=\"mailto:info@atlanticcarrentalaruba.com\" style=\"color:var(--gold);text-decoration:none\">info@atlanticcarrentalaruba.com</a>"
+},
+nl:{
+  n_fl:"Vloot",n_ar:"Ontdek Aruba",n_ab:"Over Ons",n_ct:"Nu Reserveren",n_ct_s:"Reserveer",
+  n_gtk:"Goed om te Weten",n_dr:"Rijden in Aruba",n_ins:"Verzekering",n_rr:"Reserveringsvereisten",n_ao:"Extra's",
+  ft_tg:"Luchthavenbezorging. Gecureerde voertuigen. Uw privé concierge voor het eiland.",
+  ft_nv:"Navigeren",ft_gtk:"Goed om te Weten",ft_fl:"Onze Vloot",ft_co:"Contact",ft_contact:"Contact",ft_wa:"WhatsApp",
+  ft_cp:"&copy; 2026 Atlantic Car Rental &middot; Aruba.",
+  ft_oc:"Onderdeel van OCC Holding &amp; Consultancy",ft_pr:"Privacy",ft_tc:"Voorwaarden",
+  ft_rev:"Tevreden over je huurauto? Laat een review achter op Google of Facebook.",
+  co_main:"Hoofdkantoor",co_air2:"Levering op Luchthaven",
+  tag_l:"Juridisch",h1t:"Algemene <em>Voorwaarden</em>",lu:"Laatst bijgewerkt: 27 augustus 2026",
+  sh1:"1. Met Wie U een Overeenkomst Aangaat",
+  p1_1:"Atlantic Car Rental is een merk van <strong>Atlantic Tours Transfers and Rentals</strong>, de geregistreerde handelsnaam van <strong>OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A.</strong>, een besloten vennootschap geregistreerd in Aruba bij de Kamer van Koophandel en Industrie van Aruba onder nummer <strong>H51819.5</strong>, met geregistreerd adres Italiestraat 38, Eagle/Paardenbaai, Oranjestad West, Aruba.",
+  p1_2:"In deze Voorwaarden aangeduid als &ldquo;Atlantic,&rdquo; &ldquo;wij&rdquo; of &ldquo;ons.&rdquo;",
+  p1_3:"<strong>Kantoren</strong><br/>Hoofdkantoor: Italiestraat 38 (Sasaki Gebouw), Oranjestad, Aruba &middot; Postbus 477<br/>Levering op de luchthaven: Wayaca 6B, Aeromall, Oranjestad &middot; Levering op Queen Beatrix International Airport",
+  p1_4:"Door het indienen van een reserveringsaanvraag, het ophalen van een voertuig of het ondertekenen van een huurovereenkomst, aanvaardt u (&ldquo;de Huurder&rdquo;) deze Voorwaarden.",
+  p1_5:"Deze Voorwaarden maken deel uit van de huurovereenkomst die bij levering of ophalen wordt ondertekend. Waar beide verschillen, heeft de ondertekende huurovereenkomst voorrang.",
+  p1_6:"Wanneer meer dan één persoon de huurovereenkomst ondertekent, is ieder gezamenlijk en afzonderlijk verantwoordelijk voor alles wat daaronder verschuldigd is.",
+  sh2:"2. Reserveringen",
+  p2_1:"2.1 Een reserveringsaanvraag &mdash; via website, WhatsApp, e-mail of telefoon &mdash; is geen bevestigde boeking. Er is geen betaling vereist om er een te doen.",
+  p2_2:"2.2 Een reservering wordt pas bevestigd wanneer Atlantic de beschikbaarheid rechtstreeks met u bevestigt, doorgaans via WhatsApp.",
+  p2_3:"2.3 Voertuigafbeeldingen op onze website zijn representatief voor elke klasse. Het specifieke merk en model wordt bij levering toegewezen op basis van beschikbaarheid. Wij garanderen geen specifiek merk, model, kleur of bouwjaar.",
+  p2_4:"2.4 Er geldt een minimale huurperiode van drie (3) dagen.",
+  p2_5:"2.5 Wij nemen één dag voor aankomst contact met u op om de levering te coördineren.",
+  p2_6:"2.6 Atlantic kan naar eigen inzicht elke reserveringsaanvraag weigeren.",
+  sh3:"3. Wie Mag Rijden",
+  p3_1:"3.1 Minimumleeftijd: 23 jaar.",
+  p3_2:"3.2 Elke bestuurder moet bij het huren het volgende overleggen:",
+  li3_1:"Een geldig rijbewijs",li3_2:"Een geldig paspoort of door de overheid uitgegeven identiteitsbewijs",li3_3:"Een Internationaal Rijbewijs indien het rijbewijs niet in het Latijnse schrift is opgesteld",
+  p3_3:"3.3 Alleen bestuurders die op de ondertekende huurovereenkomst staan vermeld, mogen het voertuig besturen. Extra bestuurders moeten bij het huren aanwezig zijn, aan dezelfde vereisten voldoen en op de overeenkomst worden vermeld. Extra bestuurder: $5 per dag.",
+  p3_4:"3.4 Als u iemand die niet op de overeenkomst staat laat rijden, vervalt alle verzekeringsdekking onmiddellijk en bent u verantwoordelijk voor de volledige waarde van elk verlies of schade.",
+  sh4:"4. Borgsom",
+  p4_1:"4.1 Er is een borgsom van USD $200 vereist.",
+  p4_2:"4.2 Deze kan worden betaald met een gangbare creditcard of contant.",
+  p4_3:"4.3 Deze wordt vrijgegeven of terugbetaald nadat het voertuig is ingeleverd en geïnspecteerd.",
+  p4_4:"4.4 Wij kunnen hiervan elk bedrag inhouden dat u verschuldigd bent onder deze Voorwaarden &mdash; schade die niet door verzekering is gedekt, ontbrekende brandstof, reiniging, verkeersboetes, te late inlevering, verlies van gebruik of afhandeling van claims.",
+  p4_5:"4.5 Wanneer het verschuldigde bedrag de borgsom overschrijdt, blijft u verantwoordelijk voor het restbedrag.",
+  sh5:"5. Betaling",
+  p5_1:"5.1 Alle kosten zijn in Amerikaanse dollars.",
+  p5_2:"5.2 Wij accepteren contant geld en gangbare creditcards. Betaling per goedgekeurde bankoverschrijving of ondersteunde cryptocurrency kan vooraf worden geregeld.",
+  p5_3:"5.3 Buitenlandse kaarten kunnen omrekeningskosten van uw eigen bank met zich meebrengen. Die kosten zijn niet van ons en kunnen door ons niet worden terugbetaald.",
+  p5_4:"5.4 Huurkosten en de borgsom zijn verschuldigd bij levering.",
+  p5_5:"5.5 Onbetaalde bedragen na de vervaldatum brengen een rente van 1% per maand met zich mee.",
+  p5_6:"5.6 Wanneer wij stappen moeten ondernemen om het verschuldigde bedrag te innen, bent u verantwoordelijk voor de redelijke kosten daarvan.",
+  sh6:"6. Annulering en Wijzigingen",
+  p6_1:"6.1 Annuleren meer dan 48 uur voor het ophalen: gratis.",
+  p6_2:"6.2 Annuleren binnen 48 uur: er kunnen administratiekosten van USD $25 in rekening worden gebracht.",
+  p6_3:"6.3 Wijzigingen aan een bevestigde reservering zijn onder voorbehoud van beschikbaarheid.",
+  p6_4:"6.4 Als u het voertuig niet op de afgesproken tijd ophaalt en geen contact met ons opneemt, kunnen wij de reservering na twee (2) uur vrijgeven en behandelen als een late annulering.",
+  sh7:"7. Levering en Inlevering",
+  p7_1:"7.1 Wij leveren overal op Aruba zonder kosten &mdash; luchthaven, hotel, villa of afgesproken locatie.",
+  p7_2:"7.2 U moet op de afgesproken plaats en tijd aanwezig zijn met alle vereiste documenten.",
+  p7_3:"7.3 Bij levering leggen wij samen de staat van het voertuig, het brandstofniveau en de kilometerstand vast. Meld eventuele afwijkingen op dat moment, niet later.",
+  p7_4:"7.4 Lever het voertuig in op de afgesproken datum, tijd en plaats, in dezelfde staat en met hetzelfde brandstofniveau, normale slijtage uitgezonderd.",
+  p7_5:"7.5 Als u het voertuig buiten onze openingstijden inlevert, blijft u ervoor verantwoordelijk totdat wij het inspecteren wanneer wij weer openen.",
+  p7_6:"7.6 U bent verantwoordelijk voor het compleet inleveren van het voertuig &mdash; sleutels, documenten, reserveband, gereedschap, kinderzitjes en overige meegeleverde uitrusting. Ontbrekende items worden tegen vervangingswaarde in rekening gebracht.",
+  sh8:"8. Gebruik van het Voertuig",
+  p8_1:"8.1 Alle huurovereenkomsten omvatten onbeperkte kilometers.",
+  p8_2:"8.2 U moet rijden in overeenstemming met de Arubaanse verkeerswetgeving. Op Aruba rijden wij rechts.",
+  p8_3:"8.3 Het voertuig mag <strong>niet</strong> worden gebruikt:",
+  li8_1:"Door iemand die niet op de huurovereenkomst staat vermeld, of zonder geldig rijbewijs",
+  li8_2:"Door iemand onder invloed van alcohol of drugs, op recept of anderszins, die het rijvermogen beïnvloedt",
+  li8_3:"Voor enig illegaal doel",
+  li8_4:"Voor het vervoeren van passagiers of goederen tegen betaling of beloning",
+  li8_5:"Om iets te duwen of te slepen",
+  li8_6:"In enige race, wedstrijd, rally of rijles",
+  li8_7:"Buiten het eiland Aruba",
+  li8_8:"Om meer personen te vervoeren dan waarvoor het voertuig geregistreerd is",
+  li8_9:"Wanneer het duidelijk is dat verder rijden het voertuig zou beschadigen",
+  p8_4:"<strong>8.4 Onverharde wegen en Arikok</strong><br/>Vierwielaandrijving wordt aanbevolen voor het verkennen van Nationaal Park Arikok. De route naar het Natuurlijk Zwembad (Conchi) vereist vierwielaandrijving en is niet bereikbaar met een conventionele auto.",
+  p8_5:"Schade door het rijden met een voertuig op terrein waarvoor het niet geschikt is, is volledig uw verantwoordelijkheid en wordt niet gedekt door enige verzekering of vrijwaring.",
+  p8_6:"8.5 U bent verantwoordelijk voor het voertuig gedurende de gehele huurperiode, ook wanneer het geparkeerd staat. Vergrendel het en bewaar de sleutels veilig wanneer het onbeheerd is.",
+  p8_7:"8.6 U moet tijdens langere huurperiodes de vloeistofniveaus en bandenspanning controleren en onderhouden, en stoppen met rijden als een waarschuwingslampje gaat branden.",
+  p8_8:"8.7 Geen reparaties, onderhoud of vervanging van onderdelen zonder onze voorafgaande schriftelijke toestemming.",
+  sh9:"9. Roken, Huisdieren en Reiniging",
+  p9_1:"9.1 Roken is niet toegestaan in enig voertuig van Atlantic. Bij aanwijzingen van roken geldt een reinigingskosten van USD $250.",
+  p9_2:"9.2 Huisdieren zijn niet toegestaan zonder voorafgaande afspraak. Wanneer een huisdier zonder afspraak is vervoerd, kunnen reinigingskosten van maximaal USD $100 in rekening worden gebracht.",
+  p9_3:"9.3 Voertuigen die worden ingeleverd en meer reiniging nodig hebben dan normaal gebruik &mdash; zand, gemorste vloeistoffen, zware vervuiling &mdash; kunnen reinigingskosten van maximaal USD $100 met zich meebrengen.",
+  sh10:"10. Brandstof",
+  p10_1:"10.1 Het voertuig wordt geleverd met een geregistreerd brandstofniveau en moet op dat niveau worden ingeleverd.",
+  p10_2:"10.2 Bij inlevering met minder brandstof: de ontbrekende brandstof wordt in rekening gebracht, plus tankservicekosten van USD $15.",
+  sh11:"11. Verzekering en Bescherming",
+  p11_1:"Onderstaande tarieven zijn actueel en gelden per dag van de huurperiode.",
+  p11_2:"11.1 <strong>Aansprakelijkheid tegenover Derden</strong> &mdash; inbegrepen, zonder kosten. Dekt schade of letsel aan derden, zoals vereist door de Arubaanse wet. Dekt <strong>geen</strong> schade aan het gehuurde voertuig.",
+  p11_3:"<strong>11.2 Optionele bescherming</strong>",
+  tbH1:"Optie",tbH2:"Prijs",tbH3:"Wat het dekt",tbH4:"Eigen risico",
+  tbR1c1:"CDW",tbR1c2:"$15/dag",tbR1c3:"Schade aan het gehuurde voertuig",tbR1c4:"$750&ndash;$1.500 afhankelijk van de voertuigklasse",
+  tbR2c1:"Diefstalbescherming",tbR2c2:"$10/dag",tbR2c3:"Diefstal van het voertuig",tbR2c4:"$500",
+  tbR3c1:"Standaard",tbR3c2:"$25/dag",tbR3c3:"CDW + Diefstal + banden en voorruit",tbR3c4:"$400",
+  tbR4c1:"Premium (Geen Eigen Risico)",tbR4c2:"$35/dag",tbR4c3:"Volledige dekking, banden en voorruit, pechhulp, verloren sleutel",tbR4c4:"$0",
+  p11_4:"Optionele bescherming is niet verplicht. Zonder deze bent u verantwoordelijk voor de volledige kosten van schade aan of diefstal van het voertuig.",
+  p11_5:"<strong>11.3 Wat niet is gedekt</strong>",
+  p11_6:"Geen enkele bescherming dekt:",
+  li11_1:"Schade terwijl de bestuurder onder invloed was van alcohol of drugs",
+  li11_2:"Schade terwijl iemand die niet op de overeenkomst stond, reed",
+  li11_3:"Schade voortvloeiend uit enige schending van deze Voorwaarden, waaronder ongeoorloofd rijden op onverharde wegen",
+  li11_4:"Banden en voorruit, tenzij u Standaard of Premium bescherming heeft",
+  li11_5:"Pechhulp en vervanging van verloren sleutels, tenzij u Premium bescherming heeft",
+  li11_6:"Verlies van of schade aan persoonlijke eigendommen in of uit het voertuig gehaald",
+  p11_7:"Als u niet zeker weet of een specifieke situatie is gedekt, vraag het ons vóór het boeken &mdash; wij hebben dat gesprek liever nu dan achteraf.",
+  p11_8:"11.4 Bij een claim bent u verantwoordelijk voor het toepasselijke eigen risico, voor ons verlies van gebruik van het voertuig terwijl het buiten gebruik is (sectie 12.5), en voor onze redelijke kosten van claimafhandeling.",
+  p11_9:"11.5 Dekking, eigen risico's en uitsluitingen worden bevestigd bij uw reservering en maken deel uit van uw huurovereenkomst.",
+  sh12:"12. Schade, Ongevallen en Pech",
+  p12_1:"12.1 U bent verantwoordelijk voor schade aan, verlies van of diefstal van het voertuig tijdens de huurperiode, behalve voor zover gedekt door de door u afgesloten bescherming.",
+  p12_2:"12.2 Bij een ongeval moet u:",
+  li12_1:"Ervoor zorgen dat iedereen veilig is",
+  li12_2:"De politie bellen en een politierapport verkrijgen",
+  li12_3:"Atlantic onmiddellijk informeren op +297 593 1982",
+  li12_4:"Geen aansprakelijkheid erkennen of een schikking treffen met iemand",
+  li12_5:"De gegevens van de andere partij en eventuele getuigen noteren",
+  p12_3:"12.3 Het niet verkrijgen van een politierapport wanneer dit vereist is, kan de verzekeringsdekking beëindigen en u volledig verantwoordelijk maken.",
+  p12_4:"12.4 Meld diefstal of vandalisme aan ons en de politie zodra u dit ontdekt.",
+  p12_5:"12.5 <strong>Verlies van gebruik.</strong> Wanneer een voertuig buiten gebruik is voor reparatie of vervanging vanwege schade waarvoor u verantwoordelijk bent, bent u ook verantwoordelijk voor ons verlies van gebruik van dat voertuig &mdash; berekend als het dagelijkse huurtarief voor die klasse, voor de periode dat het voertuig niet beschikbaar is, tot een maximum van 14 dagen.",
+  p12_6:"12.6 Neem bij pech onmiddellijk contact met ons op. Regel zelf geen reparaties zonder onze schriftelijke goedkeuring.",
+  p12_7:"12.7 Wanneer pech wordt veroorzaakt door een mechanisch defect dat niet aan u is toe te schrijven, zullen wij zo snel als redelijkerwijs mogelijk een vervangend voertuig leveren, onder voorbehoud van beschikbaarheid.",
+  p12_8:"12.8 Verloren sleutels &mdash; inclusief elektronische sleutels, afstandsbedieningen en herprogrammering &mdash; worden in rekening gebracht tegen USD $150, tenzij u Premium bescherming heeft.",
+  sh13:"13. Verkeersboetes",
+  p13_1:"13.1 U bent verantwoordelijk voor alle verkeersboetes, sancties, tolgelden en gerelateerde kosten opgelopen tijdens de huurperiode.",
+  p13_2:"13.2 Wanneer een boete ons bereikt nadat de huurperiode is beëindigd, gelden naast de boete administratiekosten van USD $25.",
+  sh14:"14. Te Late Inlevering",
+  p14_1:"14.1 Respijtperiode: één (1) uur.",
+  p14_2:"14.2 Daarna wordt voor elke dag of deel daarvan een volledige extra huurdag in rekening gebracht.",
+  p14_3:"14.3 Het niet inleveren van het voertuig zonder contact met ons op te nemen, kan worden behandeld als ongeoorloofd gebruik en gemeld aan de autoriteiten.",
+  sh15:"15. Uw Eigendommen",
+  p15_1:"Wij zijn niet verantwoordelijk voor persoonlijke eigendommen achtergelaten in of uit het voertuig gehaald, of achtergelaten op onze kantoren, ongeacht hoe dat verlies plaatsvindt. Neem uw bezittingen mee.",
+  sh16:"16. Vroegtijdige Beëindiging van de Huur",
+  p16_1:"Wij kunnen een huurovereenkomst beëindigen en het voertuig onmiddellijk terugvorderen, zonder terugbetaling, wanneer u deze Voorwaarden schendt, valse informatie heeft gegeven om het voertuig te verkrijgen, of het gebruikt op een manier die schade, letsel of wettelijke aansprakelijkheid riskeert. Wanneer wij het voertuig moeten terugvorderen, bent u verantwoordelijk voor de redelijke kosten daarvan.",
+  sh17:"17. Grenzen van Onze Aansprakelijkheid",
+  p17_1:"Wij zijn niet verantwoordelijk voor indirecte of gevolgschade &mdash; gemiste vluchten, gemiste activiteiten, verlies van genot of extra accommodatie &mdash; voortvloeiend uit onbeschikbaarheid, pech of vertraging van het voertuig, behalve wanneer dit het gevolg is van onze nalatigheid en voor zover aansprakelijkheid niet wettelijk kan worden uitgesloten.",
+  p17_2:"Niets hierin sluit aansprakelijkheid uit voor overlijden of persoonlijk letsel veroorzaakt door nalatigheid.",
+  sh18:"18. Algemeen",
+  p18_1:"18.1 Deze Voorwaarden vormen, samen met de ondertekende huurovereenkomst, de volledige overeenkomst tussen ons. Alles wat vooraf is gezegd of overeengekomen en niet schriftelijk hierin is opgenomen, is niet van toepassing.",
+  p18_2:"18.2 Wijzigingen moeten schriftelijk en door ons ondertekend zijn. Neem contact met ons op vóór de inleverdatum om een huurperiode te verlengen &mdash; verlengingen zijn onder voorbehoud van beschikbaarheid en schriftelijke bevestiging.",
+  p18_3:"18.3 Als wij een voorwaarde bij één gelegenheid niet handhaven, betekent dit niet dat wij afstand doen van het recht om deze later te handhaven.",
+  p18_4:"18.4 Als een deel van deze Voorwaarden ongeldig wordt bevonden, blijft de rest van kracht.",
+  sh19:"19. Persoonsgegevens",
+  p19_1:"Persoonlijke informatie die u ons verstrekt, wordt behandeld conform ons <a href=\"privacy.html\" style=\"color:var(--gold);text-decoration:none\">Privacybeleid</a>.",
+  sh20:"20. Toepasselijk Recht",
+  p20_1:"Deze Voorwaarden worden beheerst door het recht van Aruba. Geschillen zijn onderworpen aan de jurisdictie van de bevoegde rechtbank in Aruba.",
+  sh21:"21. Contact",
+  p21_1:"<strong>Atlantic Car Rental</strong><br/>Een merk van Atlantic Tours Transfers and Rentals<br/>OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A.<br/>Kamer van Koophandel Aruba: H51819.5<br/>Italiestraat 38 (Sasaki Gebouw), Oranjestad, Aruba &middot; Postbus 477<br/>Levering op de luchthaven: Wayaca 6B, Aeromall, Oranjestad<br/>WhatsApp / Telefoon: <a href=\"tel:+2975931982\" style=\"color:var(--gold);text-decoration:none\">+297 593 1982</a><br/>E-mail: <a href=\"mailto:info@atlanticcarrentalaruba.com\" style=\"color:var(--gold);text-decoration:none\">info@atlanticcarrentalaruba.com</a>"
+},
+pt:{
+  n_fl:"Frota",n_ar:"Explorar Aruba",n_ab:"Sobre Nós",n_ct:"Reservar Agora",n_ct_s:"Reservar",
+  n_gtk:"Bom Saber",n_dr:"Dirigindo em Aruba",n_ins:"Seguro",n_rr:"Requisitos de Reserva",n_ao:"Extras",
+  ft_tg:"Entrega no aeroporto. Veículos curados. Seu concierge privado para a ilha.",
+  ft_nv:"Navegar",ft_gtk:"Bom Saber",ft_fl:"Nossa Frota",ft_co:"Contato",ft_contact:"Contato",ft_wa:"WhatsApp",
+  ft_cp:"&copy; 2026 Atlantic Car Rental &middot; Aruba.",
+  ft_oc:"Parte da OCC Holding &amp; Consultancy",ft_pr:"Privacidade",ft_tc:"Termos",
+  ft_rev:"Satisfeito com o seu aluguer? Deixe uma avaliação no Google ou Facebook.",
+  co_main:"Escritório Principal",co_air2:"Entrega no Aeroporto",
+  tag_l:"Legal",h1t:"Termos e <em>Condições</em>",lu:"Última atualização: 27 de agosto de 2026",
+  sh1:"1. Com Quem Você Está Contratando",
+  p1_1:"Atlantic Car Rental é uma marca da <strong>Atlantic Tours Transfers and Rentals</strong>, nome comercial registrado da <strong>OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A.</strong>, sociedade de responsabilidade limitada registrada em Aruba na Câmara de Comércio e Indústria de Aruba sob o número <strong>H51819.5</strong>, com endereço registrado em Italiestraat 38, Eagle/Paardenbaai, Oranjestad West, Aruba.",
+  p1_2:"Referida nestes Termos como &ldquo;Atlantic,&rdquo; &ldquo;nós&rdquo; ou &ldquo;conosco.&rdquo;",
+  p1_3:"<strong>Escritórios</strong><br/>Escritório principal: Italiestraat 38 (Edifício Sasaki), Oranjestad, Aruba &middot; Caixa Postal 477<br/>Entrega no aeroporto: Wayaca 6B, Aeromall, Oranjestad &middot; Entrega no Aeroporto Internacional Queen Beatrix",
+  p1_4:"Ao enviar uma solicitação de reserva, retirar um veículo ou assinar um contrato de aluguel, você (&ldquo;o Locatário&rdquo;) aceita estes Termos.",
+  p1_5:"Estes Termos fazem parte do contrato de aluguel assinado na entrega ou retirada. Em caso de divergência, prevalece o contrato de aluguel assinado.",
+  p1_6:"Quando mais de uma pessoa assinar o contrato de aluguel, cada uma será solidária e individualmente responsável por tudo o que for devido nos termos dele.",
+  sh2:"2. Reservas",
+  p2_1:"2.1 Uma solicitação de reserva &mdash; por site, WhatsApp, e-mail ou telefone &mdash; não é uma reserva confirmada. Nenhum pagamento é necessário para fazê-la.",
+  p2_2:"2.2 Uma reserva só é confirmada quando a Atlantic confirma a disponibilidade diretamente com você, normalmente por WhatsApp.",
+  p2_3:"2.3 As imagens dos veículos em nosso site são representativas de cada categoria. A marca e o modelo específicos são atribuídos na entrega, de acordo com a disponibilidade. Não garantimos uma marca, modelo, cor ou ano específicos.",
+  p2_4:"2.4 Aplica-se um período mínimo de aluguel de três (3) dias.",
+  p2_5:"2.5 Entramos em contato um dia antes da chegada para coordenar a entrega.",
+  p2_6:"2.6 A Atlantic pode recusar qualquer solicitação de reserva a seu critério.",
+  sh3:"3. Quem Pode Dirigir",
+  p3_1:"3.1 Idade mínima: 23 anos.",
+  p3_2:"3.2 Todo motorista deve apresentar no momento do aluguel:",
+  li3_1:"Uma carteira de motorista válida",li3_2:"Um passaporte válido ou identificação emitida pelo governo",li3_3:"Uma Permissão Internacional para Dirigir quando a carteira não estiver escrita em alfabeto latino",
+  p3_3:"3.3 Somente motoristas nomeados no contrato de aluguel assinado podem dirigir o veículo. Motoristas adicionais devem estar presentes no momento do aluguel, atender aos mesmos requisitos e ser nomeados no contrato. Motorista adicional: $5 por dia.",
+  p3_4:"3.4 Permitir que alguém não nomeado no contrato dirija encerra imediatamente toda a cobertura do seguro e torna você responsável pelo valor total de qualquer perda ou dano.",
+  sh4:"4. Depósito de Segurança",
+  p4_1:"4.1 É exigido um depósito de segurança de USD $200.",
+  p4_2:"4.2 Pode ser pago com cartão de crédito das principais bandeiras ou em dinheiro.",
+  p4_3:"4.3 É liberado ou devolvido após o veículo ser devolvido e inspecionado.",
+  p4_4:"4.4 Podemos deduzir dele qualquer valor que você deva nos termos destes Termos &mdash; danos não cobertos pelo seguro, combustível faltante, limpeza, multas de trânsito, devolução tardia, perda de uso ou tratamento de sinistros.",
+  p4_5:"4.5 Quando o valor devido exceder o depósito, você continua responsável pelo saldo.",
+  sh5:"5. Pagamento",
+  p5_1:"5.1 Todas as cobranças são em dólares americanos.",
+  p5_2:"5.2 Aceitamos dinheiro e os principais cartões de crédito. O pagamento por transferência bancária aprovada ou criptomoeda suportada pode ser combinado com antecedência.",
+  p5_3:"5.3 Cartões estrangeiros podem incorrer em uma taxa de conversão cobrada pelo seu próprio banco. Essa taxa não é nossa e não podemos reembolsá-la.",
+  p5_4:"5.4 As cobranças do aluguel e o depósito são pagáveis na entrega.",
+  p5_5:"5.5 Valores não pagos no vencimento geram juros de 1% ao mês.",
+  p5_6:"5.6 Quando precisarmos tomar medidas para recuperar o que você deve, você é responsável pelos custos razoáveis dessa cobrança.",
+  sh6:"6. Cancelamento e Alterações",
+  p6_1:"6.1 Cancelamento com mais de 48 horas de antecedência da retirada: gratuito.",
+  p6_2:"6.2 Cancelamento dentro de 48 horas: pode ser aplicada uma taxa administrativa de USD $25.",
+  p6_3:"6.3 Alterações em uma reserva confirmada estão sujeitas à disponibilidade.",
+  p6_4:"6.4 Se você não retirar o veículo no horário combinado e não entrar em contato conosco, podemos liberar a reserva após duas (2) horas e tratá-la como um cancelamento tardio.",
+  sh7:"7. Entrega e Devolução",
+  p7_1:"7.1 Entregamos em qualquer lugar de Aruba sem custo &mdash; aeroporto, hotel, casa de temporada ou local combinado.",
+  p7_2:"7.2 Você deve estar presente no local e horário combinados com todos os documentos exigidos.",
+  p7_3:"7.3 Na entrega, registramos juntos as condições do veículo, o nível de combustível e a quilometragem. Aponte qualquer divergência nesse momento, não depois.",
+  p7_4:"7.4 Devolva o veículo na data, horário e local combinados, nas mesmas condições e com o mesmo nível de combustível, salvo o desgaste normal.",
+  p7_5:"7.5 Se você devolver o veículo fora do nosso horário de funcionamento, continuará responsável por ele até que o inspecionemos na próxima abertura.",
+  p7_6:"7.6 Você é responsável por devolver o veículo completo &mdash; chaves, documentos, estepe, ferramentas, cadeirinhas infantis e qualquer outro equipamento fornecido. Itens faltantes são cobrados pelo custo de reposição.",
+  sh8:"8. Uso do Veículo",
+  p8_1:"8.1 Todos os aluguéis incluem quilometragem ilimitada.",
+  p8_2:"8.2 Você deve dirigir de acordo com a legislação de trânsito de Aruba. Em Aruba, dirigimos pela direita.",
+  p8_3:"8.3 O veículo <strong>não</strong> pode ser usado:",
+  li8_1:"Por qualquer pessoa não nomeada no contrato de aluguel, ou sem carteira de motorista válida",
+  li8_2:"Por qualquer pessoa sob efeito de álcool ou drogas, prescritas ou não, que afete a capacidade de dirigir",
+  li8_3:"Para qualquer finalidade ilegal",
+  li8_4:"Para transportar passageiros ou mercadorias mediante pagamento ou recompensa",
+  li8_5:"Para empurrar ou rebocar qualquer coisa",
+  li8_6:"Em qualquer corrida, competição, rali ou aula de direção",
+  li8_7:"Fora da ilha de Aruba",
+  li8_8:"Para transportar mais pessoas do que a capacidade registrada do veículo",
+  li8_9:"Quando for evidente que continuar dirigindo danificaria o veículo",
+  p8_4:"<strong>8.4 Estradas de terra e Arikok</strong><br/>Recomenda-se tração nas quatro rodas para explorar o Parque Nacional Arikok. O trajeto até a Piscina Natural (Conchi) exige tração nas quatro rodas e não é acessível em um carro convencional.",
+  p8_5:"Danos causados por dirigir um veículo em terreno para o qual ele não é adequado são de sua total responsabilidade e não são cobertos por nenhum seguro ou isenção.",
+  p8_6:"8.5 Você é responsável pelo veículo durante todo o aluguel, inclusive quando estacionado. Tranque-o e mantenha as chaves seguras quando não estiver sob vigilância.",
+  p8_7:"8.6 Você deve verificar e manter os níveis de fluidos e a pressão dos pneus durante aluguéis mais longos, e parar de dirigir caso uma luz de advertência acenda.",
+  p8_8:"8.7 Nenhum reparo, manutenção ou substituição de peças sem nossa aprovação prévia por escrito.",
+  sh9:"9. Fumo, Animais de Estimação e Limpeza",
+  p9_1:"9.1 Não é permitido fumar em nenhum veículo da Atlantic. Uma taxa de limpeza de USD $250 se aplica quando houver evidência de fumo.",
+  p9_2:"9.2 Animais de estimação não são permitidos sem combinação prévia. Quando um animal for transportado sem combinação prévia, pode ser aplicada uma taxa de limpeza de até USD $100.",
+  p9_3:"9.3 Veículos devolvidos precisando de limpeza além do uso normal &mdash; areia, derramamentos, sujeira excessiva &mdash; podem gerar uma taxa de limpeza de até USD $100.",
+  sh10:"10. Combustível",
+  p10_1:"10.1 O veículo é fornecido com um nível de combustível registrado e deve ser devolvido nesse mesmo nível.",
+  p10_2:"10.2 Se devolvido com menos combustível: o combustível faltante é cobrado, mais uma taxa de serviço de abastecimento de USD $15.",
+  sh11:"11. Seguro e Proteção",
+  p11_1:"As tarifas abaixo estão atualizadas e se aplicam por dia de aluguel.",
+  p11_2:"11.1 <strong>Responsabilidade Civil frente a Terceiros</strong> &mdash; incluída, sem custo. Cobre danos ou lesões causados a terceiros, conforme exigido pela lei de Aruba. <strong>Não</strong> cobre danos ao veículo alugado.",
+  p11_3:"<strong>11.2 Proteção opcional</strong>",
+  tbH1:"Opção",tbH2:"Preço",tbH3:"O que cobre",tbH4:"Franquia",
+  tbR1c1:"CDW",tbR1c2:"$15/dia",tbR1c3:"Danos ao veículo alugado",tbR1c4:"$750&ndash;$1.500 conforme a categoria do veículo",
+  tbR2c1:"Proteção contra Roubo",tbR2c2:"$10/dia",tbR2c3:"Roubo do veículo",tbR2c4:"$500",
+  tbR3c1:"Standard",tbR3c2:"$25/dia",tbR3c3:"CDW + Roubo + pneus e para-brisa",tbR3c4:"$400",
+  tbR4c1:"Premium (Franquia Zero)",tbR4c2:"$35/dia",tbR4c3:"Cobertura total, pneus e para-brisa, assistência na estrada, chave perdida",tbR4c4:"$0",
+  p11_4:"A proteção opcional não é obrigatória. Sem ela, você é responsável pelo custo total de danos ao veículo ou de seu roubo.",
+  p11_5:"<strong>11.3 O que não é coberto</strong>",
+  p11_6:"Nenhuma proteção cobre:",
+  li11_1:"Danos ocorridos enquanto o motorista estava sob efeito de álcool ou drogas",
+  li11_2:"Danos ocorridos enquanto alguém não nomeado no contrato estava dirigindo",
+  li11_3:"Danos decorrentes de qualquer violação destes Termos, incluindo condução não autorizada em estradas de terra",
+  li11_4:"Pneus e para-brisa, a menos que você tenha a proteção Standard ou Premium",
+  li11_5:"Assistência na estrada e reposição de chave perdida, a menos que você tenha a proteção Premium",
+  li11_6:"Perda ou dano de bens pessoais dentro do veículo ou retirados dele",
+  p11_7:"Se você não tiver certeza se uma situação específica está coberta, pergunte antes de reservar &mdash; preferimos ter essa conversa antes do que depois.",
+  p11_8:"11.4 Quando surgir um sinistro, você é responsável pela franquia aplicável, por nossa perda de uso do veículo enquanto ele estiver fora de circulação (seção 12.5), e por nossos custos razoáveis de tratamento do sinistro.",
+  p11_9:"11.5 A cobertura, as franquias e as exclusões são confirmadas com sua reserva e fazem parte do seu contrato de aluguel.",
+  sh12:"12. Danos, Acidentes e Panes",
+  p12_1:"12.1 Você é responsável por danos, perda ou roubo do veículo durante o aluguel, exceto na medida em que estiver coberto pela proteção contratada.",
+  p12_2:"12.2 Em caso de acidente, você deve:",
+  li12_1:"Garantir que todos estejam seguros",
+  li12_2:"Chamar a polícia e obter um boletim de ocorrência",
+  li12_3:"Notificar a Atlantic imediatamente pelo +297 593 1982",
+  li12_4:"Não admitir responsabilidade nem fazer acordos com ninguém",
+  li12_5:"Registrar os dados da outra parte e de eventuais testemunhas",
+  p12_3:"12.3 Não obter um boletim de ocorrência quando exigido pode encerrar a cobertura do seguro e deixá-lo totalmente responsável.",
+  p12_4:"12.4 Informe roubo ou vandalismo a nós e à polícia assim que descobrir.",
+  p12_5:"12.5 <strong>Perda de uso.</strong> Quando um veículo estiver fora de circulação para reparo ou substituição devido a danos pelos quais você é responsável, você também será responsável por nossa perda de uso desse veículo &mdash; calculada como a tarifa diária de aluguel da categoria, pelo período em que o veículo estiver indisponível, até o máximo de 14 dias.",
+  p12_6:"12.6 Em caso de pane, entre em contato conosco imediatamente. Não providencie reparos por conta própria sem nossa aprovação por escrito.",
+  p12_7:"12.7 Quando uma pane for causada por falha mecânica não atribuível a você, forneceremos um veículo substituto assim que razoavelmente possível, sujeito à disponibilidade.",
+  p12_8:"12.8 Chaves perdidas &mdash; incluindo chaves eletrônicas, controles e reprogramação &mdash; são cobradas a USD $150, a menos que você tenha a proteção Premium.",
+  sh13:"13. Multas de Trânsito",
+  p13_1:"13.1 Você é responsável por todas as multas de trânsito, penalidades, pedágios e custos relacionados incorridos durante o aluguel.",
+  p13_2:"13.2 Quando uma multa chegar até nós após o término do aluguel, será aplicada uma taxa administrativa de USD $25 além da multa.",
+  sh14:"14. Devolução Tardia",
+  p14_1:"14.1 Período de tolerância: uma (1) hora.",
+  p14_2:"14.2 Após esse período, é cobrado um dia adicional completo de aluguel para cada dia ou fração de dia.",
+  p14_3:"14.3 Não devolver o veículo sem entrar em contato conosco pode ser tratado como uso não autorizado e reportado às autoridades.",
+  sh15:"15. Seus Pertences",
+  p15_1:"Não somos responsáveis por bens pessoais deixados no veículo ou retirados dele, ou deixados em nossos escritórios, independentemente de como essa perda ocorra. Leve seus pertences com você.",
+  sh16:"16. Encerramento Antecipado do Aluguel",
+  p16_1:"Podemos encerrar um aluguel e recuperar o veículo imediatamente, sem reembolso, quando você violar estes Termos, tiver fornecido informações falsas para obter o veículo, ou estiver usando-o de uma forma que arrisque danos, lesões ou responsabilidade legal. Quando precisarmos recuperar o veículo, você é responsável pelo custo razoável dessa recuperação.",
+  sh17:"17. Limites da Nossa Responsabilidade",
+  p17_1:"Não somos responsáveis por perdas indiretas ou consequenciais &mdash; voos perdidos, atividades perdidas, perda de aproveitamento ou hospedagem adicional &mdash; decorrentes da indisponibilidade, pane ou atraso do veículo, exceto quando resultarem de nossa negligência e na medida em que a responsabilidade não possa ser excluída por lei.",
+  p17_2:"Nada aqui exclui a responsabilidade por morte ou lesão pessoal causada por negligência.",
+  sh18:"18. Disposições Gerais",
+  p18_1:"18.1 Estes Termos, juntamente com o contrato de aluguel assinado, constituem o acordo integral entre nós. Qualquer coisa dita ou combinada anteriormente que não esteja registrada por escrito neles não se aplica.",
+  p18_2:"18.2 Alterações devem ser feitas por escrito e assinadas por nós. Para estender um aluguel, entre em contato conosco antes da data de devolução &mdash; extensões estão sujeitas à disponibilidade e confirmação por escrito.",
+  p18_3:"18.3 Se não exigirmos o cumprimento de uma cláusula em uma ocasião, isso não significa que renunciamos ao direito de exigi-la posteriormente.",
+  p18_4:"18.4 Se qualquer parte destes Termos for considerada inválida, o restante continua a ser aplicado.",
+  sh19:"19. Dados Pessoais",
+  p19_1:"As informações pessoais que você nos fornece são tratadas de acordo com nossa <a href=\"privacy.html\" style=\"color:var(--gold);text-decoration:none\">Política de Privacidade</a>.",
+  sh20:"20. Lei Aplicável",
+  p20_1:"Estes Termos são regidos pela lei de Aruba. Disputas estão sujeitas à jurisdição do tribunal competente em Aruba.",
+  sh21:"21. Contato",
+  p21_1:"<strong>Atlantic Car Rental</strong><br/>Uma marca da Atlantic Tours Transfers and Rentals<br/>OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A.<br/>Câmara de Comércio de Aruba: H51819.5<br/>Italiestraat 38 (Edifício Sasaki), Oranjestad, Aruba &middot; Caixa Postal 477<br/>Entrega no aeroporto: Wayaca 6B, Aeromall, Oranjestad<br/>WhatsApp / Telefone: <a href=\"tel:+2975931982\" style=\"color:var(--gold);text-decoration:none\">+297 593 1982</a><br/>E-mail: <a href=\"mailto:info@atlanticcarrentalaruba.com\" style=\"color:var(--gold);text-decoration:none\">info@atlanticcarrentalaruba.com</a>"
+}
+};
+
+let lang = 'en';
+function setL(l) {
+  lang = l;
+  document.querySelectorAll('.lbtn').forEach(b => b.classList.remove('on'));
+  document.querySelector(`.lbtn[onclick="setL('${l}')"]`).classList.add('on');
+  const d = T[l];
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const k = el.getAttribute('data-t');
+    if (d[k] !== undefined) el.innerHTML = d[k];
+  });
+  document.documentElement.lang = l === 'pt' ? 'pt-BR' : l;
+}
+(function() {
+  const bl = (navigator.language || 'en').toLowerCase();
+  if (bl.startsWith('es')) setL('es');
+  else if (bl.startsWith('nl')) setL('nl');
+  else if (bl.startsWith('pt')) setL('pt');
+  else setL('en');
+})();
+
 /* Mobile nav dropdown */
 function toggleMNav(){
   const nl = document.getElementById('nlinks');
