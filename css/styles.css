@@ -436,11 +436,12 @@ nav + section.sec{padding-top:170px}
   font-size:2.1rem;color:var(--gold);
   font-family:'Cormorant',serif;font-weight:500;line-height:1;
 }
-.cpr-dur{font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.cpr-sub{display:flex;gap:14px;margin-top:5px;flex-wrap:wrap}
-.cpr-sub-item{display:inline-flex;align-items:baseline;gap:5px;font-size:.68rem;color:var(--muted);font-weight:400}
-.cpr-sub-item strong{color:var(--gold-l);font-weight:600}
-.cpr-note{font-size:.62rem;color:var(--ink-5);font-weight:300;margin-top:5px}
+.cpr-from{font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cpr-per{font-size:.7rem;color:var(--muted);font-weight:400}
+.cpr-sub{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px;margin-top:5px;font-size:.68rem;color:var(--muted);font-weight:400}
+.cpr-sub strong{color:var(--gold-l);font-weight:600}
+.cpr-sub-sep{color:var(--ink-5)}
+.cpr-note{font-size:.7rem;color:var(--gold-l);font-weight:600;margin-top:6px}
 .ccard-benefits{
   font-size:.58rem;font-weight:400;letter-spacing:.04em;
   color:var(--muted);line-height:1.6;margin-bottom:14px;
