@@ -17,6 +17,7 @@
 - Pages without a language switcher yet (check for `.nav-lang`/`.lbtn` and `const T = {`) must have the full i18n scaffold added before new content goes on them — don't bolt content onto a page that can't translate it.
 - Proper nouns are exempt: brand wordmark ("Atlantic", "Est. 2020"), hotel/resort names, platform names (WhatsApp, Instagram, Facebook), and other company names (Atlantic Tours & Transfers, OCC Black Card) stay as-is in every language.
 - After editing any page's translations, run `node scripts/check-translations.js` from the project root. It compares every `data-t`/`data-t-hi`/`data-t-ph` key used in the markup against the keys defined per language and fails if any are missing — run it before considering translation work done. It cannot catch text that was never wrapped in `data-t` at all; that still needs a human read of the diff.
+- Language selection must persist site-wide: choosing a language on any page must survive navigation to any other page, for all four languages. The mechanism is `localStorage` (`atlantic_lang`), read on load before the page becomes visible (no flash of English), applied via `setL()`, with the toggle's active state always reflecting the loaded language — not defaulting to EN. Preserve this behavior when touching any page's language-switcher script or adding a new page to the site.
 
 # Pricing & Policies
 

@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
+<script>document.documentElement.classList.add('i18n-loading')</script>
+<style>html.i18n-loading{visibility:hidden;background:#0A0A0A}</style>
+<noscript><style>html.i18n-loading{visibility:visible}</style></noscript>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Driving in Aruba | Atlantic Car Rental</title>
 <meta name="description" content="Local driving tips for Aruba: which side of the road, speed limits, roundabout rules, and more. Atlantic Car Rental Aruba."/>
@@ -325,6 +328,7 @@ pt:{
 let lang = 'en';
 function setL(l) {
   lang = l;
+  try { localStorage.setItem('atlantic_lang', l); } catch (e) {}
   document.querySelectorAll('.lbtn').forEach(b => b.classList.remove('on'));
   document.querySelector(`.lbtn[onclick="setL('${l}')"]`).classList.add('on');
   const d = T[l];
@@ -335,11 +339,18 @@ function setL(l) {
   document.documentElement.lang = l === 'pt' ? 'pt-BR' : l;
 }
 (function() {
-  const bl = (navigator.language || 'en').toLowerCase();
-  if (bl.startsWith('es')) setL('es');
-  else if (bl.startsWith('nl')) setL('nl');
-  else if (bl.startsWith('pt')) setL('pt');
-  else setL('en');
+  let stored = null;
+  try { stored = localStorage.getItem('atlantic_lang'); } catch (e) {}
+  if (stored === 'en' || stored === 'es' || stored === 'nl' || stored === 'pt') {
+    setL(stored);
+  } else {
+    const bl = (navigator.language || 'en').toLowerCase();
+    if (bl.startsWith('es')) setL('es');
+    else if (bl.startsWith('nl')) setL('nl');
+    else if (bl.startsWith('pt')) setL('pt');
+    else setL('en');
+  }
+  document.documentElement.classList.remove('i18n-loading');
 })();
 </script>
 </body>
