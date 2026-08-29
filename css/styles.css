@@ -357,7 +357,7 @@ nav + section.sec{padding-top:170px}
   box-shadow:inset 0 1px 4px rgba(0,0,0,.3);
 }
 .stog.on:hover{border-color:var(--gold-d)}
-.stog-label{font-size:.68rem;font-weight:500;letter-spacing:.08em}
+.stog-label{font-size:.8rem;font-weight:500;letter-spacing:.05em}
 .usd-note{font-size:.85rem;color:#888;text-align:center;max-width:600px;margin:16px auto 24px;line-height:1.6}
 
 /* luxury car cards — large cinematic */
@@ -765,6 +765,8 @@ footer{background:var(--bg-base);border-top:1px solid var(--ink-4);padding:0 52p
   .gb-grid{grid-template-columns:1fr}
   .gb-divider{padding:2px 0}
   .fl-head{grid-template-columns:1fr;gap:18px}
+  .fl-head .rule{margin-bottom:22px}
+  .fl-head .stog-note{margin-bottom:10px}
   .fgrid{grid-template-columns:1fr}
   .aruba-intro{grid-template-columns:1fr;gap:32px}
   .dgrid{grid-template-columns:1fr}

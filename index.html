@@ -74,7 +74,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/styles.css?v=4"/>
+<link rel="stylesheet" href="css/styles.css?v=5"/>
 </head>
 <body>
 
@@ -1785,10 +1785,15 @@ body.occ-mb-open{overflow:hidden}
 .ch-wa-handoff:hover{background:rgba(201,169,97,.08)}
 
 /* Chat bubble (floating, always visible) */
-#chat-tease{position:fixed;bottom:24px;right:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:rgba(10,10,10,.55);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:transform 200ms ease,border-color 200ms ease}
+#chat-tease{position:fixed;bottom:24px;right:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:rgba(10,10,10,.55);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:transform 200ms ease,border-color 200ms ease,opacity 200ms ease}
 #chat-tease:hover{transform:scale(1.05);border-color:rgba(255,255,255,.16)}
 #chat-tease:focus-visible{outline:2px solid #C9A961;outline-offset:2px}
 #chat-tease svg{width:24px;height:24px}
+#chat-tease.ct-hide{opacity:0;pointer-events:none}
+@media(max-width:768px){
+  #chat-tease{width:48px;height:48px;bottom:16px;right:16px}
+  #chat-tease svg{width:20px;height:20px}
+}
 </style>
 
 <!-- OCC Black Card — Membership Application Modal -->
@@ -1886,6 +1891,36 @@ function openChatFromTease(){
     toggleChat();
   }
 }
+
+/* Keep the floating chat bubble from resting on top of readable text or
+   form controls on mobile -- fade it out whenever its footprint overlaps
+   a button, input, or the pricing disclaimer currently in view. */
+function chatTeaseAvoidOverlap(){
+  var tease = document.getElementById('chat-tease');
+  if(!tease) return;
+  if(window.innerWidth > 768){ tease.classList.remove('ct-hide'); return; }
+  var tr = tease.getBoundingClientRect();
+  var guards = document.querySelectorAll('.usd-note, button, input, select, textarea');
+  var overlap = false;
+  for(var i=0;i<guards.length;i++){
+    var el = guards[i];
+    if(el.id === 'chat-tease' || el.closest('#chat-win')) continue;
+    var r = el.getBoundingClientRect();
+    if(r.width === 0 || r.height === 0) continue;
+    if(r.bottom < 0 || r.top > window.innerHeight) continue;
+    var intersects = !(r.right < tr.left || r.left > tr.right || r.bottom < tr.top || r.top > tr.bottom);
+    if(intersects){ overlap = true; break; }
+  }
+  tease.classList.toggle('ct-hide', overlap);
+}
+var chatTeaseRaf = null;
+function scheduleChatTeaseAvoid(){
+  if(chatTeaseRaf) return;
+  chatTeaseRaf = requestAnimationFrame(function(){ chatTeaseRaf = null; chatTeaseAvoidOverlap(); });
+}
+window.addEventListener('scroll', scheduleChatTeaseAvoid, {passive:true});
+window.addEventListener('resize', scheduleChatTeaseAvoid);
+chatTeaseAvoidOverlap();
 </script>
 
 </body>
