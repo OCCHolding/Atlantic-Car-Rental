@@ -11,6 +11,13 @@
 - No smoking policy fee: $250
 - Vehicle cards display: vehicle category + three duration prices (1-day, 3-day, 7-day totals) for the currently selected season, updated live by the Low/High season toggle + a small "3-day minimum booking" note + benefits line ("Free delivery · Unlimited mileage"). The 1-day price is shown for reference only — it is not an independently bookable option.
 
+# Translations
+
+- Every page must support English, Spanish, Dutch, and Portuguese. Any new visible text (a new FAQ item, a new card, a new label, a corrected fact) gets `data-t` wiring and en/es/nl/pt entries in that page's `T` object in the same change that adds the text — never English-only, even temporarily.
+- Pages without a language switcher yet (check for `.nav-lang`/`.lbtn` and `const T = {`) must have the full i18n scaffold added before new content goes on them — don't bolt content onto a page that can't translate it.
+- Proper nouns are exempt: brand wordmark ("Atlantic", "Est. 2020"), hotel/resort names, platform names (WhatsApp, Instagram, Facebook), and other company names (Atlantic Tours & Transfers, OCC Black Card) stay as-is in every language.
+- After editing any page's translations, run `node scripts/check-translations.js` from the project root. It compares every `data-t`/`data-t-hi`/`data-t-ph` key used in the markup against the keys defined per language and fails if any are missing — run it before considering translation work done. It cannot catch text that was never wrapped in `data-t` at all; that still needs a human read of the diff.
+
 # Pricing & Policies
 
 - Low season (Apr 16 – Dec 14) rates (1-day / 3-day / 7-day):

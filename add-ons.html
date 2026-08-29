@@ -33,20 +33,20 @@
     <span class="nav-wm-b">Car Rental &nbsp;&middot;&nbsp; Aruba</span>
   </a>
   <ul class="nlinks" id="nlinks">
-    <li><a href="index.html#fleet" onclick="closeMNav()">Fleet</a></li>
-    <li><a href="index.html#aruba" onclick="closeMNav()">Explore Aruba</a></li>
+    <li><a href="index.html#fleet" data-t="n_fl" onclick="closeMNav()">Fleet</a></li>
+    <li><a href="index.html#aruba" data-t="n_ar" onclick="closeMNav()">Explore Aruba</a></li>
     <li class="nav-drop">
       <button type="button" class="nav-drop-btn" onclick="toggleGtkDrop(event)" aria-expanded="false" aria-haspopup="true">
-        <span>Good to Know</span><span class="nav-drop-caret" aria-hidden="true">&#9662;</span>
+        <span data-t="n_gtk">Good to Know</span><span class="nav-drop-caret" aria-hidden="true">&#9662;</span>
       </button>
       <ul class="nav-drop-menu">
-        <li><a href="driving-in-aruba.html" onclick="closeMNav()">Driving in Aruba</a></li>
-        <li><a href="insurance.html" onclick="closeMNav()">Insurance</a></li>
-        <li><a href="reservation-requirements.html" onclick="closeMNav()">Reservation Requirements</a></li>
-        <li><a href="add-ons.html" onclick="closeMNav()">Add-ons</a></li>
+        <li><a href="driving-in-aruba.html" data-t="n_dr" onclick="closeMNav()">Driving in Aruba</a></li>
+        <li><a href="insurance.html" data-t="n_ins" onclick="closeMNav()">Insurance</a></li>
+        <li><a href="reservation-requirements.html" data-t="n_rr" onclick="closeMNav()">Reservation Requirements</a></li>
+        <li><a href="add-ons.html" data-t="n_ao" onclick="closeMNav()">Add-ons</a></li>
       </ul>
     </li>
-    <li><a href="about.html" onclick="closeMNav()">About</a></li>
+    <li><a href="about.html" data-t="n_ab" onclick="closeMNav()">About</a></li>
   </ul>
   <div class="nav-right">
     <a href="tel:+2975931982" class="nav-phone" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.65);font-size:.85rem;font-weight:500;letter-spacing:.04em;transition:color .2s;text-decoration:none">
@@ -56,7 +56,13 @@
     <a href="https://wa.me/2975931982" target="_blank" class="nav-whatsapp" aria-label="WhatsApp" style="align-items:center;color:rgba(255,255,255,.65);transition:color .2s;text-decoration:none">
       <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
-    <button class="nav-cta" onclick="location.href='index.html#contact'"><span class="cta-full">Reservation Request</span><span class="cta-short">Reserve</span></button>
+    <button class="nav-cta" onclick="location.href='index.html#contact'"><span class="cta-full" data-t="n_ct">Reservation Request</span><span class="cta-short" data-t="n_ct_s">Reserve</span></button>
+    <div class="nav-lang">
+      <button class="lbtn on" onclick="setL('en')">EN</button>
+      <button class="lbtn" onclick="setL('es')">ES</button>
+      <button class="lbtn" onclick="setL('nl')">NL</button>
+      <button class="lbtn" onclick="setL('pt')">PT</button>
+    </div>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="toggleMNav()">&#9776;</button>
   </div>
 </nav>
@@ -64,23 +70,23 @@
 <!-- CONCIERGE ADD-ONS -->
 <section class="sec sec-alt">
   <div style="text-align:center;margin-bottom:48px">
-    <div class="tag rv" style="justify-content:center">Concierge Add-ons</div>
-    <h1 class="sh rv d1">On-Island <em>Add-ons</em></h1>
+    <div class="tag rv" style="justify-content:center" data-t="ad_tg">Concierge Add-ons</div>
+    <h1 class="sh rv d1" data-t="ad_h">On-Island <em>Add-ons</em></h1>
     <div class="rule rv d2" style="margin-left:auto;margin-right:auto"></div>
-    <p style="color:var(--body);font-size:.88rem;font-weight:300;max-width:560px;margin:0 auto;line-height:1.7">Tell us what you need. We'll have it in the car when you arrive &mdash; no scrambling at the airport.</p>
+    <p style="color:var(--body);font-size:.88rem;font-weight:300;max-width:560px;margin:0 auto;line-height:1.7" data-t="ad_sub">Tell us what you need. We'll have it in the car when you arrive &mdash; no scrambling at the airport.</p>
   </div>
   <div class="addon-grid rv" style="max-width:1100px;margin:0 auto">
-    <div class="addon"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18 L5 12 A7 7 0 0 1 19 12 L19 18 Z"/><line x1="3" y1="18" x2="21" y2="18"/><path d="M8 10 A4 4 0 0 1 16 10"/></svg></div><div class="addon-name">Infant Seat</div><div class="addon-sub">0&ndash;13 kg &middot; $5/day</div></div>
-    <div class="addon"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="12" rx="1"/><path d="M5 15 L5 21 L19 21 L19 15"/><line x1="9" y1="6" x2="15" y2="12"/></svg></div><div class="addon-name">Child Seat</div><div class="addon-sub">9&ndash;36 kg &middot; $5/day</div></div>
-    <div class="addon"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="1"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M8 8 L8 5 Q8 4 9 4 L15 4 Q16 4 16 5 L16 8"/></svg></div><div class="addon-name">Cooler Box</div><div class="addon-sub">With ice &middot; $15/day</div></div>
-    <div class="addon"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 A9 9 0 0 1 21 12 Z"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="7" y1="12" x2="12" y2="3"/><line x1="17" y1="12" x2="12" y2="3"/></svg></div><div class="addon-name">Beach Set</div><div class="addon-sub">Umbrella &middot; 2 chairs &middot; $10/day</div></div>
-    <div class="addon"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="9" cy="14" rx="6" ry="4"/><line x1="3" y1="14" x2="2" y2="13"/><line x1="15" y1="14" x2="16" y2="13"/><path d="M17 6 L17 16 Q17 18 19 18 L20 18"/></svg></div><div class="addon-name">Snorkel Set</div><div class="addon-sub">Mask &middot; fins &middot; $10/day</div></div>
-    <div class="addon"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.55a11 11 0 0 1 14 0"/><path d="M8.5 16.05a6 6 0 0 1 7 0"/><circle cx="12" cy="20" r="0.5" fill="currentColor" stroke="none"/></svg></div><div class="addon-name">Wi-Fi Hotspot</div><div class="addon-sub">Pocket router &middot; $10/day</div></div>
-    <div class="addon addon-partner"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg></div><div class="addon-name">Airport Transfer</div><div class="addon-sub">Arrival or departure &middot; <a href="https://atlantictoursaruba.com/?utm_source=carrental&amp;utm_medium=referral&amp;utm_campaign=addons_airport">Atlantic Tours &amp; Transfers</a></div></div>
-    <div class="addon addon-partner"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3v6.5M4.2 16.5l5.7-3M19.8 16.5l-5.7-3"/></svg></div><div class="addon-name">Private Driver</div><div class="addon-sub">Half or full day &middot; <a href="https://atlantictoursaruba.com/?utm_source=carrental&amp;utm_medium=referral&amp;utm_campaign=addons_driver">Atlantic Tours &amp; Transfers</a></div></div>
-    <div class="addon addon-partner"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20 3 18V4l6 2 6-2 6 2v14l-6-2-6 2Z"/><path d="M9 4v14M15 6v14"/></svg></div><div class="addon-name">Guided Island Tour</div><div class="addon-sub">See the island with a local &middot; <a href="https://atlantictoursaruba.com/?utm_source=carrental&amp;utm_medium=referral&amp;utm_campaign=addons_tour">Atlantic Tours &amp; Transfers</a></div></div>
+    <div class="addon"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18 L5 12 A7 7 0 0 1 19 12 L19 18 Z"/><line x1="3" y1="18" x2="21" y2="18"/><path d="M8 10 A4 4 0 0 1 16 10"/></svg></div><div class="addon-name" data-t="ad_1n">Infant Seat</div><div class="addon-sub" data-t="ad_1s">0&ndash;13 kg &middot; $5/day</div></div>
+    <div class="addon"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="12" rx="1"/><path d="M5 15 L5 21 L19 21 L19 15"/><line x1="9" y1="6" x2="15" y2="12"/></svg></div><div class="addon-name" data-t="ad_2n">Child Seat</div><div class="addon-sub" data-t="ad_2s">9&ndash;36 kg &middot; $5/day</div></div>
+    <div class="addon"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="1"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M8 8 L8 5 Q8 4 9 4 L15 4 Q16 4 16 5 L16 8"/></svg></div><div class="addon-name" data-t="ad_3n">Cooler Box</div><div class="addon-sub" data-t="ad_3s">With ice &middot; $15/day</div></div>
+    <div class="addon"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 A9 9 0 0 1 21 12 Z"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="7" y1="12" x2="12" y2="3"/><line x1="17" y1="12" x2="12" y2="3"/></svg></div><div class="addon-name" data-t="ad_4n">Beach Set</div><div class="addon-sub" data-t="ad_4s">Umbrella &middot; 2 chairs &middot; $10/day</div></div>
+    <div class="addon"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="9" cy="14" rx="6" ry="4"/><line x1="3" y1="14" x2="2" y2="13"/><line x1="15" y1="14" x2="16" y2="13"/><path d="M17 6 L17 16 Q17 18 19 18 L20 18"/></svg></div><div class="addon-name" data-t="ad_5n">Snorkel Set</div><div class="addon-sub" data-t="ad_5s">Mask &middot; fins &middot; $10/day</div></div>
+    <div class="addon"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.55a11 11 0 0 1 14 0"/><path d="M8.5 16.05a6 6 0 0 1 7 0"/><circle cx="12" cy="20" r="0.5" fill="currentColor" stroke="none"/></svg></div><div class="addon-name" data-t="ad_6n">Wi-Fi Hotspot</div><div class="addon-sub" data-t="ad_6s">Pocket router &middot; $10/day</div></div>
+    <div class="addon addon-partner"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg></div><div class="addon-name" data-t="ad_7n">Airport Transfer</div><div class="addon-sub"><span data-t="ad_7s">Arrival or departure</span> &middot; <a href="https://atlantictoursaruba.com/?utm_source=carrental&amp;utm_medium=referral&amp;utm_campaign=addons_airport">Atlantic Tours &amp; Transfers</a></div></div>
+    <div class="addon addon-partner"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3v6.5M4.2 16.5l5.7-3M19.8 16.5l-5.7-3"/></svg></div><div class="addon-name" data-t="ad_8n">Private Driver</div><div class="addon-sub"><span data-t="ad_8s">Half or full day</span> &middot; <a href="https://atlantictoursaruba.com/?utm_source=carrental&amp;utm_medium=referral&amp;utm_campaign=addons_driver">Atlantic Tours &amp; Transfers</a></div></div>
+    <div class="addon addon-partner"><div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20 3 18V4l6 2 6-2 6 2v14l-6-2-6 2Z"/><path d="M9 4v14M15 6v14"/></svg></div><div class="addon-name" data-t="ad_9n">Guided Island Tour</div><div class="addon-sub"><span data-t="ad_9s">See the island with a local</span> &middot; <a href="https://atlantictoursaruba.com/?utm_source=carrental&amp;utm_medium=referral&amp;utm_campaign=addons_tour">Atlantic Tours &amp; Transfers</a></div></div>
   </div>
-  <div style="text-align:center;margin-top:32px"><p style="color:var(--muted);font-size:.78rem;font-weight:300">Mention any add-on in your reservation request. We confirm availability within minutes. Airport transfers, private drivers and guided tours are provided by our sister company, Atlantic Tours &amp; Transfers.</p></div>
+  <div style="text-align:center;margin-top:32px"><p style="color:var(--muted);font-size:.78rem;font-weight:300" data-t="ad_note">Mention any add-on in your reservation request. We confirm availability within minutes. Airport transfers, private drivers and guided tours are provided by our sister company, Atlantic Tours &amp; Transfers.</p></div>
 </section>
 
 <!-- FOOTER -->
@@ -89,7 +95,7 @@
     <div>
       <div class="ft-wm">Atlantic</div>
       <span class="ft-wm-sub">Car Rental &nbsp;&middot;&nbsp; Aruba &nbsp;&middot;&nbsp; Est. 2020</span>
-      <p class="fttag">We deliver anywhere. Curated vehicles. Your private concierge for the island.</p>
+      <p class="fttag" data-t="ft_tg">We deliver anywhere. Curated vehicles. Your private concierge for the island.</p>
       <div class="ftsoc">
         <a class="ftsb" href="https://www.instagram.com/atlanticcarrentalaruba" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
         <a class="ftsb" href="https://www.facebook.com/share/18JVxDgM2i/" target="_blank" aria-label="Facebook"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
@@ -97,48 +103,48 @@
       </div>
     </div>
     <div>
-      <div class="ftch">Navigate</div>
+      <div class="ftch" data-t="ft_nv">Navigate</div>
       <ul class="ftlinks">
-        <li><a href="index.html#fleet">Fleet</a></li>
-        <li><a href="index.html#aruba">Explore Aruba</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#fleet" data-t="n_fl">Fleet</a></li>
+        <li><a href="index.html#aruba" data-t="n_ar">Explore Aruba</a></li>
+        <li><a href="about.html" data-t="n_ab">About</a></li>
+        <li><a href="index.html#contact" data-t="ft_contact">Contact</a></li>
       </ul>
     </div>
     <div>
-      <div class="ftch">Good to Know</div>
+      <div class="ftch" data-t="ft_gtk">Good to Know</div>
       <ul class="ftlinks">
-        <li><a href="driving-in-aruba.html">Driving in Aruba</a></li>
-        <li><a href="insurance.html">Insurance</a></li>
-        <li><a href="reservation-requirements.html">Reservation Requirements</a></li>
-        <li><a href="add-ons.html">Add-ons</a></li>
+        <li><a href="driving-in-aruba.html" data-t="n_dr">Driving in Aruba</a></li>
+        <li><a href="insurance.html" data-t="n_ins">Insurance</a></li>
+        <li><a href="reservation-requirements.html" data-t="n_rr">Reservation Requirements</a></li>
+        <li><a href="add-ons.html" data-t="n_ao">Add-ons</a></li>
         <li><a href="https://atlantictoursaruba.com/?utm_source=carrental&amp;utm_medium=referral&amp;utm_campaign=footer">Atlantic Tours &amp; Transfers</a></li>
         <li><a href="https://wa.me/2975931982" target="_blank">WhatsApp</a></li>
-        <li><a href="mailto:info@atlanticcarrentalaruba.com">Email Us</a></li>
+        <li><a href="mailto:info@atlanticcarrentalaruba.com" data-t="ft_email">Email Us</a></li>
       </ul>
     </div>
     <div>
-      <div class="ftch">Our Fleet</div>
+      <div class="ftch" data-t="ft_fl">Our Fleet</div>
       <ul class="ftlinks">
-        <li><a href="index.html#fleet">Compact</a></li>
-        <li><a href="index.html#fleet">Sedan</a></li>
-        <li><a href="index.html#fleet">SUV</a></li>
-        <li><a href="index.html#fleet">Large SUV</a></li>
-        <li><a href="index.html#fleet">Jeep 4x4</a></li>
-        <li><a href="index.html#fleet">Van</a></li>
+        <li><a href="index.html#fleet" data-t="fv_co">Compact</a></li>
+        <li><a href="index.html#fleet" data-t="fv_se">Sedan</a></li>
+        <li><a href="index.html#fleet" data-t="fv_su">SUV</a></li>
+        <li><a href="index.html#fleet" data-t="fv_lsu">Large SUV</a></li>
+        <li><a href="index.html#fleet" data-t="fv_je">Jeep 4x4</a></li>
+        <li><a href="index.html#fleet" data-t="fv_va">Van</a></li>
       </ul>
     </div>
     <div>
-      <div class="ftch">Contact</div>
+      <div class="ftch" data-t="ft_co">Contact</div>
       <div class="ftci">
-        <strong>Main Office</strong><br/>
+        <strong data-t="co_main">Main Office</strong><br/>
         Italiestraat 38 (Sasaki Building)<br/>
         Oranjestad, Aruba &middot; P.O. Box 477<br/><br/>
-        <strong>Airport Delivery</strong><br/>
+        <strong data-t="co_air2">Airport Delivery</strong><br/>
         Wayaca 6B, Aeromall<br/>
         Oranjestad, Aruba<br/><br/>
         <a href="tel:+2975931982">+297 593 1982</a><br/>
-        <a href="https://wa.me/2975931982" target="_blank">WhatsApp</a><br/>
+        <a href="https://wa.me/2975931982" target="_blank" data-t="ft_wa">WhatsApp</a><br/>
         <a href="mailto:info@atlanticcarrentalaruba.com" style="display:inline-flex;align-items:center;gap:6px">
           <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="flex-shrink:0"><path d="M4 6h16c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2z"/><path d="m22 8-10 6L2 8"/></svg>
           info@atlanticcarrentalaruba.com
@@ -147,19 +153,19 @@
       </div>
     </div>
   </div>
-  <div class="ftrev" style="position:relative;z-index:1;text-align:center;font-size:.58rem;color:var(--ink-5);padding:18px 0 4px;letter-spacing:.04em">Happy with your rental? Leave a review on Google or Facebook.</div>
+  <div class="ftrev" style="position:relative;z-index:1;text-align:center;font-size:.58rem;color:var(--ink-5);padding:18px 0 4px;letter-spacing:.04em" data-t="ft_rev">Happy with your rental? Leave a review on Google or Facebook.</div>
   <div class="fbot" style="position:relative;z-index:1">
-    <div class="fcp">&copy; 2026 Atlantic Car Rental &middot; Aruba. All rights reserved.</div>
+    <div class="fcp" data-t="ft_cp">&copy; 2026 Atlantic Car Rental &middot; Aruba. All rights reserved.</div>
     <div class="focc">
       <img src="assets/occ-logo.png" alt="OCC Holding &amp; Consultancy" class="occ-footer-logo"/>
-      <span class="focctxt">Part of OCC Holding &amp; Consultancy</span>
+      <span class="focctxt" data-t="ft_oc">Part of OCC Holding &amp; Consultancy</span>
     </div>
     <div class="fleg">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
+      <a href="privacy.html" data-t="ft_pr">Privacy</a>
+      <a href="terms.html" data-t="ft_tc">Terms</a>
     </div>
   </div>
-  <div style="position:relative;z-index:1;text-align:center;font-size:.62rem;color:var(--ink-5);padding:10px 20px 20px;max-width:820px;margin:0 auto;line-height:1.6">Atlantic Car Rental is a brand of Atlantic Tours Transfers and Rentals, registered trade name of OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A., Chamber of Commerce Aruba H51819.5.</div>
+  <div style="position:relative;z-index:1;text-align:center;font-size:.62rem;color:var(--ink-5);padding:10px 20px 20px;max-width:820px;margin:0 auto;line-height:1.6" data-t="lg_disc">Atlantic Car Rental is a brand of Atlantic Tours Transfers and Rentals, registered trade name of OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A., Chamber of Commerce Aruba H51819.5.</div>
 </footer>
 
 <script>
@@ -194,6 +200,127 @@ document.addEventListener('click', function(e){
 document.querySelectorAll('.rv').forEach(el => {
   new IntersectionObserver(([e]) => { if (e.isIntersecting) el.classList.add('on'); }, {threshold: 0.07}).observe(el);
 });
+</script>
+
+<script>
+const T = {
+en:{
+  n_fl:"Fleet",n_ar:"Explore Aruba",n_ab:"About",n_ct:"Reservation Request",n_ct_s:"Reserve",
+  n_gtk:"Good to Know",n_dr:"Driving in Aruba",n_ins:"Insurance",n_rr:"Reservation Requirements",n_ao:"Add-ons",
+  fv_co:"Compact",fv_se:"Sedan",fv_su:"SUV",fv_lsu:"Large SUV",fv_je:"Jeep 4x4",fv_va:"Van",
+  ft_tg:"We deliver anywhere. Curated vehicles. Your private concierge for the island.",
+  ft_nv:"Navigate",ft_gtk:"Good to Know",ft_fl:"Our Fleet",ft_co:"Contact",ft_contact:"Contact",ft_wa:"WhatsApp",ft_email:"Email Us",
+  ft_cp:"&copy; 2026 Atlantic Car Rental &middot; Aruba. All rights reserved.",
+  ft_oc:"Part of OCC Holding &amp; Consultancy",ft_pr:"Privacy",ft_tc:"Terms",
+  ft_rev:"Happy with your rental? Leave a review on Google or Facebook.",
+  co_main:"Main Office",co_air2:"Airport Delivery",
+  lg_disc:"Atlantic Car Rental is a brand of Atlantic Tours Transfers and Rentals, registered trade name of OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A., Chamber of Commerce Aruba H51819.5.",
+  ad_tg:"Concierge Add-ons",ad_h:"On-Island <em>Add-ons</em>",
+  ad_sub:"Tell us what you need. We'll have it in the car when you arrive — no scrambling at the airport.",
+  ad_1n:"Infant Seat",ad_1s:"0–13 kg &middot; $5/day",
+  ad_2n:"Child Seat",ad_2s:"9–36 kg &middot; $5/day",
+  ad_3n:"Cooler Box",ad_3s:"With ice &middot; $15/day",
+  ad_4n:"Beach Set",ad_4s:"Umbrella &middot; 2 chairs &middot; $10/day",
+  ad_5n:"Snorkel Set",ad_5s:"Mask &middot; fins &middot; $10/day",
+  ad_6n:"Wi-Fi Hotspot",ad_6s:"Pocket router &middot; $10/day",
+  ad_7n:"Airport Transfer",ad_7s:"Arrival or departure",
+  ad_8n:"Private Driver",ad_8s:"Half or full day",
+  ad_9n:"Guided Island Tour",ad_9s:"See the island with a local",
+  ad_note:"Mention any add-on in your reservation request. We confirm availability within minutes. Airport transfers, private drivers and guided tours are provided by our sister company, Atlantic Tours &amp; Transfers.",
+},
+es:{
+  n_fl:"Flota",n_ar:"Explorar Aruba",n_ab:"Nosotros",n_ct:"Reservar Ahora",n_ct_s:"Reservar",
+  n_gtk:"Información Útil",n_dr:"Conducir en Aruba",n_ins:"Seguro",n_rr:"Requisitos de Reserva",n_ao:"Extras",
+  fv_co:"Compacto",fv_se:"Sedán",fv_su:"SUV",fv_lsu:"SUV Grande",fv_je:"Jeep 4x4",fv_va:"Van",
+  ft_tg:"Entregamos en cualquier lugar. Vehículos curados. Tu concierge privado para la isla.",
+  ft_nv:"Navegar",ft_gtk:"Información Útil",ft_fl:"Nuestra Flota",ft_co:"Contacto",ft_contact:"Contacto",ft_wa:"WhatsApp",ft_email:"Escríbenos",
+  ft_cp:"&copy; 2026 Atlantic Car Rental &middot; Aruba. Todos los derechos reservados.",
+  ft_oc:"Parte de OCC Holding &amp; Consultancy",ft_pr:"Privacidad",ft_tc:"Términos",
+  ft_rev:"&iquest;Contento con tu alquiler? Déjanos una reseña en Google o Facebook.",
+  co_main:"Oficina Principal",co_air2:"Entrega en Aeropuerto",
+  lg_disc:"Atlantic Car Rental es una marca de Atlantic Tours Transfers and Rentals, nombre comercial registrado de OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A., Cámara de Comercio de Aruba H51819.5.",
+  ad_tg:"Extras del Concierge",ad_h:"Extras en la <em>Isla</em>",
+  ad_sub:"Dinos qué necesitas. Lo tendremos en el auto cuando llegues — sin correr al aeropuerto a buscarlo.",
+  ad_1n:"Silla para Bebé",ad_1s:"0–13 kg &middot; $5/día",
+  ad_2n:"Silla para Niño",ad_2s:"9–36 kg &middot; $5/día",
+  ad_3n:"Nevera Portátil",ad_3s:"Con hielo &middot; $15/día",
+  ad_4n:"Set de Playa",ad_4s:"Sombrilla &middot; 2 sillas &middot; $10/día",
+  ad_5n:"Set de Esnórquel",ad_5s:"Máscara &middot; aletas &middot; $10/día",
+  ad_6n:"Wi-Fi Portátil",ad_6s:"Router de bolsillo &middot; $10/día",
+  ad_7n:"Traslado al Aeropuerto",ad_7s:"Llegada o salida",
+  ad_8n:"Chofer Privado",ad_8s:"Medio día o día completo",
+  ad_9n:"Tour Guiado por la Isla",ad_9s:"Conoce la isla con un local",
+  ad_note:"Menciona cualquier extra en tu solicitud de reserva. Confirmamos disponibilidad en minutos. Los traslados al aeropuerto, choferes privados y tours guiados son provistos por nuestra empresa hermana, Atlantic Tours &amp; Transfers.",
+},
+nl:{
+  n_fl:"Vloot",n_ar:"Ontdek Aruba",n_ab:"Over Ons",n_ct:"Nu Reserveren",n_ct_s:"Reserveer",
+  n_gtk:"Goed om te Weten",n_dr:"Rijden in Aruba",n_ins:"Verzekering",n_rr:"Reserveringsvereisten",n_ao:"Extra's",
+  fv_co:"Compact",fv_se:"Sedan",fv_su:"SUV",fv_lsu:"Grote SUV",fv_je:"Jeep 4x4",fv_va:"Van",
+  ft_tg:"Wij bezorgen overal. Gecureerde voertuigen. Uw privé concierge voor het eiland.",
+  ft_nv:"Navigeren",ft_gtk:"Goed om te Weten",ft_fl:"Onze Vloot",ft_co:"Contact",ft_contact:"Contact",ft_wa:"WhatsApp",ft_email:"Mail Ons",
+  ft_cp:"&copy; 2026 Atlantic Car Rental &middot; Aruba. Alle rechten voorbehouden.",
+  ft_oc:"Onderdeel van OCC Holding &amp; Consultancy",ft_pr:"Privacy",ft_tc:"Voorwaarden",
+  ft_rev:"Tevreden over je huurauto? Laat een review achter op Google of Facebook.",
+  co_main:"Hoofdkantoor",co_air2:"Levering op Luchthaven",
+  lg_disc:"Atlantic Car Rental is een merk van Atlantic Tours Transfers and Rentals, geregistreerde handelsnaam van OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A., Kamer van Koophandel Aruba H51819.5.",
+  ad_tg:"Concierge Extra's",ad_h:"Extra's op het <em>eiland</em>",
+  ad_sub:"Laat ons weten wat u nodig heeft. Het ligt al in de auto wanneer u aankomt — geen gestress op de luchthaven.",
+  ad_1n:"Babyzitje",ad_1s:"0–13 kg &middot; $5/dag",
+  ad_2n:"Kinderzitje",ad_2s:"9–36 kg &middot; $5/dag",
+  ad_3n:"Koelbox",ad_3s:"Met ijs &middot; $15/dag",
+  ad_4n:"Strandset",ad_4s:"Parasol &middot; 2 stoelen &middot; $10/dag",
+  ad_5n:"Snorkelset",ad_5s:"Masker &middot; vinnen &middot; $10/dag",
+  ad_6n:"Wifi-hotspot",ad_6s:"Pocket router &middot; $10/dag",
+  ad_7n:"Luchthaventransfer",ad_7s:"Aankomst of vertrek",
+  ad_8n:"Privéchauffeur",ad_8s:"Halve of hele dag",
+  ad_9n:"Begeleide Eilandtour",ad_9s:"Ontdek het eiland met een local",
+  ad_note:"Vermeld elke extra in uw reserveringsaanvraag. Wij bevestigen beschikbaarheid binnen enkele minuten. Luchthaventransfers, privéchauffeurs en begeleide tours worden verzorgd door onze zustermaatschappij, Atlantic Tours &amp; Transfers.",
+},
+pt:{
+  n_fl:"Frota",n_ar:"Explorar Aruba",n_ab:"Sobre Nós",n_ct:"Reservar Agora",n_ct_s:"Reservar",
+  n_gtk:"Bom Saber",n_dr:"Dirigindo em Aruba",n_ins:"Seguro",n_rr:"Requisitos de Reserva",n_ao:"Extras",
+  fv_co:"Compacto",fv_se:"Sedan",fv_su:"SUV",fv_lsu:"SUV Grande",fv_je:"Jeep 4x4",fv_va:"Van",
+  ft_tg:"Entregamos em qualquer lugar. Veículos curados. Seu concierge privado para a ilha.",
+  ft_nv:"Navegar",ft_gtk:"Bom Saber",ft_fl:"Nossa Frota",ft_co:"Contato",ft_contact:"Contato",ft_wa:"WhatsApp",ft_email:"Envie um E-mail",
+  ft_cp:"&copy; 2026 Atlantic Car Rental &middot; Aruba. Todos os direitos reservados.",
+  ft_oc:"Parte da OCC Holding &amp; Consultancy",ft_pr:"Privacidade",ft_tc:"Termos",
+  ft_rev:"Satisfeito com o seu aluguer? Deixe uma avaliação no Google ou Facebook.",
+  co_main:"Escritório Principal",co_air2:"Entrega no Aeroporto",
+  lg_disc:"Atlantic Car Rental é uma marca da Atlantic Tours Transfers and Rentals, nome comercial registrado da OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A., Câmara de Comércio de Aruba H51819.5.",
+  ad_tg:"Extras do Concierge",ad_h:"Extras na <em>Ilha</em>",
+  ad_sub:"Diga-nos o que precisa. Vai estar no carro quando você chegar — sem correria no aeroporto.",
+  ad_1n:"Cadeira de Bebê",ad_1s:"0–13 kg &middot; $5/dia",
+  ad_2n:"Cadeira Infantil",ad_2s:"9–36 kg &middot; $5/dia",
+  ad_3n:"Caixa Térmica",ad_3s:"Com gelo &middot; $15/dia",
+  ad_4n:"Kit de Praia",ad_4s:"Guarda-sol &middot; 2 cadeiras &middot; $10/dia",
+  ad_5n:"Kit de Mergulho",ad_5s:"Máscara &middot; nadadeiras &middot; $10/dia",
+  ad_6n:"Wi-Fi Portátil",ad_6s:"Roteador de bolso &middot; $10/dia",
+  ad_7n:"Traslado do Aeroporto",ad_7s:"Chegada ou partida",
+  ad_8n:"Motorista Particular",ad_8s:"Meio dia ou dia inteiro",
+  ad_9n:"Passeio Guiado pela Ilha",ad_9s:"Conheça a ilha com um local",
+  ad_note:"Mencione qualquer extra no seu pedido de reserva. Confirmamos disponibilidade em minutos. Traslados do aeroporto, motoristas particulares e passeios guiados são fornecidos pela nossa empresa irmã, Atlantic Tours &amp; Transfers.",
+},
+};
+
+let lang = 'en';
+function setL(l) {
+  lang = l;
+  document.querySelectorAll('.lbtn').forEach(b => b.classList.remove('on'));
+  document.querySelector(`.lbtn[onclick="setL('${l}')"]`).classList.add('on');
+  const d = T[l];
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const k = el.getAttribute('data-t');
+    if (d[k] !== undefined) el.innerHTML = d[k];
+  });
+  document.documentElement.lang = l === 'pt' ? 'pt-BR' : l;
+}
+(function() {
+  const bl = (navigator.language || 'en').toLowerCase();
+  if (bl.startsWith('es')) setL('es');
+  else if (bl.startsWith('nl')) setL('nl');
+  else if (bl.startsWith('pt')) setL('pt');
+  else setL('en');
+})();
 </script>
 </body>
 </html>
