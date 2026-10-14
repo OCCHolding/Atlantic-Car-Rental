@@ -1018,3 +1018,41 @@ input[type="date"]::-webkit-datetime-edit-text {
   .addon-grid{grid-template-columns:1fr}
 }
 
+
+/* ---------- OCC family standard footer ---------- */
+.occf{background:#000000;color:#CFCFCC;padding:72px 0 36px;margin:0;font-family:'Outfit',system-ui,sans-serif;font-size:.9rem;font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;text-align:left}
+.occf *{box-sizing:border-box}
+.occf a{color:inherit;text-decoration:none;transition:color .2s}
+.occf a:hover{color:#FAFAF9}
+.occf-wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+.occf-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px}
+.occf-name{font-family:'Cormorant',Georgia,serif;font-size:1.9rem;color:#FAFAF9;font-weight:600;line-height:1.1;letter-spacing:0}
+.occf-tag{color:#9A9A96;margin:14px 0 0;max-width:330px;font-size:.9rem;line-height:1.7}
+.occf-soc{display:flex;gap:12px;margin-top:22px}
+.occf-soc a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(255,255,255,.18);border-radius:50%;color:#9A9A96}
+.occf-soc a:hover{border-color:#C8A96E;color:#C8A96E}
+.occf-soc svg{width:17px;height:17px;display:block}
+.occf-h{font-family:'Outfit',system-ui,sans-serif;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:#C8A96E;font-weight:600;margin:0 0 18px;line-height:1.4}
+.occf-col a,.occf-col span{display:block;color:#CFCFCC;margin-bottom:9px;font-size:.9rem}
+.occf-col .gap{margin-top:16px}
+.occf-rule{height:1px;background:rgba(255,255,255,.10);margin:54px 0 34px}
+.occf-occ{display:flex;justify-content:center}
+.occf-occ img{width:220px;max-width:70%;height:auto;opacity:.92}
+.occf-occ-fb{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:#9A9A96;font-weight:600}
+.occf-fam{text-align:center;margin:26px auto 0;font-size:.76rem;letter-spacing:.04em;color:#9A9A96;line-height:2.1}
+.occf-label{display:block;text-transform:uppercase;letter-spacing:.24em;font-size:.6rem;color:#9A9A96;opacity:.65;margin-bottom:6px}
+.occf-fam a{color:#9A9A96}
+.occf-fam .dot{opacity:.5;margin:0 4px}
+.occf-fam a,.occf-cur{white-space:nowrap}
+.occf-cur{color:#FAFAF9;font-weight:500}
+.occf-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.10);font-size:.72rem;letter-spacing:.04em;color:#9A9A96}
+.occf-bot a{color:#9A9A96}
+.occf-bot .sep{opacity:.5;margin:0 8px}
+@media(max-width:860px){.occf-wrap{padding:0 24px}
+.occf-grid{grid-template-columns:1fr 1fr;gap:36px}
+.occf-brand{grid-column:1/-1}
+}
+@media(max-width:520px){.occf-grid{grid-template-columns:1fr}
+.occf-bot{flex-direction:column;align-items:center;text-align:center}
+.occf-fam .dot{margin:0 2px}
+}
