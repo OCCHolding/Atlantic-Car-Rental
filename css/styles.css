@@ -1056,3 +1056,10 @@ input[type="date"]::-webkit-datetime-edit-text {
 .occf-bot{flex-direction:column;align-items:center;text-align:center}
 .occf-fam .dot{margin:0 2px}
 }
+
+/* ---------- review band ---------- */
+.occr{border-top:1px solid rgba(255,255,255,.10);padding:46px 24px;text-align:center}
+.occr-q{font-size:1.5rem;margin:0 0 20px;line-height:1.2}
+.occr-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.occr-btns a{display:inline-block;padding:13px 26px;border:1px solid currentColor;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s}
+.occr{background:#000;color:#FAFAF9}.occr-q{font-family:'Cormorant',Georgia,serif;font-weight:500}.occr-btns a{color:#C8A96E}.occr-btns a:hover{background:#C8A96E;color:#000}
