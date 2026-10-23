@@ -9,7 +9,7 @@
 - No OCC watermarks
 - Minimum rental age: 23
 - No smoking policy fee: $250
-- Vehicle cards display: vehicle category + three duration prices (1-day, 3-day, 7-day totals) for the currently selected season, updated live by the Low/High season toggle + a small "3-day minimum booking" note + benefits line ("Free delivery · Unlimited mileage"). The 1-day price is shown for reference only — it is not an independently bookable option.
+- Vehicle cards display: vehicle category + a "From $X/day" figure (the 7-day rate ÷ 7, rounded down) + 3-day and 7-day totals for the currently selected season, updated live by the Low/High season toggle + a small "3-day minimum booking" note + benefits line ("Free delivery · Unlimited mileage"). No 1-day rate is offered or shown anywhere.
 
 # Translations
 
@@ -21,22 +21,22 @@
 
 # Pricing & Policies
 
-- Low season (Apr 16 – Dec 14) rates (1-day / 3-day / 7-day):
-  - Compact: $60 / $160 / $305
-  - Sedan: $65 / $175 / $340
-  - SUV: $90 / $240 / $465
-  - Large SUV: $110 / $300 / $580
-  - Jeep 4x4: $145 / $400 / $770
-  - Van: $130 / $350 / $685
-- High season (Dec 15 – Apr 15) rates (1-day / 3-day / 7-day):
-  - Compact: $70 / $190 / $370
-  - Sedan: $80 / $215 / $415
-  - SUV: $105 / $290 / $560
-  - Large SUV: $130 / $355 / $695
-  - Jeep 4x4: $180 / $480 / $925
-  - Van: $160 / $420 / $820
+- Low season (Apr 16 – Dec 14) rates (3-day / 7-day · "From" per day):
+  - Compact: $160 / $305 · $43
+  - Sedan: $175 / $340 · $48
+  - SUV: $240 / $465 · $66
+  - Large SUV: $300 / $580 · $82
+  - Jeep 4x4: $400 / $770 · $110
+  - Van: $350 / $685 · $97
+- High season (Dec 15 – Apr 15) rates (3-day / 7-day · "From" per day):
+  - Compact: $190 / $370 · $52
+  - Sedan: $215 / $415 · $59
+  - SUV: $290 / $560 · $80
+  - Large SUV: $355 / $695 · $99
+  - Jeep 4x4: $480 / $925 · $132
+  - Van: $420 / $820 · $117
 - Van seats 10; Large SUV seats 7 (premium positioning) — other vehicles seat 5
-- 3-day minimum rental applies to all bookings (confirmed policy — matches terms.html section 2.4). The 1-day price shown on vehicle cards is a per-day reference/pricing component only; it does not mean 1-day bookings are accepted.
+- 3-day minimum rental applies to all bookings (confirmed policy — matches terms.html section 2.4). No 1-day rate exists.
 - Free delivery anywhere on the island
 - Unlimited mileage on all rentals
 - Always display the benefits line ("Free delivery · Unlimited mileage") on every vehicle card in the local language
