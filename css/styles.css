@@ -361,7 +361,11 @@ nav + section.sec{padding-top:170px}
 .usd-note{font-size:.85rem;color:#888;text-align:center;max-width:600px;margin:16px auto 24px;line-height:1.6}
 
 /* luxury car cards — large cinematic */
-.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.fgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+/* 5 cards: 3 on top, last 2 centred below */
+.fgrid>.ccard{grid-column:span 2}
+.fgrid>.ccard:nth-child(4){grid-column:2 / span 2}
+.fgrid>.ccard:nth-child(5){grid-column:4 / span 2}
 
 .ccard{
   position:relative;overflow:hidden;cursor:pointer;
@@ -715,7 +719,9 @@ footer{background:var(--bg-base);border-top:1px solid var(--ink-4);padding:0 52p
    RESPONSIVE
 ═══════════════════════════════ */
 @media(max-width:1100px){
-  .fgrid{grid-template-columns:repeat(2,1fr)}
+  .fgrid{grid-template-columns:repeat(4,1fr)}
+  .fgrid>.ccard,.fgrid>.ccard:nth-child(4){grid-column:span 2}
+  .fgrid>.ccard:nth-child(5){grid-column:2 / span 2}
   .dgrid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
   .dcard:nth-child(1){grid-row:auto}
   .ftop{grid-template-columns:1fr 1fr}
@@ -768,6 +774,7 @@ footer{background:var(--bg-base);border-top:1px solid var(--ink-4);padding:0 52p
   .fl-head .rule{margin-bottom:22px}
   .fl-head .stog-note{margin-bottom:10px}
   .fgrid{grid-template-columns:1fr}
+  .fgrid>.ccard,.fgrid>.ccard:nth-child(4),.fgrid>.ccard:nth-child(5){grid-column:auto}
   .aruba-intro{grid-template-columns:1fr;gap:32px}
   .dgrid{grid-template-columns:1fr}
   .cgrid{grid-template-columns:1fr;gap:48px}
