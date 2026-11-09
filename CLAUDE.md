@@ -1,7 +1,7 @@
 # Project Rules
 
 - CTA is always "Reservation Request" (English only). For Spanish, Dutch, Portuguese, and any other language, use the natural local equivalent verb so the site reads naturally to native speakers — keep existing translations as-is (e.g., "Reservar" / "Reserveren" / "Reservar"). Do not back-translate the English CTA literally into other languages.
-- Fleet includes ONLY these 6 vehicles, in this order: Compact, Sedan, SUV, Large SUV, Jeep 4x4, Van
+- Fleet includes ONLY these 5 vehicles, in this order: Sedan, SUV, Large SUV, Jeep 4x4, Van. Compact/economy cars were discontinued (Nov 2026) — never re-add them
 - Never use the terms "Crossover," "SUV Crossover," "7-Seat SUV," "10-Seat Van," or "SUV Van" (the Large SUV is positioned as a premium 7-seater — refer to it as "Large SUV" only)
 - All vehicles are automatic; no brand names
 - Navigation uses text wordmark only; include Phone + WhatsApp in nav
@@ -22,14 +22,12 @@
 # Pricing & Policies
 
 - Low season (Apr 16 – Dec 14) rates (3-day / 7-day · "From" per day):
-  - Compact: $160 / $305 · $43
   - Sedan: $175 / $340 · $48
   - SUV: $240 / $465 · $66
   - Large SUV: $300 / $580 · $82
   - Jeep 4x4: $400 / $770 · $110
   - Van: $350 / $685 · $97
 - High season (Dec 15 – Apr 15) rates (3-day / 7-day · "From" per day):
-  - Compact: $190 / $370 · $52
   - Sedan: $215 / $415 · $59
   - SUV: $290 / $560 · $80
   - Large SUV: $355 / $695 · $99

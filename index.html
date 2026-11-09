@@ -205,7 +205,6 @@
         <div class="qb-label" data-t="f_vh">Vehicle</div>
         <select class="qb-input" id="qv" style="appearance:none">
           <option value="" data-t="fv0">Select type</option>
-          <option value="compact" data-t="fv_co">Compact</option>
           <option value="sedan" data-t="fv_se">Sedan</option>
           <option value="suv" data-t="fv_su">SUV</option>
           <option value="large-suv" data-t="fv_lsu">Large SUV</option>
@@ -243,32 +242,6 @@
 
     <div class="ccard rv" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       <div class="car-img-wrap">
-        <img class="car-img" src="assets/fleet/transparent/compact.png" onerror="this.parentElement.style.background='#1A1A1A'" alt="Compact car"/>
-      </div>
-      <div class="ccard-cta-bar"><div class="ccard-cta-txt" data-t="fl_rs">Reservation Request</div></div>
-      <div class="ccard-body">
-        <div class="ccard-category" data-t="c_co">Compact &nbsp;&middot;&nbsp; Economy</div>
-        <div class="ccard-ideal" data-t="c_co_i">Ideal for couples &amp; solo travelers</div>
-        <div class="ccard-pricing">
-          <div class="cpr-hero"><span class="cpr-from" data-t="fr_lbl">From</span><span data-t="pr_co_day" data-t-hi="pr_co_day_hi"><strong>$43</strong></span><span class="cpr-per" data-t="per_day">/day</span></div>
-          <div class="cpr-sub">
-            <span data-t="dur3">3 days</span><span data-t="pr_co_3" data-t-hi="pr_co_3_hi"><strong>$160</strong></span>
-            <span class="cpr-sub-sep">&middot;</span>
-            <span data-t="dur7">7 days</span><span data-t="pr_co_7" data-t-hi="pr_co_7_hi"><strong>$305</strong></span>
-          </div>
-          <div class="cpr-note" data-t="cpr_min">3-day minimum booking</div>
-          <div class="cpr-season" data-t="szn_lo_lbl" data-t-hi="szn_hi_lbl">Low season rate</div>
-        </div>
-        <div class="ccard-benefits" data-t="bn_li">Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
-        <div class="ccard-specs">
-          <span class="cspec">5 seats</span>
-          <span class="cspec" data-t="spec_auto">Automatic</span><span class="cspec" data-t="spec_km">Unlimited km</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="ccard rv d1" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-      <div class="car-img-wrap">
         
         <img class="car-img" src="assets/fleet/transparent/sedan.png" onerror="this.parentElement.style.background='#1A1A1A'" alt="Sedan car"/>
       </div>
@@ -294,7 +267,7 @@
       </div>
     </div>
 
-    <div class="ccard rv d2" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+    <div class="ccard rv d1" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       <div class="car-img-wrap">
         
         <img class="car-img" src="assets/fleet/transparent/suv.png" onerror="this.parentElement.style.background='#1A1A1A'" alt="SUV"/>
@@ -321,7 +294,7 @@
       </div>
     </div>
 
-    <div class="ccard rv d3" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+    <div class="ccard rv d2" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       <div class="car-img-wrap">
         <img class="car-img" src="assets/fleet/transparent/large-suv.png" onerror="this.parentElement.style.background='#1A1A1A'" alt="Large SUV"/>
       </div>
@@ -347,7 +320,7 @@
       </div>
     </div>
 
-    <div class="ccard rv d4" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+    <div class="ccard rv d3" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       <div class="car-img-wrap">
 
         <img class="car-img" src="assets/fleet/transparent/jeep.png" onerror="this.parentElement.style.background='#1A1A1A'" alt="Jeep 4x4"/>
@@ -374,7 +347,7 @@
       </div>
     </div>
 
-    <div class="ccard rv d5" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+    <div class="ccard rv d4" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       <div class="car-img-wrap">
         <img class="car-img" src="assets/fleet/transparent/van.png" onerror="this.parentElement.style.background='#1A1A1A'" alt="Van"/>
       </div>
@@ -611,7 +584,6 @@
       <div class="fg"><label data-t="f_vh">Vehicle</label>
         <select id="fv">
           <option value="" data-t="fv0">Select vehicle type</option>
-          <option value="compact" data-t="fv_co">Compact</option>
           <option value="sedan" data-t="fv_se">Sedan</option>
           <option value="suv" data-t="fv_su">SUV</option>
           <option value="large-suv" data-t="fv_lsu">Large SUV</option>
@@ -736,15 +708,12 @@ en:{fo_rvq:"Enjoyed your rental?",fo_rvg:"Review us on Google",fo_rvf:"Review us
   ch_name:"Atlantic AI Concierge",ch_online:"Online now",ch_inp_ph:"Ask anything...",
   ch_sug1:"Family trip",ch_sug2:"Off-road",ch_sug3:"Weekly pricing",ch_sug4:"Insurance",ch_sug5:"Delivery",
   lg_disc:"Atlantic Car Rental is a brand of Atlantic Tours Transfers and Rentals, registered trade name of OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A., Chamber of Commerce Aruba H51819.5.",
-  c_co:"Compact · Economy",c_co_b:"Island Essentials",c_co_i:"Ideal for couples & solo travelers",
   c_se:"Sedan · Comfort",c_se_b:"Executive Comfort",c_se_i:"Ideal for business & couples",
   c_su:"SUV",c_su_b:"Premium SUV",c_su_i:"Ideal for families & groups",
   c_lsu:"Large SUV",c_lsu_i:"Ideal for groups & extended families",
   c_je:"Jeep  · 4×4",c_je_b:"Adventure Collection",c_je_i:"Ideal for off-road & adventure",
   c_va:"Van",c_va_b:"Family Premium",c_va_i:"Ideal for groups & families",
   fl_rs:"Reservation Request",from:"per day",
-  pr_co_3:"<strong>$160</strong>",pr_co_3_hi:"<strong>$190</strong>",
-  pr_co_7:"<strong>$305</strong>",pr_co_7_hi:"<strong>$370</strong>",
   pr_se_3:"<strong>$175</strong>",pr_se_3_hi:"<strong>$215</strong>",
   pr_se_7:"<strong>$340</strong>",pr_se_7_hi:"<strong>$415</strong>",
   pr_su_3:"<strong>$240</strong>",pr_su_3_hi:"<strong>$290</strong>",
@@ -755,7 +724,6 @@ en:{fo_rvq:"Enjoyed your rental?",fo_rvg:"Review us on Google",fo_rvf:"Review us
   pr_je_7:"<strong>$770</strong>",pr_je_7_hi:"<strong>$925</strong>",
   pr_va_3:"<strong>$350</strong>",pr_va_3_hi:"<strong>$420</strong>",
   pr_va_7:"<strong>$685</strong>",pr_va_7_hi:"<strong>$820</strong>",
-  pr_co_day:"<strong>$43</strong>",pr_co_day_hi:"<strong>$52</strong>",
   pr_se_day:"<strong>$48</strong>",pr_se_day_hi:"<strong>$59</strong>",
   pr_su_day:"<strong>$66</strong>",pr_su_day_hi:"<strong>$80</strong>",
   pr_lsu_day:"<strong>$82</strong>",pr_lsu_day_hi:"<strong>$99</strong>",
@@ -777,7 +745,7 @@ en:{fo_rvq:"Enjoyed your rental?",fo_rvg:"Review us on Google",fo_rvf:"Review us
   s6t:"Flexible Insurance",s6b:"Choose your coverage. Basic, full collision, or zero-deductible — we will guide you to the right option for your trip.",
   s7t:"Family Ready",s7b:"Child seats, vans with extra luggage. We anticipate every need.",
   df_tg:"Designed For",df_h:"Every Kind of<br/><em>Aruba Traveler</em>",
-  df1t:"Couples",df1b:"Sunset drives to Eagle Beach. Dinner along the waterfront. The compact or sedan makes every moment effortless.",
+  df1t:"Couples",df1b:"Sunset drives to Eagle Beach. Dinner along the waterfront. The sedan makes every moment effortless.",
   df2t:"Adventurers",df2b:"The Natural Pool. The rugged north coast. Arikok at dawn. Only the Jeep  gets you there.",
   df3t:"Families",df3b:"Space, comfort, and safety for everyone. Our van handles the whole crew with ease.",
   df4t:"VIP Travelers",df4b:"Private delivery anywhere. Personal concierge. Curated island routes. This is how Aruba should feel.",
@@ -821,7 +789,7 @@ en:{fo_rvq:"Enjoyed your rental?",fo_rvg:"Review us on Google",fo_rvf:"Review us
   f_nt:"Special Requests",fv0:"Select vehicle type",
   f_ao:"Also interested in (optional)",
   ao_air:"Airport transfer (arrival or departure)",ao_drv:"Private driver for a day",ao_tour:"Guided island tour",
-  fv_co:"Compact",fv_se:"Sedan",fv_su:"SUV",fv_lsu:"Large SUV",fv_je:"Jeep 4x4",fv_va:"Van",
+  fv_se:"Sedan",fv_su:"SUV",fv_lsu:"Large SUV",fv_je:"Jeep 4x4",fv_va:"Van",
   ft_hd:"No payment required to reserve",
   ft_bd:"We confirm your reservation by WhatsApp as soon as possible. Need instant help? <a href='https://wa.me/2975931982' target='_blank'>Message us now</a>",
   f_sb:"Send Reservation Request",
@@ -907,15 +875,12 @@ es:{fo_rvq:"¿Disfrutó su alquiler?",fo_rvg:"Reseña en Google",fo_rvf:"Reseña
   ch_name:"Concierge IA de Atlantic",ch_online:"En línea ahora",ch_inp_ph:"Pregunta lo que quieras...",
   ch_sug1:"Viaje familiar",ch_sug2:"Todoterreno",ch_sug3:"Precios semanales",ch_sug4:"Seguro",ch_sug5:"Entrega",
   lg_disc:"Atlantic Car Rental es una marca de Atlantic Tours Transfers and Rentals, nombre comercial registrado de OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A., Cámara de Comercio de Aruba H51819.5.",
-  c_co:"Compacto · Económico",c_co_b:"Esenciales de Isla",c_co_i:"Ideal para parejas y viajeros solos",
   c_se:"Sedán · Confort",c_se_b:"Confort Ejecutivo",c_se_i:"Ideal para negocios y parejas",
   c_su:"SUV",c_su_b:"SUV Premium",c_su_i:"Ideal para familias y grupos",
   c_lsu:"SUV Grande",c_lsu_i:"Ideal para grupos y familias numerosas",
   c_je:"Jeep  · 4x4",c_je_b:"Colección Aventura",c_je_i:"Ideal para off-road y aventura",
   c_va:"Van",c_va_b:"Familiar Premium",c_va_i:"Ideal para grupos y familias",
   fl_rs:"Reservar",from:"por día",
-  pr_co_3:"<strong>$160</strong>",pr_co_3_hi:"<strong>$190</strong>",
-  pr_co_7:"<strong>$305</strong>",pr_co_7_hi:"<strong>$370</strong>",
   pr_se_3:"<strong>$175</strong>",pr_se_3_hi:"<strong>$215</strong>",
   pr_se_7:"<strong>$340</strong>",pr_se_7_hi:"<strong>$415</strong>",
   pr_su_3:"<strong>$240</strong>",pr_su_3_hi:"<strong>$290</strong>",
@@ -926,7 +891,6 @@ es:{fo_rvq:"¿Disfrutó su alquiler?",fo_rvg:"Reseña en Google",fo_rvf:"Reseña
   pr_je_7:"<strong>$770</strong>",pr_je_7_hi:"<strong>$925</strong>",
   pr_va_3:"<strong>$350</strong>",pr_va_3_hi:"<strong>$420</strong>",
   pr_va_7:"<strong>$685</strong>",pr_va_7_hi:"<strong>$820</strong>",
-  pr_co_day:"<strong>$43</strong>",pr_co_day_hi:"<strong>$52</strong>",
   pr_se_day:"<strong>$48</strong>",pr_se_day_hi:"<strong>$59</strong>",
   pr_su_day:"<strong>$66</strong>",pr_su_day_hi:"<strong>$80</strong>",
   pr_lsu_day:"<strong>$82</strong>",pr_lsu_day_hi:"<strong>$99</strong>",
@@ -948,7 +912,7 @@ es:{fo_rvq:"¿Disfrutó su alquiler?",fo_rvg:"Reseña en Google",fo_rvf:"Reseña
   s6t:"Seguro Flexible",s6b:"Elija su cobertura. Básica, completa o sin deducible — le ayudamos a elegir la opción adecuada para su viaje.",
   s7t:"Apto para Familias",s7b:"Sillas infantiles, furgonetas de 7 plazas, espacio extra.",
   df_tg:"Diseñado Para",df_h:"Todo Tipo de<br/><em>Viajero en Aruba</em>",
-  df1t:"Parejas",df1b:"Paseos al atardecer a Eagle Beach. El compacto o sedán hace cada momento sin esfuerzo.",
+  df1t:"Parejas",df1b:"Paseos al atardecer a Eagle Beach. El sedán hace cada momento sin esfuerzo.",
   df2t:"Aventureros",df2b:"El Natural Pool. La costa norte. Arikok al amanecer. Solo el Jeep  llega.",
   df3t:"Familias",df3b:"Espacio, confort y seguridad. El  de 7 plazas maneja a toda la familia.",
   df4t:"Viajeros VIP",df4b:"Entrega privada en aeropuerto. Concierge personal. Rutas curadas por la isla.",
@@ -992,7 +956,7 @@ es:{fo_rvq:"¿Disfrutó su alquiler?",fo_rvg:"Reseña en Google",fo_rvf:"Reseña
   f_nt:"Solicitudes Especiales",fv0:"Selecciona el tipo",
   f_ao:"También interesado en (opcional)",
   ao_air:"Traslado al aeropuerto (llegada o salida)",ao_drv:"Chofer privado por un día",ao_tour:"Tour guiado por la isla",
-  fv_co:"Compacto",fv_se:"Sedán",fv_su:"SUV",fv_lsu:"SUV Grande",fv_je:"Jeep 4x4",fv_va:"Van",
+  fv_se:"Sedán",fv_su:"SUV",fv_lsu:"SUV Grande",fv_je:"Jeep 4x4",fv_va:"Van",
   ft_hd:"Sin pago requerido para reservar",
   ft_bd:"Confirmamos tu reserva por WhatsApp lo antes posible. ¿Necesita ayuda inmediata? <a href='https://wa.me/2975931982' target='_blank'>Escríbanos</a>",
   f_sb:"Enviar Solicitud de Reserva",
@@ -1078,15 +1042,12 @@ nl:{fo_rvq:"Tevreden over uw huurauto?",fo_rvg:"Beoordeel ons op Google",fo_rvf:
   ch_name:"Atlantic AI Concierge",ch_online:"Nu online",ch_inp_ph:"Stel gerust een vraag...",
   ch_sug1:"Gezinsreis",ch_sug2:"Terreinwagen",ch_sug3:"Weekprijzen",ch_sug4:"Verzekering",ch_sug5:"Bezorging",
   lg_disc:"Atlantic Car Rental is een merk van Atlantic Tours Transfers and Rentals, geregistreerde handelsnaam van OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A., Kamer van Koophandel Aruba H51819.5.",
-  c_co:"Compact · Economisch",c_co_b:"Eiland Essentials",c_co_i:"Ideaal voor stellen en solo reizigers",
   c_se:"Sedan · Comfort",c_se_b:"Executive Comfort",c_se_i:"Ideaal voor zakelijk en stellen",
   c_su:"SUV",c_su_b:"Premium SUV",c_su_i:"Ideaal voor families en groepen",
   c_lsu:"Grote SUV",c_lsu_i:"Ideaal voor groepen en grote families",
   c_je:"Jeep  · 4x4",c_je_b:"Avontuur Collectie",c_je_i:"Ideaal voor off-road en avontuur",
   c_va:"Van",c_va_b:"Familie Premium",c_va_i:"Ideaal voor groepen en families",
   fl_rs:"Reserveren",from:"per dag",
-  pr_co_3:"<strong>$160</strong>",pr_co_3_hi:"<strong>$190</strong>",
-  pr_co_7:"<strong>$305</strong>",pr_co_7_hi:"<strong>$370</strong>",
   pr_se_3:"<strong>$175</strong>",pr_se_3_hi:"<strong>$215</strong>",
   pr_se_7:"<strong>$340</strong>",pr_se_7_hi:"<strong>$415</strong>",
   pr_su_3:"<strong>$240</strong>",pr_su_3_hi:"<strong>$290</strong>",
@@ -1097,7 +1058,6 @@ nl:{fo_rvq:"Tevreden over uw huurauto?",fo_rvg:"Beoordeel ons op Google",fo_rvf:
   pr_je_7:"<strong>$770</strong>",pr_je_7_hi:"<strong>$925</strong>",
   pr_va_3:"<strong>$350</strong>",pr_va_3_hi:"<strong>$420</strong>",
   pr_va_7:"<strong>$685</strong>",pr_va_7_hi:"<strong>$820</strong>",
-  pr_co_day:"<strong>$43</strong>",pr_co_day_hi:"<strong>$52</strong>",
   pr_se_day:"<strong>$48</strong>",pr_se_day_hi:"<strong>$59</strong>",
   pr_su_day:"<strong>$66</strong>",pr_su_day_hi:"<strong>$80</strong>",
   pr_lsu_day:"<strong>$82</strong>",pr_lsu_day_hi:"<strong>$99</strong>",
@@ -1119,7 +1079,7 @@ nl:{fo_rvq:"Tevreden over uw huurauto?",fo_rvg:"Beoordeel ons op Google",fo_rvf:
   s6t:"Flexibele Verzekering",s6b:"Kies uw dekking. Basis, volledige aanrijdingsdekking of zonder eigen risico — wij adviseren u de juiste optie.",
   s7t:"Familie Klaar",s7b:"Kinderzitjes, 7-persoons bussen, extra bagageruimte.",
   df_tg:"Ontworpen Voor",df_h:"Elk Type<br/><em>Aruba Reiziger</em>",
-  df1t:"Stellen",df1b:"Zonsondergang naar Eagle Beach. Diner aan het water. De compact of sedan maakt elk moment moeiteloos.",
+  df1t:"Stellen",df1b:"Zonsondergang naar Eagle Beach. Diner aan het water. De sedan maakt elk moment moeiteloos.",
   df2t:"Avonturiers",df2b:"Het Natuurlijk Zwembad. De ruige noordkust. Arikok bij zonsopgang. Alleen de Jeep  komt er.",
   df3t:"Families",df3b:"Ruimte, comfort en veiligheid voor iedereen. De  van 7 personen verwerkt het hele gezin.",
   df4t:"VIP Reizigers",df4b:"Privé luchthavenbezorging. Persoonlijke concierge. Gecureerde eilandroutes.",
@@ -1163,7 +1123,7 @@ nl:{fo_rvq:"Tevreden over uw huurauto?",fo_rvg:"Beoordeel ons op Google",fo_rvf:
   f_nt:"Speciale Verzoeken",fv0:"Selecteer type",
   f_ao:"Ook geïnteresseerd in (optioneel)",
   ao_air:"Luchthaventransfer (aankomst of vertrek)",ao_drv:"Privéchauffeur voor een dag",ao_tour:"Begeleide eilandtour",
-  fv_co:"Compact",fv_se:"Sedan",fv_su:"SUV",fv_lsu:"Grote SUV",fv_je:"Jeep 4x4",fv_va:"Van",
+  fv_se:"Sedan",fv_su:"SUV",fv_lsu:"Grote SUV",fv_je:"Jeep 4x4",fv_va:"Van",
   ft_hd:"Geen betaling vereist voor reservering",
   ft_bd:"We bevestigen uw reservering zo snel mogelijk via WhatsApp. <a href='https://wa.me/2975931982' target='_blank'>Direct berichten</a>",
   f_sb:"Stuur Reserveringsverzoek",
@@ -1249,15 +1209,12 @@ pt:{fo_rvq:"Gostou do seu aluguel?",fo_rvg:"Avalie-nos no Google",fo_rvf:"Avalie
   ch_name:"Concierge de IA da Atlantic",ch_online:"Online agora",ch_inp_ph:"Pergunte qualquer coisa...",
   ch_sug1:"Viagem em família",ch_sug2:"Off-road",ch_sug3:"Preços semanais",ch_sug4:"Seguro",ch_sug5:"Entrega",
   lg_disc:"Atlantic Car Rental é uma marca da Atlantic Tours Transfers and Rentals, nome comercial registrado da OCC Holding Real Estate Consultancy Private Charter Exclusive Tours Transfers Rentals V.B.A., Câmara de Comércio de Aruba H51819.5.",
-  c_co:"Compacto · Econômico",c_co_b:"Essenciais da Ilha",c_co_i:"Ideal para casais e viajantes solo",
   c_se:"Sedã · Conforto",c_se_b:"Conforto Executivo",c_se_i:"Ideal para negócios e casais",
   c_su:"SUV",c_su_b:"SUV Premium",c_su_i:"Ideal para famílias e grupos",
   c_lsu:"SUV Grande",c_lsu_i:"Ideal para grupos e famílias numerosas",
   c_je:"Jeep  · 4x4",c_je_b:"Coleção Aventura",c_je_i:"Ideal para off-road e aventura",
   c_va:"Van",c_va_b:"Família Premium",c_va_i:"Ideal para grupos e famílias",
   fl_rs:"Reservar",from:"por dia",
-  pr_co_3:"<strong>$160</strong>",pr_co_3_hi:"<strong>$190</strong>",
-  pr_co_7:"<strong>$305</strong>",pr_co_7_hi:"<strong>$370</strong>",
   pr_se_3:"<strong>$175</strong>",pr_se_3_hi:"<strong>$215</strong>",
   pr_se_7:"<strong>$340</strong>",pr_se_7_hi:"<strong>$415</strong>",
   pr_su_3:"<strong>$240</strong>",pr_su_3_hi:"<strong>$290</strong>",
@@ -1268,7 +1225,6 @@ pt:{fo_rvq:"Gostou do seu aluguel?",fo_rvg:"Avalie-nos no Google",fo_rvf:"Avalie
   pr_je_7:"<strong>$770</strong>",pr_je_7_hi:"<strong>$925</strong>",
   pr_va_3:"<strong>$350</strong>",pr_va_3_hi:"<strong>$420</strong>",
   pr_va_7:"<strong>$685</strong>",pr_va_7_hi:"<strong>$820</strong>",
-  pr_co_day:"<strong>$43</strong>",pr_co_day_hi:"<strong>$52</strong>",
   pr_se_day:"<strong>$48</strong>",pr_se_day_hi:"<strong>$59</strong>",
   pr_su_day:"<strong>$66</strong>",pr_su_day_hi:"<strong>$80</strong>",
   pr_lsu_day:"<strong>$82</strong>",pr_lsu_day_hi:"<strong>$99</strong>",
@@ -1290,7 +1246,7 @@ pt:{fo_rvq:"Gostou do seu aluguel?",fo_rvg:"Avalie-nos no Google",fo_rvf:"Avalie
   s6t:"Seguro Flexível",s6b:"Escolha sua cobertura. Básica, total ou sem franquia — orientamos você na melhor opção para sua viagem.",
   s7t:"Pronto para Famílias",s7b:"Cadeirinhas, vans de 7 lugares, espaço extra para bagagem.",
   df_tg:"Projetado Para",df_h:"Todo Tipo de<br/><em>Viajante em Aruba</em>",
-  df1t:"Casais",df1b:"Passeios ao pôr do sol na Eagle Beach. O compacto ou sedã torna cada momento sem esforço.",
+  df1t:"Casais",df1b:"Passeios ao pôr do sol na Eagle Beach. O sedã torna cada momento sem esforço.",
   df2t:"Aventureiros",df2b:"A Piscina Natural. A costa norte. Arikok ao amanhecer. Apenas o Jeep  chega lá.",
   df3t:"Famílias",df3b:"Espaço, conforto e segurança para todos. O  de 7 lugares cuida da família toda.",
   df4t:"Viajantes VIP",df4b:"Entrega privada no aeroporto. Concierge pessoal. Rotas curadas pela ilha.",
@@ -1334,7 +1290,7 @@ pt:{fo_rvq:"Gostou do seu aluguel?",fo_rvg:"Avalie-nos no Google",fo_rvf:"Avalie
   f_nt:"Pedidos Especiais",fv0:"Selecione o tipo",
   f_ao:"Também interessado em (opcional)",
   ao_air:"Transfer para o aeroporto (chegada ou partida)",ao_drv:"Motorista particular por um dia",ao_tour:"Tour guiado pela ilha",
-  fv_co:"Compacto",fv_se:"Sedan",fv_su:"SUV",fv_lsu:"SUV Grande",fv_je:"Jeep 4x4",fv_va:"Van",
+  fv_se:"Sedan",fv_su:"SUV",fv_lsu:"SUV Grande",fv_je:"Jeep 4x4",fv_va:"Van",
   ft_hd:"Sem pagamento necessário para reservar",
   ft_bd:"Confirmamos sua reserva pelo WhatsApp o mais rápido possível. <a href='https://wa.me/2975931982' target='_blank'>Mensagem direta</a>",
   f_sb:"Enviar Solicitação de Reserva",
