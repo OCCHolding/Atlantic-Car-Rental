@@ -22,17 +22,17 @@
 # Pricing & Policies
 
 - Low season (Apr 16 – Dec 14) rates (3-day / 7-day · "From" per day):
-  - Sedan: $180 / $385 · $55
-  - SUV: $240 / $465 · $66
-  - Large SUV: $300 / $580 · $82
-  - Jeep 4x4: $400 / $770 · $110
-  - Van: $350 / $685 · $97
+  - Sedan: $195 / $420 · $60
+  - SUV: $265 / $515 · $73
+  - Large SUV: $330 / $640 · $91
+  - Jeep 4x4: $440 / $850 · $121
+  - Van: $385 / $755 · $107
 - High season (Dec 15 – Apr 15) rates (3-day / 7-day · "From" per day):
-  - Sedan: $225 / $455 · $65
-  - SUV: $290 / $560 · $80
-  - Large SUV: $355 / $695 · $99
-  - Jeep 4x4: $480 / $925 · $132
-  - Van: $420 / $820 · $117
+  - Sedan: $240 / $490 · $70
+  - SUV: $320 / $620 · $88
+  - Large SUV: $395 / $770 · $110
+  - Jeep 4x4: $530 / $1,020 · $145
+  - Van: $465 / $905 · $129
 - Van seats 10; Large SUV seats 7 (premium positioning) — other vehicles seat 5
 - 3-day minimum rental applies to all bookings (confirmed policy — matches terms.html section 2.4). No 1-day rate exists.
 - Free delivery anywhere on the island
