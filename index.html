@@ -208,8 +208,8 @@
           <option value="sedan" data-t="fv_se">Sedan</option>
           <option value="suv" data-t="fv_su">SUV</option>
           <option value="large-suv" data-t="fv_lsu">Large SUV</option>
-          <option value="jeep-4x4" data-t="fv_je">Jeep 4x4</option>
           <option value="van" data-t="fv_va">Van</option>
+          <option value="jeep-4x4" data-t="fv_je">Jeep 4x4</option>
         </select>
       </div>
       <button class="qb-btn" onclick="qbSubmit()" data-t="n_ct">Reservation Request</button>
@@ -322,6 +322,31 @@
 
     <div class="ccard rv d3" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       <div class="car-img-wrap">
+        <img class="car-img" src="assets/fleet/transparent/van.png" onerror="this.parentElement.style.background='#1A1A1A'" alt="Van"/>
+      </div>
+      <div class="ccard-cta-bar"><div class="ccard-cta-txt" data-t="fl_rs">Reservation Request</div></div>
+      <div class="ccard-body">
+        <div class="ccard-category" data-t="c_va">Van</div>
+        <div class="ccard-ideal" data-t="c_va_i">Ideal for groups &amp; families</div>
+        <div class="ccard-pricing">
+          <div class="cpr-hero"><span class="cpr-from" data-t="fr_lbl">From</span><span data-t="pr_va_day" data-t-hi="pr_va_day_hi"><strong>$107</strong></span><span class="cpr-per" data-t="per_day">/day</span></div>
+          <div class="cpr-sub">
+            <span data-t="dur3">3 days</span><span data-t="pr_va_3" data-t-hi="pr_va_3_hi"><strong>$385</strong></span>
+            <span class="cpr-sub-sep">&middot;</span>
+            <span data-t="dur7">7 days</span><span data-t="pr_va_7" data-t-hi="pr_va_7_hi"><strong>$755</strong></span>
+          </div>
+          <div class="cpr-note" data-t="cpr_min">3-day minimum booking</div>
+          <div class="cpr-season" data-t="szn_lo_lbl" data-t-hi="szn_hi_lbl">Low season rate</div>
+        </div>
+        <div class="ccard-benefits" data-t="bn_li">Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
+        <div class="ccard-specs">
+          <span class="cspec">10 seats</span>
+          <span class="cspec" data-t="spec_auto">Automatic</span><span class="cspec" data-t="spec_km">Unlimited km</span>
+        </div>
+      </div>
+    </div>
+    <div class="ccard rv d4" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      <div class="car-img-wrap">
 
         <img class="car-img" src="assets/fleet/transparent/jeep.png" onerror="this.parentElement.style.background='#1A1A1A'" alt="Jeep 4x4"/>
       </div>
@@ -347,31 +372,6 @@
       </div>
     </div>
 
-    <div class="ccard rv d4" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-      <div class="car-img-wrap">
-        <img class="car-img" src="assets/fleet/transparent/van.png" onerror="this.parentElement.style.background='#1A1A1A'" alt="Van"/>
-      </div>
-      <div class="ccard-cta-bar"><div class="ccard-cta-txt" data-t="fl_rs">Reservation Request</div></div>
-      <div class="ccard-body">
-        <div class="ccard-category" data-t="c_va">Van</div>
-        <div class="ccard-ideal" data-t="c_va_i">Ideal for groups &amp; families</div>
-        <div class="ccard-pricing">
-          <div class="cpr-hero"><span class="cpr-from" data-t="fr_lbl">From</span><span data-t="pr_va_day" data-t-hi="pr_va_day_hi"><strong>$107</strong></span><span class="cpr-per" data-t="per_day">/day</span></div>
-          <div class="cpr-sub">
-            <span data-t="dur3">3 days</span><span data-t="pr_va_3" data-t-hi="pr_va_3_hi"><strong>$385</strong></span>
-            <span class="cpr-sub-sep">&middot;</span>
-            <span data-t="dur7">7 days</span><span data-t="pr_va_7" data-t-hi="pr_va_7_hi"><strong>$755</strong></span>
-          </div>
-          <div class="cpr-note" data-t="cpr_min">3-day minimum booking</div>
-          <div class="cpr-season" data-t="szn_lo_lbl" data-t-hi="szn_hi_lbl">Low season rate</div>
-        </div>
-        <div class="ccard-benefits" data-t="bn_li">Free delivery &nbsp;&middot;&nbsp; Unlimited mileage</div>
-        <div class="ccard-specs">
-          <span class="cspec">10 seats</span>
-          <span class="cspec" data-t="spec_auto">Automatic</span><span class="cspec" data-t="spec_km">Unlimited km</span>
-        </div>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -587,8 +587,8 @@
           <option value="sedan" data-t="fv_se">Sedan</option>
           <option value="suv" data-t="fv_su">SUV</option>
           <option value="large-suv" data-t="fv_lsu">Large SUV</option>
-          <option value="jeep-4x4" data-t="fv_je">Jeep 4x4</option>
           <option value="van" data-t="fv_va">Van</option>
+          <option value="jeep-4x4" data-t="fv_je">Jeep 4x4</option>
         </select>
       </div>
       <div class="fg"><label data-t="f_insel">Insurance</label>

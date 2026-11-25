@@ -1,7 +1,7 @@
 # Project Rules
 
 - CTA is always "Reservation Request" (English only). For Spanish, Dutch, Portuguese, and any other language, use the natural local equivalent verb so the site reads naturally to native speakers — keep existing translations as-is (e.g., "Reservar" / "Reserveren" / "Reservar"). Do not back-translate the English CTA literally into other languages.
-- Fleet includes ONLY these 5 vehicles, in this order: Sedan, SUV, Large SUV, Jeep 4x4, Van. Compact/economy cars were discontinued (Nov 2026) — never re-add them
+- Fleet includes ONLY these 5 vehicles, in this order (lowest to highest price): Sedan, SUV, Large SUV, Van, Jeep 4x4. Compact/economy cars were discontinued (Nov 2026) — never re-add them
 - Never use the terms "Crossover," "SUV Crossover," "7-Seat SUV," "10-Seat Van," or "SUV Van" (the Large SUV is positioned as a premium 7-seater — refer to it as "Large SUV" only)
 - All vehicles are automatic; no brand names
 - Navigation uses text wordmark only; include Phone + WhatsApp in nav
@@ -25,14 +25,14 @@
   - Sedan: $195 / $420 · $60
   - SUV: $265 / $515 · $73
   - Large SUV: $330 / $640 · $91
-  - Jeep 4x4: $440 / $850 · $121
   - Van: $385 / $755 · $107
+  - Jeep 4x4: $440 / $850 · $121
 - High season (Dec 15 – Apr 15) rates (3-day / 7-day · "From" per day):
   - Sedan: $240 / $490 · $70
   - SUV: $320 / $620 · $88
   - Large SUV: $395 / $770 · $110
-  - Jeep 4x4: $530 / $1,020 · $145
   - Van: $465 / $905 · $129
+  - Jeep 4x4: $530 / $1,020 · $145
 - Van seats 10; Large SUV seats 7 (premium positioning) — other vehicles seat 5
 - 3-day minimum rental applies to all bookings (confirmed policy — matches terms.html section 2.4). No 1-day rate exists.
 - Free delivery anywhere on the island
