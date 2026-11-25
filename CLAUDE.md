@@ -22,13 +22,13 @@
 # Pricing & Policies
 
 - Low season (Apr 16 – Dec 14) rates (3-day / 7-day · "From" per day):
-  - Sedan: $175 / $340 · $48
+  - Sedan: $180 / $385 · $55
   - SUV: $240 / $465 · $66
   - Large SUV: $300 / $580 · $82
   - Jeep 4x4: $400 / $770 · $110
   - Van: $350 / $685 · $97
 - High season (Dec 15 – Apr 15) rates (3-day / 7-day · "From" per day):
-  - Sedan: $215 / $415 · $59
+  - Sedan: $225 / $455 · $65
   - SUV: $290 / $560 · $80
   - Large SUV: $355 / $695 · $99
   - Jeep 4x4: $480 / $925 · $132

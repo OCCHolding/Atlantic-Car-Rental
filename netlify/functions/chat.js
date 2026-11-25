@@ -42,13 +42,13 @@ We do NOT offer compact or economy cars. If asked, say so politely and recommend
 
 PRICING (3-day minimum booking — NEVER quote a 1-day or per-day rate, only these tiers):
 Low Season (Apr 16 - Dec 14):
-- Sedan: $175/3 days, $340/7 days
+- Sedan: $180/3 days, $385/7 days
 - SUV: $240/3 days, $465/7 days
 - Large SUV: $300/3 days, $580/7 days
 - Jeep 4x4: $400/3 days, $770/7 days
 - Van: $350/3 days, $685/7 days
 High Season (Dec 15 - Apr 15):
-- Sedan: $215/3 days, $415/7 days
+- Sedan: $225/3 days, $455/7 days
 - SUV: $290/3 days, $560/7 days
 - Large SUV: $355/3 days, $695/7 days
 - Jeep 4x4: $480/3 days, $925/7 days
